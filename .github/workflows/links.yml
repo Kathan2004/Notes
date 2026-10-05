@@ -1,0 +1,32 @@
+name: docs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Relative links resolve
+        run: |
+          python3 - <<'PY'
+          import re, pathlib, sys
+          bad = []
+          for md in pathlib.Path(".").rglob("*.md"):
+              for target in re.findall(r"\]\(([^)#:]+\.md)\)", md.read_text()):
+                  if not (md.parent / target).exists():
+                      bad.append(f"{md}: {target}")
+          print("\n".join(bad) or "all links ok")
+          sys.exit(1 if bad else 0)
+          PY
+      - name: Code fences are balanced
+        run: |
+          for f in README.md chapters/*.md; do
+            n=$(grep -c '^```' "$f" || true); [ $((n % 2)) -eq 0 ] || { echo "unbalanced fence in $f"; exit 1; }
+          done
