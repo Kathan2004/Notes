@@ -1,0 +1,1102 @@
+[
+[
+1,
+"A data center installs steel bollards along the front of the building to stop vehicles from reaching the lobby. Which control category and type BEST describe them?",
+[
+"Physical, preventive",
+"Managerial, corrective",
+"Operational, deterrent",
+"Technical, detective"
+],
+0,
+"Bollards are a physical barrier that stops a vehicle from reaching the building, so they prevent the event rather than detect or correct it."
+],
+[
+1,
+"A server room is monitored in the dark by a sensor that raises an alarm when it detects the body heat of a person entering. Which sensor type is this?",
+[
+"Microwave",
+"Ultrasonic",
+"Infrared",
+"Pressure"
+],
+2,
+"Infrared sensors detect heat signatures such as a human body. Ultrasonic and microwave sensors emit energy and measure reflections, and pressure sensors respond to weight."
+],
+[
+1,
+"A facilities team places sensors under floor tiles in a restricted area that trigger an alarm when someone steps on them after hours. Which sensor type is this?",
+[
+"Pressure",
+"Ultrasonic",
+"Infrared",
+"Microwave"
+],
+0,
+"Pressure sensors detect physical weight or force, such as footsteps on a mat or tile. The other sensors detect heat or reflected energy."
+],
+[
+1,
+"Which TWO sensor types detect motion by emitting energy into a space and then measuring changes in the reflected signal?",
+[
+"Pressure",
+"Ultrasonic",
+"Microwave",
+"Passive infrared",
+"Badge reader"
+],
+[
+1,
+2
+],
+"Microwave sensors emit radio waves and ultrasonic sensors emit high-frequency sound waves, both detecting disturbances in the reflections. Passive infrared only senses heat and does not emit energy."
+],
+[
+1,
+"During review of a request to upgrade a core switch's firmware, the change advisory board asks which applications, users and systems could be affected if the upgrade goes wrong. Which part of the change management process is being performed?",
+[
+"Backout planning",
+"Impact analysis",
+"Post-change documentation",
+"Maintenance window scheduling"
+],
+1,
+"Impact analysis identifies what a change could affect and how severely. Backout planning describes how to undo the change, not what it touches."
+],
+[
+1,
+"A retailer must apply a database patch that requires downtime but wants to avoid disrupting sales. Which change management practice BEST reduces the business disruption?",
+[
+"Applying the patch immediately after it is approved",
+"Skipping testing to shorten the downtime",
+"Scheduling the change within an approved maintenance window during low-demand hours",
+"Applying the patch during peak trading hours so staff are available"
+],
+2,
+"A maintenance window coordinates downtime with the business to limit impact. Applying changes at peak times or without testing increases risk."
+],
+[
+1,
+"Before approving a change to a production load balancer configuration, the change board requires evidence that the configuration was validated in a non-production environment that mirrors production. Which change management element does this address?",
+[
+"Version control",
+"Test results",
+"Allow list",
+"Ownership"
+],
+1,
+"Test results demonstrate that the change works as intended before it reaches production. Ownership identifies who is accountable, not whether the change was validated."
+],
+[
+1,
+"An administrator plans to restart a directory service. The change request notes that several applications rely on it for authentication and will fail during the restart. Which technical implication of change does this describe?",
+[
+"Restricted activities",
+"Deny list updates",
+"Version control",
+"Dependencies"
+],
+3,
+"Dependencies are other systems or services that rely on the component being changed. Failure of those systems during the restart is the dependency impact."
+],
+[
+1,
+"After a firewall migration, the network team discovers the topology diagrams and policy documents still show the old environment. Which change management activity was skipped?",
+[
+"Performing a vulnerability scan",
+"Installing a security patch",
+"Updating documentation and diagrams",
+"Obtaining executive approval"
+],
+2,
+"Change management requires that diagrams, policies and procedures be updated to reflect the new state so that later changes and troubleshooting use accurate information."
+],
+[
+1,
+"In a Zero Trust model, which component sits in the data plane and permits or blocks a subject's session to a resource based on decisions made by the control plane?",
+[
+"Implicit trust zone",
+"Policy administrator",
+"Policy enforcement point",
+"Policy engine"
+],
+2,
+"The policy enforcement point enables, monitors and terminates connections. The policy engine decides, and an implicit trust zone is what Zero Trust seeks to eliminate."
+],
+[
+1,
+"A company places three web servers behind a load balancer so users can still reach the site when one server fails. Which element of the CIA triad is this primarily addressing?",
+[
+"Integrity",
+"Non-repudiation",
+"Availability",
+"Confidentiality"
+],
+2,
+"Redundant servers behind a load balancer keep the service reachable during a failure, which is availability."
+],
+[
+2,
+"A caller tells a help desk agent they are a new executive's assistant, invents a detailed story about an urgent deadline, and persuades the agent to reset the executive's password. Which social engineering technique is this?",
+[
+"Pretexting",
+"Typosquatting",
+"Tailgating",
+"Watering hole"
+],
+0,
+"Pretexting uses a fabricated scenario and identity to gain trust and obtain information or access."
+],
+[
+2,
+"The finance team receives an email that appears to come from the CEO, sent from a lookalike domain, asking for an urgent wire transfer to a new vendor account. Which attack is this?",
+[
+"Credential stuffing",
+"Pharming",
+"Smishing",
+"Business email compromise"
+],
+3,
+"Business email compromise impersonates an executive or vendor by email to trick staff into fraudulent payments."
+],
+[
+2,
+"An attacker carrying boxes waits at a badge-controlled door and walks in behind an employee who holds it open. Which attack is this?",
+[
+"Whaling",
+"Tailgating",
+"Dumpster diving",
+"Shoulder surfing"
+],
+1,
+"Tailgating is following an authorized person through an access point without presenting credentials."
+],
+[
+2,
+"Ransomware encrypted both production file servers and the backup copies stored on a mapped network share. Which change would BEST improve future recoverability?",
+[
+"Compress the backup files to save space",
+"Give the backup service account domain administrator rights",
+"Keep an offline or immutable backup copy that cannot be modified from the network",
+"Run backups more often to the same network share"
+],
+2,
+"Backups reachable and writable from the compromised network are encrypted too. An offline, air-gapped or immutable copy survives the attack."
+],
+[
+2,
+"A public web server stops responding. Captures show a flood of TCP SYN packets from thousands of sources and a connection table full of half-open sessions. Which attack is occurring?",
+[
+"DNS amplification",
+"ARP poisoning",
+"Distributed SYN flood denial of service",
+"Session hijacking"
+],
+2,
+"Many sources sending SYN packets without completing the handshake exhausts the connection table, which is a distributed SYN flood."
+],
+[
+2,
+"A user who is logged in to an online bank visits a malicious page that silently submits a funds transfer request using the user's active session. Which attack is this?",
+[
+"SQL injection",
+"Cross-site request forgery",
+"Cross-site scripting",
+"Directory traversal"
+],
+1,
+"CSRF abuses the browser's authenticated session to send forged requests. XSS instead injects script into a page the victim views."
+],
+[
+2,
+"A web application fetches a URL supplied by the user. An attacker supplies an internal address so that the server retrieves data from a cloud metadata service. Which attack is this?",
+[
+"Server-side request forgery",
+"Cross-site request forgery",
+"Replay attack",
+"Buffer overflow"
+],
+0,
+"SSRF tricks the server into making requests on the attacker's behalf, often to internal resources the attacker cannot reach directly."
+],
+[
+2,
+"An attacker records a valid authentication exchange on the network and later retransmits it to gain access. Which attack is this?",
+[
+"Rootkit installation",
+"Birthday attack",
+"Replay attack",
+"Cross-site scripting"
+],
+2,
+"A replay attack captures legitimate traffic and resends it. Nonces, timestamps and session tokens help prevent it."
+],
+[
+2,
+"Which control BEST defeats precomputed rainbow table attacks against a stolen password database?",
+[
+"Salting each password with a unique random value before hashing",
+"Storing the hashes in a separate table",
+"Hashing each password twice with the same algorithm and no salt",
+"Requiring passwords to be changed every 30 days"
+],
+0,
+"Unique salts make precomputed tables useless because each hash must be attacked individually. Double hashing without a salt remains vulnerable to precomputation."
+],
+[
+2,
+"A vendor learns that attackers are exploiting a flaw in its product for which no patch yet exists. What is this type of vulnerability called?",
+[
+"Race condition",
+"Misconfiguration",
+"Zero-day",
+"Weak cipher suite"
+],
+2,
+"A zero-day is a flaw unknown to the vendor or without an available fix at the time it is exploited."
+],
+[
+2,
+"Signature-based antivirus finds nothing on a compromised host, yet analysts discover malicious code running only in memory through legitimate PowerShell. Which malware type is this?",
+[
+"Worm",
+"Fileless malware",
+"Logic bomb",
+"Ransomware"
+],
+1,
+"Fileless malware runs in memory and abuses trusted tools, leaving few or no files for signature scanning to detect."
+],
+[
+2,
+"An EDR agent reports that a host's process list differs from what the kernel reports. A hidden component loads at boot and conceals its own files from the operating system. Which malware type is this?",
+[
+"Trojan dropper",
+"Rootkit",
+"Adware",
+"Keylogger"
+],
+1,
+"Rootkits hide their presence by modifying operating system or boot components and persist at a low level."
+],
+[
+2,
+"A user signs in from Pune, and 20 minutes later the same account signs in from Frankfurt. Which indicator of malicious activity does this represent?",
+[
+"Resource inconsistency",
+"Missing logs",
+"Concurrent session limit",
+"Impossible travel"
+],
+3,
+"Logins from locations too far apart for the elapsed time suggest the credentials are being used by someone else."
+],
+[
+2,
+"Which TWO actions BEST reduce the impact of a ransomware infection?",
+[
+"Maintaining offline, immutable backups",
+"Disabling log retention to save storage",
+"Segmenting the network so malware cannot spread freely",
+"Installing a second UPS in the server room",
+"Enabling a guest wireless network"
+],
+[
+0,
+2
+],
+"Offline backups allow recovery without paying, and segmentation limits how far encryption spreads. The other options do not reduce ransomware impact."
+],
+[
+2,
+"Attackers inserted malicious code into a legitimate update of a widely used IT management tool, which customers then installed. Which attack is this?",
+[
+"Supply chain attack",
+"Brute force attack",
+"Evil twin attack",
+"Watering hole attack"
+],
+0,
+"Compromising a trusted vendor's software to reach its customers is a supply chain attack. A watering hole targets a site the victims visit."
+],
+[
+2,
+"An audit finds that a critical database server is fed by a single power circuit and a single network uplink. Which weakness does this represent?",
+[
+"Race condition",
+"Single point of failure",
+"Cryptographic downgrade",
+"Zero-day vulnerability"
+],
+1,
+"Any component whose failure takes down a service with no redundancy is a single point of failure."
+],
+[
+2,
+"A standard user exploits a flaw in a kernel driver and obtains administrator rights on the same workstation. Which type of attack is this?",
+[
+"Horizontal privilege escalation",
+"Vertical privilege escalation",
+"Lateral movement",
+"Credential stuffing"
+],
+1,
+"Gaining higher privileges than assigned is vertical escalation. Horizontal escalation accesses peers' resources at the same level."
+],
+[
+2,
+"A company wants only approved executables to run on its point-of-sale terminals and to block everything else by default. Which mitigation is this?",
+[
+"Content filtering",
+"Network address translation",
+"Application allow listing",
+"Application deny listing"
+],
+2,
+"Allow listing permits only known-good software, blocking unknown and malicious programs by default. Deny listing blocks only known-bad items."
+],
+[
+2,
+"An employee who was passed over for promotion deletes shared project files on the last day of employment. Which motivation BEST describes this insider's actions?",
+[
+"Service disruption as a political statement",
+"Espionage",
+"Financial gain",
+"Revenge"
+],
+3,
+"Retaliating against the employer for perceived mistreatment is revenge. There is no profit or intelligence-gathering goal."
+],
+[
+2,
+"A user receives an automated phone call claiming to be from their bank's fraud department and is prompted to enter their card number and PIN on the keypad. Which attack is this?",
+[
+"Typosquatting",
+"Smishing",
+"Pharming",
+"Vishing"
+],
+3,
+"Vishing is voice-based phishing, conducted by phone call. Smishing uses text messages."
+],
+[
+3,
+"Two identical application servers both handle live user requests at the same time, with a load balancer spreading traffic across them. If one fails, the other absorbs the load. Which configuration is this?",
+[
+"Cold standby",
+"Active-passive",
+"Active-active",
+"Hot spare disk"
+],
+2,
+"In active-active, all nodes serve traffic simultaneously. In active-passive, a standby node only takes over on failure."
+],
+[
+3,
+"A database cluster has a primary node serving all requests while a secondary node monitors its heartbeat and takes over only if the primary fails. Which configuration is this?",
+[
+"Active-active",
+"Active-passive",
+"Round-robin DNS",
+"Sticky sessions"
+],
+1,
+"Only one node is serving requests; the standby assumes the role after failover, which is active-passive."
+],
+[
+3,
+"An organization uses firewalls from two different vendors and runs redundant servers on different operating systems so that one vulnerability is unlikely to affect all of them. Which resilience concept is this?",
+[
+"Geographic dispersion",
+"Tokenization",
+"Obfuscation",
+"Platform diversity"
+],
+3,
+"Platform diversity uses different technologies so a single flaw or failure mode does not compromise every system."
+],
+[
+3,
+"To avoid dependence on one provider and stay online if an entire cloud provider has an outage, a company deploys workloads across two public cloud providers. Which strategy is this?",
+[
+"Private cloud",
+"Community cloud",
+"Single-region deployment",
+"Multi-cloud"
+],
+3,
+"Multi-cloud spreads workloads across multiple providers for resilience and to reduce vendor lock-in."
+],
+[
+3,
+"Before applying a risky update, an administrator wants to capture the state of a virtual machine so it can be reverted within minutes. Which is the BEST option?",
+[
+"Perform a full tape backup",
+"Take a snapshot",
+"Enable asynchronous replication",
+"Defragment the virtual disk"
+],
+1,
+"A snapshot quickly captures a point-in-time state for fast rollback. Tape backup is far slower to restore."
+],
+[
+3,
+"Two data centers must hold identical copies of transaction data so that no committed transaction is lost if the primary site fails. Which replication method is required?",
+[
+"Synchronous replication",
+"Asynchronous replication",
+"Incremental backup",
+"Differential backup"
+],
+0,
+"Synchronous replication confirms writes at both sites before committing, giving a near-zero RPO. Asynchronous replication can lose recent data."
+],
+[
+3,
+"After a sudden power loss, a file system returns to a consistent state by replaying a log of changes recorded before they were written to disk. Which feature is this?",
+[
+"Tokenization",
+"Defragmentation",
+"Deduplication",
+"Journaling"
+],
+3,
+"Journaling logs pending changes so the system can complete or roll back operations after a crash."
+],
+[
+3,
+"A company keeps all its backups in a cabinet in the same building as its servers. Which change would BEST protect against a building fire?",
+[
+"Store a copy of the backups at a geographically separate offsite location",
+"Add a second copy next to the first",
+"Move the cabinet to a different room in the same building",
+"Switch from nightly to hourly backups"
+],
+0,
+"Backups kept near the production systems are lost in the same disaster. An offsite copy survives site-wide events."
+],
+[
+3,
+"Backup tapes are shipped to a third-party storage vendor. Which control BEST prevents data disclosure if a tape is lost in transit?",
+[
+"Compress the backup data",
+"Encrypt the backup data before it leaves the facility",
+"Label the tapes with random names",
+"Use incremental rather than full backups"
+],
+1,
+"Encryption protects confidentiality of data on lost media. Labels and compression do not provide protection."
+],
+[
+3,
+"A hospital data center must keep running through a power outage lasting many hours. Which combination BEST meets this requirement?",
+[
+"Dual power supplies connected to the same circuit",
+"A UPS alone",
+"A UPS to bridge the switchover plus a generator for sustained power",
+"Surge protectors on each rack"
+],
+2,
+"A UPS provides immediate short-term power while the generator starts and then supplies long-term power. A UPS alone has limited runtime."
+],
+[
+3,
+"An organization writes a plan to keep its essential functions running at an alternate location with alternate staff and systems after a major disruption. Which plan is this?",
+[
+"Continuity of operations plan (COOP)",
+"Vulnerability management plan",
+"Data retention policy",
+"Acceptable use policy"
+],
+0,
+"A COOP ensures critical functions can continue during and after a disruption, using alternate facilities, people and technology."
+],
+[
+3,
+"Ahead of a seasonal peak, a team forecasts expected demand and ensures it has enough staff, servers and bandwidth to handle it. Which activity is this?",
+[
+"Capacity planning",
+"Change control",
+"Penetration testing",
+"Risk transference"
+],
+0,
+"Capacity planning aligns people, technology and infrastructure with anticipated demand to avoid degraded service."
+],
+[
+3,
+"Which TWO actions would MOST improve the availability of a web application tier?",
+[
+"Enabling multifactor authentication",
+"Deploying a load balancer with health checks",
+"Placing additional nodes in separate availability zones",
+"Implementing role-based access control",
+"Encrypting data at rest"
+],
+[
+1,
+2
+],
+"Load balancing with health checks and redundancy across zones keep the service up when a node or zone fails. The others protect confidentiality."
+],
+[
+3,
+"An attacker running inside a guest virtual machine exploits a hypervisor flaw to run code on the host and reach other guests. Which attack is this?",
+[
+"Pass-the-hash",
+"VM escape",
+"Session replay",
+"VM sprawl"
+],
+1,
+"VM escape breaks isolation between a guest and the hypervisor or host. VM sprawl is unmanaged growth of virtual machines."
+],
+[
+3,
+"A company maintains a recovery site with hardware and connectivity in place but must restore data from backups before it can operate, taking hours to days. Which site type is this?",
+[
+"Mobile site",
+"Hot site",
+"Cold site",
+"Warm site"
+],
+3,
+"A warm site has equipment ready but needs data restored. A hot site has current data and a cold site has little more than space and power."
+],
+[
+3,
+"To reduce the risk that a single regional disaster such as an earthquake disables both production and recovery, an organization places its recovery site in another region. Which concept is this?",
+[
+"Microsegmentation",
+"Geographic dispersion",
+"Data masking",
+"Platform diversity"
+],
+1,
+"Geographic dispersion separates sites so a regional event does not affect them all."
+],
+[
+4,
+"A security team gathers key staff in a conference room to talk through a ransomware scenario step by step, reviewing the plan and roles without touching any systems. Which exercise is this?",
+[
+"Tabletop exercise",
+"Parallel processing test",
+"Penetration test",
+"Failover test"
+],
+0,
+"A tabletop is a discussion-based walkthrough of a scenario that tests plans and roles without operational impact."
+],
+[
+4,
+"To validate high availability, an administrator deliberately shuts down the primary database node during a maintenance window and confirms that the secondary takes over. Which test is this?",
+[
+"Parallel processing test",
+"Failover test",
+"Tabletop exercise",
+"Attestation"
+],
+1,
+"A failover test verifies that redundant components assume the workload when the primary fails."
+],
+[
+4,
+"As part of disaster recovery validation, staff respond hands-on to a realistic outage in a lab, with injected events and timed objectives. Which exercise is this?",
+[
+"Simulation",
+"Vulnerability scan",
+"Risk assessment",
+"Policy review"
+],
+0,
+"A simulation recreates incident or outage conditions so responders practice actions, unlike a purely discussion-based tabletop."
+],
+[
+4,
+"To verify a recovery site, a team processes the same transactions there as at the production site at the same time and compares results, without moving the production workload. Which test is this?",
+[
+"Full cutover failover test",
+"Parallel processing test",
+"Penetration test",
+"Tabletop exercise"
+],
+1,
+"Parallel processing runs the recovery environment alongside production to confirm it works without disrupting live operations."
+],
+[
+4,
+"After an incident is resolved, the team meets to review what happened, what worked and what should change in the plan. Which incident response phase is this?",
+[
+"Containment",
+"Lessons learned",
+"Eradication",
+"Preparation"
+],
+1,
+"Lessons learned reviews the incident afterward to improve procedures, tools and training."
+],
+[
+4,
+"Which incident response phase includes building playbooks, contact lists and training, and deploying detection tools before any incident occurs?",
+[
+"Preparation",
+"Containment",
+"Recovery",
+"Detection"
+],
+0,
+"Preparation covers the work done in advance so the team can respond effectively."
+],
+[
+4,
+"An analyst needs to see which internal hosts communicated with an external IP address and how much data moved, without capturing packet contents. Which data source is BEST?",
+[
+"Endpoint antivirus log",
+"Authentication log",
+"NetFlow",
+"Full packet capture"
+],
+2,
+"NetFlow records metadata about conversations, such as endpoints, ports and volumes, without payloads."
+],
+[
+4,
+"A vulnerability scan reports no issues on a server, but a later penetration test exploits an unpatched flaw on it. How is the scan result classified?",
+[
+"False positive",
+"True negative",
+"True positive",
+"False negative"
+],
+3,
+"A false negative is a real vulnerability that the scanner failed to report."
+],
+[
+4,
+"After patching a critical vulnerability on a server, what should the team do to confirm the fix?",
+[
+"Rescan the system to validate that the vulnerability is no longer present",
+"Lower the vulnerability severity rating",
+"Disable the scanner for that server",
+"Close the ticket because the patch installer reported success"
+],
+0,
+"Rescanning validates remediation. Relying on the installer's status can miss failed or incomplete patches."
+],
+[
+4,
+"A SOC wants to automatically receive and share threat indicators with partners in a standardized format. Which pair of standards should it use?",
+[
+"SAML and OAuth",
+"CVSS and EPSS",
+"STIX and TAXII",
+"SNMP and NetFlow"
+],
+2,
+"STIX defines the format of threat information and TAXII defines how it is exchanged."
+],
+[
+4,
+"An analyst suspects malware on a host is using domain names to reach its command-and-control servers. Which log source is MOST useful for finding this?",
+[
+"DNS logs",
+"Backup job logs",
+"Badge reader logs",
+"Print server logs"
+],
+0,
+"DNS logs show which domains hosts looked up, revealing communication with malicious domains."
+],
+[
+4,
+"A firewall policy must drop any traffic that is not explicitly permitted. Which rule placed at the end of the ruleset accomplishes this?",
+[
+"Implicit deny (deny any any)",
+"Log-only rule",
+"Allow any any",
+"Explicit allow for management traffic"
+],
+0,
+"A final deny-all rule blocks everything not matched by earlier allow rules."
+],
+[
+4,
+"A company wants to block users from reaching sites categorized as gambling or known malware sources, regardless of which device they use on the corporate network. Which control is BEST?",
+[
+"Data loss prevention",
+"A load balancer",
+"A web content filter with URL categorization",
+"Network access control"
+],
+2,
+"Web filters allow or block sites by category and reputation. DLP controls data leaving the organization."
+],
+[
+4,
+"Which email authentication mechanism uses a digital signature, with the public key published in DNS, so receivers can verify a message came from the signing domain and was not altered?",
+[
+"DKIM",
+"SPF",
+"DMARC",
+"DNSSEC"
+],
+0,
+"DKIM signs messages. SPF lists authorized sending servers, and DMARC sets policy using SPF and DKIM results."
+],
+[
+4,
+"Administrators share a root password kept in a spreadsheet. The company wants checkout, automatic rotation and session recording for privileged accounts. Which solution BEST meets this need?",
+[
+"Group Policy password length settings",
+"Privileged access management with credential vaulting",
+"Network access control",
+"Full disk encryption"
+],
+1,
+"PAM vaults privileged credentials, controls checkout, rotates secrets and records sessions."
+],
+[
+4,
+"Which process should immediately remove an employee's accounts and access on their last day of employment?",
+[
+"Quarterly access recertification",
+"Deprovisioning as part of offboarding",
+"Annual password rotation",
+"Provisioning during onboarding"
+],
+1,
+"Offboarding with prompt deprovisioning prevents former employees from retaining access. Recertification is periodic, not immediate."
+],
+[
+4,
+"Which TWO are benefits of automating user account provisioning?",
+[
+"Elimination of the need for audits",
+"Guaranteed absence of vulnerabilities",
+"Consistent enforcement of access standards",
+"Removal of approval requirements",
+"Reduced human error"
+],
+[
+2,
+4
+],
+"Automation applies the same rules every time and reduces mistakes. It does not remove audit or approval needs."
+],
+[
+4,
+"A critical vulnerability is being actively exploited and a firewall rule must be added now to stop it. Which approach BEST aligns with change management?",
+[
+"Skip all records permanently since it is urgent",
+"Use the emergency change process with expedited approval and complete documentation afterward",
+"Wait for the next scheduled change board meeting",
+"Make the change without telling anyone"
+],
+1,
+"Emergency changes follow an expedited approval path by designated authority and are documented and reviewed afterward."
+],
+[
+4,
+"Counsel anticipates litigation and instructs IT that emails and files about the dispute must not be deleted even if retention rules would normally purge them. What is this called?",
+[
+"Order of volatility",
+"Data minimization",
+"Tokenization",
+"Legal hold"
+],
+3,
+"A legal hold suspends normal deletion so relevant evidence is preserved."
+],
+[
+4,
+"A forensic examiner needs to make an image of a suspect drive without altering its contents. Which tool should be used?",
+[
+"Antivirus scanner",
+"Hardware write blocker",
+"Password cracker",
+"Disk defragmenter"
+],
+1,
+"A write blocker prevents any writes to the source drive during acquisition, preserving evidence integrity."
+],
+[
+4,
+"A laptop containing unencrypted customer data was lost in transit. Which control, had it been in place, would have BEST protected the data?",
+[
+"Antivirus software",
+"Screen lock timeout",
+"Host-based firewall",
+"Full disk encryption"
+],
+3,
+"Full disk encryption protects data at rest even if the drive is removed. A screen lock does not stop offline access."
+],
+[
+4,
+"An employee plugs an inexpensive personal wireless router into a wall jack, creating an unmanaged wireless entry point into the corporate network. What is this called?",
+[
+"Bluejacking",
+"Jamming",
+"Evil twin",
+"Rogue access point"
+],
+3,
+"An unauthorized AP connected to the network is a rogue AP. An evil twin deliberately imitates a legitimate AP to lure users."
+],
+[
+4,
+"SOC analysts are ignoring many alerts because most turn out to be benign. Which action BEST addresses the problem?",
+[
+"Tune detection rules and thresholds to reduce false positives",
+"Disable alerting for noisy sources entirely",
+"Add more dashboards",
+"Collect more logs without changing rules"
+],
+0,
+"Tuning reduces noise and alert fatigue while preserving meaningful detections."
+],
+[
+4,
+"A team proactively searches its environment for signs of attackers that evaded automated detection, assuming a breach has already occurred. What is this activity?",
+[
+"Vulnerability scanning",
+"Penetration testing",
+"Patch management",
+"Threat hunting"
+],
+3,
+"Threat hunting is a hypothesis-driven search for undetected threats, unlike scanning for known vulnerabilities."
+],
+[
+4,
+"How can an organization BEST verify that its backups are actually usable for recovery?",
+[
+"Periodically perform test restorations and validate the restored data",
+"Check that backup jobs report completion",
+"Increase the retention period",
+"Compress the backups"
+],
+0,
+"Only a restore test proves data can be recovered. Job success messages do not confirm that the data is intact."
+],
+[
+5,
+"A business impact analysis concludes that the order processing system must be back in service within four hours of an outage. Which metric is this?",
+[
+"Recovery time objective",
+"Recovery point objective",
+"Mean time between failures",
+"Annualized rate of occurrence"
+],
+0,
+"RTO is the maximum acceptable time to restore a service. RPO is the maximum acceptable data loss."
+],
+[
+5,
+"Which metric would BEST help compare the reliability of two disk models by showing the average operating time between failures?",
+[
+"Single loss expectancy",
+"Mean time between failures",
+"Recovery time objective",
+"Mean time to repair"
+],
+1,
+"MTBF measures expected uptime between failures. MTTR measures how long repairs take."
+],
+[
+5,
+"A server environment is valued at $250,000, and a flood would destroy 30 percent of it. What is the single loss expectancy?",
+[
+"$30,000",
+"$83,333",
+"$75,000",
+"$250,000"
+],
+2,
+"SLE equals asset value multiplied by exposure factor: 250,000 x 0.30 = 75,000."
+],
+[
+5,
+"A threat has a single loss expectancy of $20,000 and occurs three times a year. A control costing $15,000 per year reduces the occurrence to once per year. What is the annual net savings?",
+[
+"$45,000",
+"$25,000",
+"$5,000",
+"$40,000"
+],
+1,
+"ALE falls from 60,000 to 20,000, a 40,000 reduction. Subtracting the 15,000 control cost gives 25,000."
+],
+[
+5,
+"Management reviews a low-impact, low-likelihood risk and the risk owner signs a statement agreeing to take no further action. Which risk strategy is this?",
+[
+"Accept",
+"Avoid",
+"Transfer",
+"Mitigate"
+],
+0,
+"Formally acknowledging a risk and choosing not to treat it is risk acceptance."
+],
+[
+5,
+"The board sets a low risk appetite, and the security team defines unplanned downtime above two hours per quarter as the maximum acceptable deviation. Which term describes the two-hour limit?",
+[
+"Risk tolerance",
+"Inherent risk",
+"Residual risk",
+"Risk appetite"
+],
+0,
+"Risk tolerance is the acceptable variation around the appetite. Appetite is the broader amount of risk the organization will pursue."
+],
+[
+5,
+"A security manager tracks the number of internet-facing systems missing critical patches as an early signal of rising exposure. Which term describes this measure?",
+[
+"Recovery point objective",
+"Service level agreement",
+"Key risk indicator",
+"Annualized loss expectancy"
+],
+2,
+"A key risk indicator is a metric that signals changing risk levels before losses occur."
+],
+[
+5,
+"Two agencies sign a document outlining their intent to cooperate on sharing threat intelligence. It is not legally binding. Which document is this?",
+[
+"Statement of work",
+"Memorandum of understanding",
+"Master service agreement",
+"Service level agreement"
+],
+1,
+"An MOU expresses mutual intent and general terms without being a binding contract, unlike an MSA or SLA."
+],
+[
+5,
+"Before signing a contract with a new cloud provider, an organization reviews its financial stability, security certifications and breach history. Which activity is this?",
+[
+"Due diligence",
+"Penetration testing",
+"Business impact analysis",
+"Data sanitization"
+],
+0,
+"Due diligence evaluates a vendor before engagement to understand risks of working with it."
+],
+[
+5,
+"Under the GDPR, within how many hours of becoming aware of a personal data breach must a controller generally notify the supervisory authority?",
+[
+"72 hours",
+"30 days",
+"7 days",
+"24 hours"
+],
+0,
+"The GDPR requires notification without undue delay and, where feasible, within 72 hours of becoming aware of the breach."
+],
+[
+5,
+"Which role is accountable for deciding the classification of a dataset and approving who may access it?",
+[
+"Data processor",
+"System administrator",
+"Data owner",
+"Data custodian"
+],
+2,
+"The data owner is accountable for the data and its classification. The custodian implements the technical protections."
+],
+[
+5,
+"A penetration tester gathers a company's employee names, email formats and technology stack from public websites and job postings without contacting the target's systems. Which activity is this?",
+[
+"Privilege escalation",
+"Passive reconnaissance",
+"Lateral movement",
+"Active reconnaissance"
+],
+1,
+"Collecting open-source information without interacting with the target is passive reconnaissance."
+],
+[
+5,
+"A tester is given only the company name and must discover the targets on their own. Which type of penetration test is this?",
+[
+"Known environment",
+"Partially known environment",
+"Compliance audit",
+"Unknown environment"
+],
+3,
+"With no information provided, the test is unknown environment, also called black box."
+],
+[
+5,
+"Which TWO activities are part of a business impact analysis?",
+[
+"Performing a source code review",
+"Selecting a firewall vendor",
+"Issuing employee badges",
+"Determining recovery time and recovery point objectives for those functions",
+"Identifying mission-essential functions"
+],
+[
+3,
+4
+],
+"A BIA identifies critical functions and sets recovery objectives based on the impact of disruption."
+],
+[
+5,
+"Which group is typically responsible for reviewing, approving and prioritizing proposed changes to production systems?",
+[
+"Internal audit committee",
+"Incident response team",
+"Security operations center",
+"Change advisory board"
+],
+3,
+"The change advisory board evaluates proposed changes for risk and business impact before approval."
+],
+[
+5,
+"Which governance document provides step-by-step instructions that staff follow to carry out a routine task, such as provisioning a new user account, consistently?",
+[
+"Acceptable use policy",
+"Business impact analysis",
+"Standard operating procedure",
+"Risk register"
+],
+2,
+"An SOP lists the specific steps to perform a task the same way each time. Policies state requirements at a higher level."
+],
+[
+5,
+"Each business unit in a company sets its own security rules and manages its own security staff, with little coordination from headquarters. Which governance structure is this?",
+[
+"Board-led",
+"Decentralized",
+"Government-led",
+"Centralized"
+],
+1,
+"When decision-making is distributed to individual units, governance is decentralized."
+],
+[
+5,
+"A company stores and processes payment card data. Which standard specifically applies to protecting that data?",
+[
+"HIPAA",
+"FERPA",
+"PCI DSS",
+"SOX"
+],
+2,
+"PCI DSS covers organizations that store, process or transmit cardholder data."
+]
+]

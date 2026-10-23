@@ -2,6 +2,8 @@
 
 Working notes for Security Operations Center analysts: fundamentals, attack techniques, detection logic and incident response. Written for interview prep and day-to-day triage, and organised so each chapter stands on its own.
 
+**Read it as a site:** [kathan2004.github.io/Notes](https://kathan2004.github.io/Notes/) combines these chapters with a Security+ SY0-701 practice bank, shared search across both, reading progress and exam readiness tracking.
+
 ```
 fundamentals ─► network & DNS ─► email ─► crypto ─► web ─► malware ─► frameworks ─► IR ─► identity ─► AD ─► tooling ─► detections ─► scenarios
 ```
@@ -25,9 +27,17 @@ fundamentals ─► network & DNS ─► email ─► crypto ─► web ─► m
 | 13 | [Red Flags & Detection Patterns](chapters/13-red-flags-detection-patterns.md) | high-signal indicators to alert on |
 | 14 | [100+ Scenario-Based Q&A](chapters/14-scenario-based-qa.md) | 100+ interview and on-shift scenarios with worked answers |
 
+## Security+ SY0-701 Practice Bank
+
+[security-plus-701/](security-plus-701/) contains ten original 90-question practice papers for CompTIA Security+ SY0-701, with answers and explanations, weighted to the exam domains. They run as an interactive quiz with a timed exam mode, a practice mode and per-domain results.
+
+- **Take the quizzes:** [kathan2004.github.io/Notes/#papers](https://kathan2004.github.io/Notes/#papers)
+- **Raw questions:** [security-plus-701/papers](security-plus-701/papers/)
+
 ## How to use
 
 - **Interview prep.** Read chapters 1-11 in order, then work through [chapter 14](chapters/14-scenario-based-qa.md) without looking at the answers.
+- **Exam prep.** Work through the [Security+ practice bank](https://kathan2004.github.io/Notes/#papers) in exam mode, then review wrong answers against the matching chapter.
 - **On shift.** Jump to [Tools & Commands](chapters/12-tools-commands-reference.md) and [Red Flags](chapters/13-red-flags-detection-patterns.md).
 - **Navigation.** Every chapter links back to this index and to its neighbours.
 

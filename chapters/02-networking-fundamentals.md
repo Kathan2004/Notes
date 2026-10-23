@@ -177,9 +177,9 @@ Ephemeral ports assigned by OS for outbound connections.
 5. **Key Exchange**: Diffie-Hellman or ECDH to establish shared secret securely.
 
 **Modern Security Alignment**:
-- **Confidentiality** ✓ (encryption).
-- **Integrity** ✓ (HMAC).
-- **Authenticity** ✓ (key verification).
+- **Confidentiality** (encryption).
+- **Integrity** (HMAC).
+- **Authenticity** (key verification).
 
 **Interview Q**: "Why is SSH better than Telnet?"
 **Answer**: "Telnet sends credentials in plaintext; any attacker on the network can sniff them. SSH uses encryption (AES) and authentication (keys or hashed passwords), so traffic is unreadable even if captured. SSH also verifies the server's identity via host key, preventing MITM. This aligns with the CIA triad: confidentiality (encryption), integrity (HMAC), authenticity (key verification)."

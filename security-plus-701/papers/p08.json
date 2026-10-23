@@ -1,0 +1,1106 @@
+[
+[
+1,
+"A software publisher wants customers to be able to confirm that an installer really came from the publisher and was not modified after release. Which technology should the publisher use?",
+[
+"Code signing certificate",
+"Full-disk encryption",
+"Salted password hashing",
+"Network access control"
+],
+0,
+"Code signing applies a digital signature backed by a certificate, which proves the publisher's identity and detects tampering after signing."
+],
+[
+1,
+"What is the PRIMARY reason a unique salt is added to each password before hashing?",
+[
+"It makes the hash reversible for password recovery",
+"It ensures identical passwords produce different hashes and defeats precomputed rainbow tables",
+"It encrypts the hash with a symmetric key",
+"It shortens the hash to save storage"
+],
+1,
+"Per-password salts make precomputed tables useless and hide duplicate passwords. Hashes are one-way and salting does not make them reversible."
+],
+[
+1,
+"A hospital discovers that an unauthorized user modified several patients' medication records. Which part of the CIA triad was MOST directly violated?",
+[
+"Confidentiality",
+"Availability",
+"Integrity",
+"Non-repudiation"
+],
+2,
+"Unauthorized modification of data violates integrity. Confidentiality concerns disclosure and availability concerns access."
+],
+[
+1,
+"A company requires that the employee who creates a vendor payment request cannot also approve it. Which security principle does this enforce?",
+[
+"Least privilege",
+"Defense in depth",
+"Implicit trust",
+"Separation of duties"
+],
+3,
+"Separation of duties splits a critical task among multiple people to prevent fraud. Least privilege limits rights, but does not divide one process between roles."
+],
+[
+1,
+"After a ransomware attack, a company restores its servers from clean backups. Which control type does the restoration represent?",
+[
+"Corrective",
+"Preventive",
+"Deterrent",
+"Directive"
+],
+0,
+"Corrective controls reduce the impact of an incident or restore normal operations after it has happened."
+],
+[
+1,
+"A laptop manufacturer includes a dedicated hardware chip that securely stores encryption keys and can attest to the integrity of the boot process. What is this chip?",
+[
+"Hardware security module (HSM)",
+"Trusted Platform Module (TPM)",
+"Secure enclave on a network switch",
+"Smart card reader"
+],
+1,
+"A TPM is a chip on the endpoint that stores keys and supports measured boot. An HSM is a separate, network-attached or PCIe appliance for enterprise key management."
+],
+[
+1,
+"Which TWO of the following are asymmetric cryptographic algorithms? (Choose TWO.)",
+[
+"RSA",
+"AES",
+"ECC",
+"Blowfish",
+"SHA-512"
+],
+[
+0,
+2
+],
+"RSA and elliptic curve cryptography use public/private key pairs. AES and Blowfish are symmetric, and SHA-512 is a hash function."
+],
+[
+1,
+"A web service uses ephemeral Diffie-Hellman keys so that if the server's long-term private key is stolen later, previously captured sessions still cannot be decrypted. Which property is this?",
+[
+"Key escrow",
+"Non-repudiation",
+"Perfect forward secrecy",
+"Certificate pinning"
+],
+2,
+"Perfect forward secrecy uses per-session ephemeral keys, so compromise of the long-term key does not expose past traffic."
+],
+[
+1,
+"Which part of the AAA framework records the actions a user performed after logging in?",
+[
+"Authentication",
+"Authorization",
+"Attestation",
+"Accounting"
+],
+3,
+"Accounting tracks user activity, such as commands and resources used, for auditing and billing."
+],
+[
+1,
+"A threat actor hides a malicious configuration file inside the pixel data of a company logo image so it passes through email filters unnoticed. Which technique is this?",
+[
+"Steganography",
+"Tokenization",
+"Key stretching",
+"Data masking"
+],
+0,
+"Steganography conceals data within another file such as an image. The other options protect or replace data but do not hide its existence."
+],
+[
+1,
+"Which technology uses a distributed ledger of cryptographically chained blocks to make records tamper-evident?",
+[
+"Certificate revocation list",
+"Blockchain",
+"Hardware security module",
+"Key escrow"
+],
+1,
+"In a blockchain each block contains the hash of the previous one, so altering history breaks the chain and is detectable."
+],
+[
+2,
+"Within minutes, multiple servers on a flat network are infected by malware that spreads by exploiting an unpatched SMB flaw. No user opened any file. Which malware type is this?",
+[
+"Virus",
+"Trojan",
+"Worm",
+"Logic bomb"
+],
+2,
+"A worm self-replicates across networks without user action. A virus needs a host file to be executed by a user."
+],
+[
+2,
+"A user installs a free PDF converter from a website. It works as advertised, but it also quietly opens a backdoor to an external server. Which malware type is this?",
+[
+"Worm",
+"Rootkit",
+"Adware",
+"Trojan"
+],
+3,
+"A trojan masquerades as legitimate software while carrying a hidden malicious function."
+],
+[
+2,
+"An investigator finds that an attacker has an interactive session on a workstation with the ability to browse files, activate the webcam and run commands remotely. Which malware is MOST likely installed?",
+[
+"Remote access Trojan (RAT)",
+"Ransomware",
+"Bloatware",
+"Logic bomb"
+],
+0,
+"A RAT gives the attacker remote, interactive control of the victim machine."
+],
+[
+2,
+"An antivirus product running on a server reports no problems, but a scan from a bootable offline medium reveals hidden processes and a malicious kernel driver. Which malware type is MOST likely present?",
+[
+"Keylogger",
+"Rootkit",
+"Macro virus",
+"Adware"
+],
+1,
+"Rootkits hide at the kernel or firmware level and can conceal themselves from tools running in the infected OS, so an offline scan exposes them."
+],
+[
+2,
+"Analysts find that malicious PowerShell is running entirely in memory, launched through WMI, with no executable written to disk. Which control is MOST likely to detect this activity?",
+[
+"Signature-based file scanning",
+"Full-disk encryption",
+"Endpoint detection and response with behavioral analysis",
+"Removable media blocking"
+],
+2,
+"Fileless malware leaves no file to match signatures, so behavioral monitoring of process activity is needed. Signature file scanning would miss it."
+],
+[
+2,
+"New corporate laptops arrive with several trial applications and vendor utilities preinstalled that consume resources and expand the attack surface. What are these programs called?",
+[
+"Spyware",
+"Ransomware",
+"Rootkits",
+"Bloatware"
+],
+3,
+"Bloatware is unwanted preinstalled software that adds resource use and attack surface without being intentionally malicious."
+],
+[
+2,
+"A technician finds a small device plugged inline between a kiosk's keyboard and the PC. Several employees later report that their credentials were used by someone else. What is the device MOST likely?",
+[
+"A hardware keylogger",
+"A rogue access point",
+"A USB data blocker",
+"A smart card reader"
+],
+0,
+"Inline hardware keyloggers record every keystroke, including typed passwords, without any software on the host."
+],
+[
+2,
+"A browser extension quietly records the websites a user visits and sends the history to an advertising broker without consent. Which malware category does this describe?",
+[
+"Worm",
+"Spyware",
+"Ransomware",
+"Logic bomb"
+],
+1,
+"Spyware secretly gathers information about a user's activity and transmits it to a third party."
+],
+[
+2,
+"Malicious code attaches itself to a legitimate executable and spreads only when a user runs the infected file. Which malware type is this?",
+[
+"Worm",
+"Rootkit",
+"Virus",
+"Botnet"
+],
+2,
+"A virus needs a host file and user execution to spread, unlike a worm which spreads on its own."
+],
+[
+2,
+"A caller says he is from an external audit firm and invents a detailed story about a compliance deadline to convince a help desk employee to reveal the VPN configuration. Which social engineering technique is this?",
+[
+"Tailgating",
+"Shoulder surfing",
+"Watering hole",
+"Pretexting"
+],
+3,
+"Pretexting uses a fabricated scenario to gain trust and extract information."
+],
+[
+2,
+"The accounts payable team receives an email, apparently from a known supplier, with a new invoice and a request to send payment to a changed bank account. What should the team do FIRST?",
+[
+"Verify the change by calling the supplier at a phone number already on file",
+"Reply to the email asking if the change is legitimate",
+"Pay the invoice and flag it for later review",
+"Forward the email to the vendor's new contact"
+],
+0,
+"Out-of-band verification using trusted contact details defeats invoice scams and business email compromise. Replying to the email may reach the attacker."
+],
+[
+2,
+"A coordinated campaign spreads fabricated posts claiming that a company is about to declare bankruptcy, with the aim of damaging its stock price. Which term BEST describes this content?",
+[
+"Typosquatting",
+"Disinformation",
+"Pharming",
+"Vishing"
+],
+1,
+"Disinformation is deliberately false information spread to cause harm. Misinformation is false but shared without intent to deceive."
+],
+[
+2,
+"A man in a utility company uniform and carrying a clipboard persuades the receptionist to let him into the server room to inspect the cooling system. Which technique is this?",
+[
+"Smishing",
+"Typosquatting",
+"Impersonation",
+"Whaling"
+],
+2,
+"Impersonation is pretending to be a trusted person or role to gain physical or informational access."
+],
+[
+2,
+"A user who is logged in to an online bank visits a malicious page, which silently submits a funds transfer request using the user's session. Which TWO controls BEST mitigate this attack? (Choose TWO.)",
+[
+"Anti-CSRF tokens",
+"Output encoding",
+"SameSite cookie attribute",
+"Parameterized queries",
+"Longer password requirements"
+],
+[
+0,
+2
+],
+"Anti-CSRF tokens and SameSite cookies stop cross-site requests from being accepted with the victim's session. Output encoding addresses XSS and parameterized queries address SQL injection."
+],
+[
+2,
+"A web application fetches an image from any URL a user supplies. An attacker submits http://169.254.169.254/latest/meta-data/ and obtains cloud instance credentials. Which attack is this?",
+[
+"Cross-site request forgery",
+"Directory traversal",
+"Session fixation",
+"Server-side request forgery (SSRF)"
+],
+3,
+"SSRF tricks the server into making requests on the attacker's behalf, here to the internal metadata service."
+],
+[
+2,
+"An attacker captures a valid authentication message from the network and resends it later to gain access. Which control BEST defends against this replay attack?",
+[
+"Use nonces or timestamps so each message is valid only once",
+"Increase the password length",
+"Enable full-disk encryption",
+"Use a longer certificate key"
+],
+0,
+"Unique, single-use values and short validity windows make a captured message useless when resent."
+],
+[
+2,
+"An attacker uses a stolen session cookie to access a user's account without knowing the password. Which cookie attribute prevents client-side scripts from reading the cookie and so reduces theft through XSS?",
+[
+"Secure",
+"HttpOnly",
+"Expires",
+"Domain"
+],
+1,
+"HttpOnly blocks JavaScript access to the cookie. Secure only restricts it to HTTPS transmission."
+],
+[
+2,
+"Customers receive a malicious update that was signed and distributed through a software vendor's legitimate update server after the vendor's build system was compromised. Which attack is this?",
+[
+"Watering hole attack",
+"Downgrade attack",
+"Supply chain attack",
+"Credential stuffing"
+],
+2,
+"Compromising a trusted supplier's build or distribution process to reach downstream customers is a supply chain attack."
+],
+[
+2,
+"An email appears to come from the CFO and demands that an employee wire funds within the hour. Which TWO social engineering principles is the attacker using? (Choose TWO.)",
+[
+"Authority",
+"Urgency",
+"Consensus",
+"Familiarity",
+"Scarcity"
+],
+[
+0,
+1
+],
+"Impersonating a senior executive exploits authority, and the one-hour deadline creates urgency."
+],
+[
+2,
+"A scan shows that a production web application bundles an open-source library with a publicly known remote code execution flaw. Which action BEST addresses this third-party component risk?",
+[
+"Obfuscate the application's source code",
+"Add a banner warning to the login page",
+"Increase the server's RAM",
+"Upgrade to a patched version and use software composition analysis to monitor dependencies"
+],
+3,
+"Updating the vulnerable component and continuously tracking dependencies directly removes the known flaw. The other choices do not fix it."
+],
+[
+3,
+"A mail gateway opens unknown email attachments in an isolated virtual environment and observes their behavior before delivering them. Which security concept is this?",
+[
+"Sandboxing",
+"Sinkholing",
+"Tokenization",
+"Port mirroring"
+],
+0,
+"A sandbox runs untrusted code in isolation so malicious behavior can be observed without harming production systems."
+],
+[
+3,
+"Compared with virtual machines, which characteristic of containers represents a security concern?",
+[
+"Containers require a separate hypervisor per instance",
+"Containers share the host operating system kernel",
+"Containers cannot be restricted by resource limits",
+"Containers always run with an encrypted file system"
+],
+1,
+"All containers use the same host kernel, so a kernel vulnerability or escape can affect every container. VMs have separate guest kernels."
+],
+[
+3,
+"A company must host a public web server while keeping the internal network protected if that server is compromised. Where should the server be placed?",
+[
+"On the internal LAN with the domain controllers",
+"Directly on the Internet without a firewall",
+"In a screened subnet (DMZ) between two firewalls",
+"On the same VLAN as the HR workstations"
+],
+2,
+"A screened subnet isolates public-facing hosts so that a compromise does not give direct access to the internal network."
+],
+[
+3,
+"A company with many branch offices wants to combine WAN connectivity with cloud-delivered security services such as secure web gateway, CASB and zero trust network access. Which architecture does this describe?",
+[
+"Demilitarized zone",
+"Software-defined perimeter appliance",
+"Air-gapped network",
+"Secure Access Service Edge (SASE)"
+],
+3,
+"SASE converges network and security services delivered from the cloud at the edge close to users and sites."
+],
+[
+3,
+"A switch must authenticate every device that plugs into a port before allowing network access. Which standard provides this port-based access control?",
+[
+"802.1X",
+"802.11ac",
+"802.3af",
+"802.1Q"
+],
+0,
+"802.1X provides port-based network access control using an authenticator, supplicant and authentication server. 802.1Q is VLAN tagging."
+],
+[
+3,
+"Remote employees use a VPN, and the company wants all of their Internet-bound traffic to pass through corporate inspection tools. Which configuration is required?",
+[
+"Split tunnel",
+"Full tunnel",
+"Out-of-band management",
+"Clientless portal with no inspection"
+],
+1,
+"A full tunnel sends all traffic through the VPN, while a split tunnel sends only corporate-bound traffic."
+],
+[
+3,
+"Which RAID level duplicates the same data to two disks so that the array survives a single disk failure?",
+[
+"RAID 0",
+"RAID 5",
+"RAID 1",
+"JBOD"
+],
+2,
+"RAID 1 mirrors data across two drives. RAID 0 stripes with no redundancy."
+],
+[
+3,
+"A company wants the lowest-cost disaster recovery option and accepts a recovery time of several days. Which site type is MOST appropriate?",
+[
+"Hot site",
+"Warm site",
+"Mirror site",
+"Cold site"
+],
+3,
+"A cold site provides space and utilities only, so it is cheapest but has the longest recovery time."
+],
+[
+3,
+"A security team needs visibility into which unsanctioned cloud applications employees use and wants to enforce data policies on them. Which technology is BEST suited?",
+[
+"Cloud access security broker (CASB)",
+"Web application firewall",
+"Hardware security module",
+"Network TAP"
+],
+0,
+"A CASB sits between users and cloud services to discover shadow IT and enforce security policy."
+],
+[
+3,
+"In a serverless function-as-a-service model, who is responsible for patching the underlying operating system and runtime hosts?",
+[
+"The customer",
+"The cloud provider",
+"The end user",
+"The application developer exclusively"
+],
+1,
+"With serverless the provider manages the infrastructure, OS and runtime. The customer is responsible for the code and its configuration and data."
+],
+[
+3,
+"Which TWO controls protect data at rest? (Choose TWO.)",
+[
+"Full-disk encryption",
+"Transparent database encryption",
+"TLS 1.3",
+"IPsec tunnel mode",
+"SSH port forwarding"
+],
+[
+0,
+1
+],
+"Disk and database encryption protect stored data. TLS, IPsec and SSH protect data in transit."
+],
+[
+3,
+"A manufacturer's industrial controller must respond to sensor input within strict, predictable time limits. Which type of operating system is typically used?",
+[
+"Hypervisor-based desktop OS",
+"Mobile device OS",
+"Real-time operating system (RTOS)",
+"Disk-imaging OS"
+],
+2,
+"An RTOS guarantees deterministic response times, which is critical in industrial and embedded systems."
+],
+[
+3,
+"An administrator still manages network switches with Telnet. Which protocol should replace it to protect credentials in transit?",
+[
+"FTP",
+"SNMPv1",
+"HTTP",
+"SSH"
+],
+3,
+"SSH encrypts the management session, while Telnet sends credentials in cleartext."
+],
+[
+3,
+"A certificate authority needs to protect its root private key with tamper-resistant hardware that performs cryptographic operations internally. Which device should it use?",
+[
+"Hardware security module (HSM)",
+"Trusted Platform Module in a user laptop",
+"Network load balancer",
+"Smart card"
+],
+0,
+"An HSM is a hardened device built to generate and store keys and perform cryptographic operations without exposing the keys."
+],
+[
+3,
+"A kiosk in a lobby should only be able to run a single approved application. Which endpoint hardening control BEST achieves this?",
+[
+"Application deny list",
+"Application allow list",
+"Host-based IDS",
+"Disk defragmentation"
+],
+1,
+"An allow list blocks everything not explicitly approved, whereas a deny list only blocks known bad programs."
+],
+[
+3,
+"Before deploying wireless access points in a new warehouse, the network team wants to find the best AP locations and detect dead spots. What should they perform?",
+[
+"Penetration test",
+"Vulnerability scan",
+"Wireless site survey with heat mapping",
+"Port scan"
+],
+2,
+"A site survey and heat map measure signal coverage and interference to plan AP placement."
+],
+[
+4,
+"Developers must prevent SQL injection in a new application. Which control is MOST effective at the code level?",
+[
+"Client-side JavaScript validation only",
+"Increasing the session timeout",
+"Renaming database tables",
+"Parameterized queries (prepared statements)"
+],
+3,
+"Parameterized queries separate code from data so input cannot change query logic. Client-side validation can be bypassed."
+],
+[
+4,
+"A web application displays user comments. Which developer practice BEST prevents stored cross-site scripting?",
+[
+"Output encoding and server-side input sanitization",
+"Enabling directory listing",
+"Using longer session IDs",
+"Hashing the comments"
+],
+0,
+"Encoding user data when it is rendered ensures the browser treats it as text, not script."
+],
+[
+4,
+"Which cookie attribute ensures a session cookie is only transmitted over encrypted HTTPS connections?",
+[
+"HttpOnly",
+"Secure",
+"SameSite=None without Secure",
+"Path"
+],
+1,
+"The Secure flag stops the browser from sending the cookie over unencrypted HTTP."
+],
+[
+4,
+"An organization wants to prevent users from running unapproved PowerShell scripts. Which control BEST supports this?",
+[
+"Disable the firewall for script hosts",
+"Rename the PowerShell executable",
+"Require scripts to be digitally signed by a trusted publisher",
+"Set longer passwords on user accounts"
+],
+2,
+"A signed-script execution policy only runs code whose signature chains to a trusted certificate, which also provides integrity."
+],
+[
+4,
+"During the build stage, a team wants to analyze application source code for vulnerabilities without running the program. Which technique should they use?",
+[
+"Dynamic application security testing (DAST)",
+"Fuzzing of the running service",
+"Penetration test of production",
+"Static application security testing (SAST)"
+],
+3,
+"SAST inspects source or compiled code without executing it, and can run early in the pipeline."
+],
+[
+4,
+"A security team has no access to a vendor's source code but wants to test the running web application for flaws by sending crafted requests. Which approach is BEST?",
+[
+"Dynamic application security testing (DAST)",
+"Static code review",
+"Software composition analysis",
+"Manual code signing review"
+],
+0,
+"DAST tests the application at runtime from the outside, without needing source code."
+],
+[
+4,
+"A tester sends large volumes of malformed and random data to a file parser to discover crashes and unhandled exceptions. Which technique is this?",
+[
+"Code signing",
+"Fuzzing",
+"Sandboxing",
+"Threat modeling"
+],
+1,
+"Fuzzing supplies unexpected inputs to reveal bugs and vulnerabilities such as memory corruption."
+],
+[
+4,
+"In the software development life cycle, when is it MOST cost-effective to address security requirements?",
+[
+"After deployment to production",
+"Only during penetration testing",
+"During requirements and design",
+"During end-of-life decommissioning"
+],
+2,
+"Shifting security left means fixing problems early, when changes are cheapest."
+],
+[
+4,
+"A scan of a source repository finds database passwords and API keys hard-coded in commits. Which action BEST fixes the problem in the CI/CD pipeline?",
+[
+"Make the repository private only",
+"Base64-encode the secrets in code",
+"Rename the variables",
+"Move secrets to a secrets management vault and add automated secret scanning"
+],
+3,
+"A vault keeps secrets out of code, and scanning prevents them from being committed again. Encoding is not protection."
+],
+[
+4,
+"A critical library vulnerability is announced, and the company must quickly identify which of its products include the affected component. Which artifact helps MOST?",
+[
+"Software bill of materials (SBOM)",
+"Business impact analysis",
+"Service level agreement",
+"Data flow diagram of the network"
+],
+0,
+"An SBOM lists the components and versions in each application, enabling fast identification of affected software."
+],
+[
+4,
+"A user opens an email attachment and shortly afterward reports pop-ups and a slow system. What should the analyst do FIRST?",
+[
+"Reimage the system immediately",
+"Isolate the host from the network",
+"Delete the email from the server only",
+"Run a defragmentation"
+],
+1,
+"Containment limits spread and preserves evidence before eradication or recovery steps."
+],
+[
+4,
+"Which control BEST prepares an organization to recover from a ransomware attack without paying?",
+[
+"Longer password complexity rules",
+"A second firewall",
+"Offline or immutable backups that are regularly tested",
+"Email footer disclaimers"
+],
+2,
+"Backups that attackers cannot encrypt or delete allow restoration, and testing proves they work."
+],
+[
+4,
+"An EDR alert shows that a Word document launched PowerShell, which then connected to an external IP address. What is the MOST likely cause?",
+[
+"A failed disk drive",
+"A DNS misconfiguration",
+"A scheduled backup job",
+"A malicious macro in the document"
+],
+3,
+"Office applications spawning command interpreters and making outbound connections are a classic sign of a malicious macro."
+],
+[
+4,
+"A user admits entering credentials on a fake login page after clicking an email link. What is the BEST first action?",
+[
+"Reset the password and revoke active sessions and tokens",
+"Wait for the next vulnerability scan",
+"Send the user to training before taking any action",
+"Add the user to the allow list"
+],
+0,
+"Invalidating the stolen credentials and sessions stops the attacker from using them."
+],
+[
+4,
+"Which email authentication mechanism adds a cryptographic signature to message headers so receivers can verify that a message was not altered and was authorized by the domain?",
+[
+"SPF",
+"DKIM",
+"MX records",
+"S/MIME encryption only"
+],
+1,
+"DKIM signs outgoing mail with a domain key published in DNS. SPF only lists authorized sending servers."
+],
+[
+4,
+"During a penetration test, the tester uses a compromised workstation to reach servers in a segment that was not directly accessible from the Internet. What is this technique called?",
+[
+"Fuzzing",
+"Reconnaissance",
+"Pivoting",
+"Footprinting"
+],
+2,
+"Pivoting uses a compromised host as a stepping stone to attack other systems on the network."
+],
+[
+4,
+"An analyst is investigating a suspected attack against an e-commerce web application. Which TWO log sources are MOST useful? (Choose TWO.)",
+[
+"Web server access logs",
+"Web application firewall logs",
+"HVAC controller logs",
+"Badge reader logs",
+"Printer queue logs"
+],
+[
+0,
+1
+],
+"Web server and WAF logs record the HTTP requests and blocked attack patterns. The others are unrelated to the application layer."
+],
+[
+4,
+"After an incident response team has eradicated malware from the affected systems, which phase comes NEXT?",
+[
+"Detection",
+"Preparation",
+"Containment",
+"Recovery"
+],
+3,
+"The phases run preparation, detection and analysis, containment, eradication, recovery and lessons learned."
+],
+[
+4,
+"Legal counsel informs IT that litigation is likely and that all relevant emails and documents must be kept from deletion. What is this requirement called?",
+[
+"Legal hold",
+"Chain of custody",
+"Data retention schedule",
+"Sanitization"
+],
+0,
+"A legal hold suspends normal deletion so potentially relevant information is preserved."
+],
+[
+4,
+"Administrators must check out shared privileged credentials from a system that rotates the password after each use and records the session. Which solution is this?",
+[
+"Single sign-on",
+"Privileged access management (PAM)",
+"Network access control",
+"Security information and event management"
+],
+1,
+"PAM vaults privileged credentials, enforces check-out and rotation, and audits privileged sessions."
+],
+[
+4,
+"Which configuration change BEST reduces the risk of macro-based malware in an enterprise?",
+[
+"Disable the Windows firewall",
+"Allow all macros from email",
+"Block macros in Office files downloaded from the Internet",
+"Remove the antivirus agent"
+],
+2,
+"Blocking macros in files with the Internet mark removes a common initial access vector."
+],
+[
+4,
+"An employee installs a banking app on a corporate phone from a third-party website instead of the official app store. What is this practice called?",
+[
+"Jailbreaking",
+"Geofencing",
+"Tethering",
+"Sideloading"
+],
+3,
+"Sideloading is installing apps from unofficial sources, which bypasses store vetting. Jailbreaking removes OS restrictions."
+],
+[
+4,
+"Which protocol is designed to exchange structured cyber threat intelligence automatically between organizations?",
+[
+"TAXII",
+"SNMP",
+"SMTP",
+"LDAP"
+],
+0,
+"TAXII is the transport mechanism for sharing threat intelligence, commonly carrying STIX-formatted data."
+],
+[
+4,
+"Which TWO controls BEST reduce the risk of malware arriving through email attachments? (Choose TWO.)",
+[
+"Attachment sandboxing at the email gateway",
+"Blocking executable file types",
+"Enabling WPA3 on wireless networks",
+"Increasing password complexity",
+"Installing more HVAC monitoring"
+],
+[
+0,
+1
+],
+"Detonating attachments in a sandbox and blocking risky file types directly intercept malicious attachments. The other choices do not address email-borne malware."
+],
+[
+4,
+"A SIEM generates hundreds of low-value alerts every day, and analysts are missing real incidents. What is the BEST action?",
+[
+"Disable all alerting",
+"Tune correlation rules and thresholds to reduce false positives",
+"Add more log sources without changes",
+"Ignore alerts from critical servers"
+],
+1,
+"Alert tuning improves signal quality, whereas disabling alerts or ignoring critical hosts creates blind spots."
+],
+[
+5,
+"A server worth protecting has a single loss expectancy of $80,000 and is expected to suffer such a loss once every four years. What is the annualized loss expectancy?",
+[
+"$80,000",
+"$320,000",
+"$20,000",
+"$4,000"
+],
+2,
+"ALE = SLE x ARO = $80,000 x 0.25 = $20,000."
+],
+[
+5,
+"A company deploys multifactor authentication to reduce the likelihood of account takeover. Which risk response is this?",
+[
+"Avoidance",
+"Acceptance",
+"Transference",
+"Mitigation"
+],
+3,
+"Applying controls to reduce likelihood or impact is risk mitigation."
+],
+[
+5,
+"A risk assessment rates risks as high, medium or low on a heat map using the team's judgment rather than monetary values. Which type of analysis is this?",
+[
+"Qualitative",
+"Quantitative",
+"Statistical",
+"Forensic"
+],
+0,
+"Qualitative analysis uses subjective ratings. Quantitative analysis assigns numeric values such as SLE and ALE."
+],
+[
+5,
+"Before signing a contract with a new cloud provider, the security team reviews the provider's certifications, audit reports and financial stability. Which activity is this?",
+[
+"Incident response",
+"Vendor due diligence",
+"Change management",
+"Penetration testing"
+],
+1,
+"Due diligence evaluates a third party's security and viability before entering a relationship."
+],
+[
+5,
+"Two companies are exploring a partnership and need to share confidential product plans during negotiations. Which agreement legally protects that information?",
+[
+"Service level agreement",
+"Memorandum of understanding",
+"Non-disclosure agreement (NDA)",
+"Statement of work"
+],
+2,
+"An NDA legally restricts the disclosure of confidential information shared between parties."
+],
+[
+5,
+"Which document expresses the intended cooperation between two organizations in a general, non-binding way?",
+[
+"Master service agreement",
+"Business partners agreement with penalties",
+"Service level agreement",
+"Memorandum of understanding (MOU)"
+],
+3,
+"An MOU records shared intentions and is usually not legally enforceable. An MSA and an SLA are contractual."
+],
+[
+5,
+"A retailer holding EU customers' personal data finds that an attacker exfiltrated records. What is its GENERAL obligation under GDPR?",
+[
+"Notify the supervisory authority within 72 hours of becoming aware",
+"Wait for the annual audit before reporting",
+"Notify only the cyber insurance carrier",
+"Publish the findings on its website only"
+],
+0,
+"GDPR generally requires reporting qualifying breaches to the regulator within 72 hours."
+],
+[
+5,
+"Which governance document provides specific, step-by-step instructions for performing a security task such as onboarding a user?",
+[
+"Policy",
+"Procedure",
+"Standard",
+"Guideline"
+],
+1,
+"A procedure lists detailed steps. A policy states high-level intent, and a standard defines mandatory requirements."
+],
+[
+5,
+"A document states that all laptops must use AES-256 disk encryption and passwords must be at least 14 characters. What type of document is this?",
+[
+"Procedure",
+"Policy",
+"Standard",
+"Business impact analysis"
+],
+2,
+"A standard defines specific mandatory requirements that support a policy."
+],
+[
+5,
+"The maximum amount of time a business function can be offline before unacceptable consequences occur is defined by which metric?",
+[
+"Recovery point objective (RPO)",
+"Mean time between failures",
+"Annualized rate of occurrence",
+"Recovery time objective (RTO)"
+],
+3,
+"RTO is the target time to restore service. RPO measures the acceptable data loss."
+],
+[
+5,
+"Staff meet in a conference room to talk through their roles in a simulated ransomware scenario, without touching any production systems. Which type of exercise is this?",
+[
+"Tabletop exercise",
+"Failover test",
+"Parallel processing test",
+"Full-interruption test"
+],
+0,
+"A tabletop is a discussion-based walkthrough with no impact on operations."
+],
+[
+5,
+"Which approach is MOST effective at reducing employee susceptibility to social engineering over time?",
+[
+"A single annual slideshow",
+"Role-based training combined with regular phishing simulations and reporting feedback",
+"Posting a policy on the intranet only",
+"Blocking all external email"
+],
+1,
+"Ongoing, targeted training with simulations reinforces behavior and gives measurable results."
+],
+[
+5,
+"An employee is terminated for cause. Which action should HR and IT perform FIRST?",
+[
+"Wait until the end of the pay period",
+"Archive the employee's email only",
+"Disable the employee's accounts and retrieve company assets",
+"Add the employee to the VPN allow list"
+],
+2,
+"Immediate account deactivation prevents retaliation and unauthorized access."
+],
+[
+5,
+"Who is ultimately accountable for deciding how a dataset is classified and who may access it?",
+[
+"Data custodian",
+"Data processor",
+"System administrator",
+"Data owner"
+],
+3,
+"The data owner is accountable for classification and access decisions. The custodian carries out technical controls."
+],
+[
+5,
+"A metric that shows an increasing number of unpatched critical vulnerabilities across the environment and signals rising exposure is an example of which measure?",
+[
+"Key risk indicator (KRI)",
+"Service level agreement",
+"Recovery point objective",
+"Annualized loss expectancy"
+],
+0,
+"KRIs are forward-looking metrics that warn when risk is increasing."
+],
+[
+5,
+"An organization invites independent researchers to find and report vulnerabilities in its public applications in exchange for payment. Which program is this?",
+[
+"Red team exercise with no scope",
+"Bug bounty",
+"Tabletop exercise",
+"Vendor audit"
+],
+1,
+"A bug bounty rewards external researchers for responsibly disclosed vulnerabilities."
+],
+[
+5,
+"A merchant keeps cardholder numbers in its order database. Which compliance framework governs how this data must be protected?",
+[
+"HIPAA",
+"SOX",
+"PCI DSS",
+"FERPA"
+],
+2,
+"PCI DSS sets security requirements for cardholder data. HIPAA covers health information, SOX financial reporting, and FERPA student records."
+],
+[
+5,
+"Which contract requirement BEST reduces supply chain risk when purchasing commercial software?",
+[
+"Allow the vendor to subcontract without notice",
+"Accept the vendor's default terms with no review",
+"Limit the vendor's liability to zero",
+"Require the vendor to supply an SBOM and attest to secure development practices"
+],
+3,
+"An SBOM and secure development attestation give the buyer visibility and assurance about components and vendor practices."
+]
+]

@@ -1,0 +1,1110 @@
+[
+[
+1,
+"A data center posts a security guard at its main entrance. Which control category BEST describes the guard?",
+[
+"Operational policy",
+"Physical",
+"Managerial",
+"Technical"
+],
+1,
+"A guard is a physical control because it protects facilities and people through tangible means. Technical controls are implemented in systems and software."
+],
+[
+1,
+"A file server computes a SHA-256 hash of a configuration file every night and compares it with the previous value. Which part of the CIA triad is being verified?",
+[
+"Integrity",
+"Confidentiality",
+"Non-repudiation",
+"Availability"
+],
+0,
+"Hash comparison detects unauthorized changes to data, which is integrity. Hashing does not hide content, so it does not address confidentiality."
+],
+[
+1,
+"A router logs every command that an administrator types during a session. Which AAA function does this represent?",
+[
+"Authentication",
+"Federation",
+"Authorization",
+"Accounting"
+],
+3,
+"Accounting records what a user did and when. Authentication proves identity and authorization determines permitted actions."
+],
+[
+1,
+"Which TWO of the following are asymmetric cryptographic algorithms?",
+[
+"ECC",
+"RSA",
+"SHA-256",
+"AES",
+"3DES"
+],
+[
+0,
+1
+],
+"RSA and ECC use public/private key pairs. AES and 3DES are symmetric ciphers and SHA-256 is a hashing algorithm."
+],
+[
+1,
+"An organization must encrypt very large volumes of data at rest with minimal performance impact. Which approach is BEST?",
+[
+"Symmetric encryption such as AES",
+"Steganography",
+"Hashing with SHA-256",
+"Asymmetric encryption such as RSA"
+],
+0,
+"Symmetric algorithms are much faster than asymmetric ones for bulk data. Hashing is one-way and cannot be reversed to recover the data."
+],
+[
+1,
+"Two systems must establish a shared session key over an untrusted network so that a later compromise of a long-term private key does not expose past sessions. Which should be used?",
+[
+"Hardcoded pre-shared symmetric key",
+"Ephemeral Diffie-Hellman (ECDHE)",
+"Static RSA key transport",
+"MD5 key derivation"
+],
+1,
+"Ephemeral Diffie-Hellman generates a fresh key per session, giving perfect forward secrecy. Static RSA key transport exposes past sessions if the private key is later stolen."
+],
+[
+1,
+"An administrator needs to obtain a certificate for a new web server. What must the administrator submit to the certificate authority?",
+[
+"An OCSP response",
+"A certificate signing request (CSR)",
+"The server's private key",
+"A certificate revocation list"
+],
+1,
+"A CSR contains the public key and identity details to be signed by the CA. The private key must never leave the server."
+],
+[
+1,
+"A security researcher conceals a message inside the pixel data of a JPEG image so that observers do not realize a message exists. Which technique is this?",
+[
+"Tokenization",
+"Steganography",
+"Salting",
+"Key stretching"
+],
+1,
+"Steganography hides the existence of data within another file. Encryption protects content but does not hide that a message exists."
+],
+[
+1,
+"A certificate authority needs a dedicated, tamper-resistant appliance to generate and store its root private keys. Which device is BEST?",
+[
+"Trusted platform module (TPM) on a laptop",
+"Smart card",
+"Self-encrypting USB drive",
+"Hardware security module (HSM)"
+],
+3,
+"An HSM is a purpose-built, tamper-resistant device for protecting and using cryptographic keys at scale. A TPM is tied to a single endpoint."
+],
+[
+1,
+"An employee in accounts payable can both add new vendors and approve payments to them. Which security principle is MOST directly violated?",
+[
+"Non-repudiation",
+"Least privilege",
+"Separation of duties",
+"Defense in depth"
+],
+2,
+"Separation of duties splits critical tasks among people to prevent fraud. Least privilege concerns the amount of access, though it is related."
+],
+[
+1,
+"A security team deploys an unused server with fake data to lure attackers and study their techniques. What is this?",
+[
+"Honeypot",
+"Jump server",
+"Bastion host",
+"Sandbox"
+],
+0,
+"A honeypot is a decoy system designed to attract and observe attackers. A jump server is a legitimate hardened administrative gateway."
+],
+[
+2,
+"A switch port receives frames carrying two stacked 802.1Q tags, and the inner tag causes traffic to reach a VLAN the attacker's port is not assigned to. Which attack is this?",
+[
+"VLAN hopping",
+"ARP poisoning",
+"MAC flooding",
+"DHCP starvation"
+],
+0,
+"Double tagging is a classic VLAN hopping technique that exploits the native VLAN. MAC flooding targets the CAM table instead."
+],
+[
+2,
+"Which TWO actions help prevent VLAN hopping?",
+[
+"Enable port-based QoS marking",
+"Increase the MAC address aging timer",
+"Disable trunk negotiation (DTP) on user-facing ports",
+"Enable DHCP snooping",
+"Change the native VLAN to an unused VLAN"
+],
+[
+2,
+4
+],
+"Statically setting access ports and moving the native VLAN away from user VLANs blocks switch spoofing and double tagging. DHCP snooping and QoS do not address trunk behavior."
+],
+[
+2,
+"A switch suddenly begins forwarding unicast traffic out of every port, and logs show thousands of new source MAC addresses on a single access port. Which attack is occurring?",
+[
+"Evil twin",
+"MAC flooding",
+"Deauthentication",
+"DNS poisoning"
+],
+1,
+"Flooding the CAM table forces the switch to fail open and behave like a hub, which lets an attacker sniff traffic. DNS poisoning affects name resolution, not switching."
+],
+[
+2,
+"Users who type the correct bank URL are directed to an attacker's server because the recursive resolver holds a forged record. Which control BEST protects against this?",
+[
+"DNSSEC",
+"DNS over UDP rate limiting",
+"WPA3-Personal",
+"DHCP snooping"
+],
+0,
+"DNSSEC digitally signs DNS records so resolvers can validate their authenticity and integrity. Rate limiting does not verify record authenticity."
+],
+[
+2,
+"After an attacker uses ARP spoofing, all traffic between a workstation and the default gateway passes through the attacker, who reads and alters it. Which attack is this?",
+[
+"On-path attack",
+"Smurf attack",
+"Replay attack",
+"Session fixation"
+],
+0,
+"The attacker sits between two parties, intercepting and modifying communications, which defines an on-path attack. A replay attack only resends captured traffic."
+],
+[
+2,
+"Which TWO controls help mitigate on-path attacks on a local network?",
+[
+"Dynamic ARP inspection",
+"HTTPS with HSTS and certificate validation",
+"Disabling system logging",
+"Longer user password length",
+"Increasing DHCP lease time"
+],
+[
+0,
+1
+],
+"Dynamic ARP inspection blocks forged ARP replies and TLS with certificate validation protects data even if intercepted. Longer passwords do not stop interception."
+],
+[
+2,
+"Travelers at an airport connect to a Wi-Fi network that uses the same SSID as the airline lounge network but with a stronger signal, and a captive page then asks for corporate credentials. What is this attack?",
+[
+"Bluesnarfing",
+"Evil twin",
+"War driving",
+"Rogue access point plugged into the wired LAN"
+],
+1,
+"An evil twin impersonates a legitimate SSID to harvest credentials. A rogue AP is an unauthorized device connected to the organization's own network."
+],
+[
+2,
+"A wireless scan finds an unmanaged access point connected to a wall jack in a conference room, installed by an employee for convenience. What does this represent?",
+[
+"Evil twin",
+"Rogue access point",
+"Bluejacking",
+"Jamming"
+],
+1,
+"A rogue AP is an unauthorized AP attached to the internal network, bypassing controls. An evil twin copies an authorized SSID to deceive users."
+],
+[
+2,
+"Wireless clients keep disconnecting, and a capture shows many forged 802.11 management frames that tell clients to leave the network. Which attack is this?",
+[
+"Bluesnarfing",
+"Deauthentication attack",
+"IV attack",
+"SYN flood"
+],
+1,
+"Spoofed deauthentication frames force clients off an AP, often to capture handshakes or push them to an evil twin. Protected management frames (802.11w) help prevent it."
+],
+[
+2,
+"An attacker connects to a victim's phone over Bluetooth without permission and copies the contact list. Which attack is this?",
+[
+"Bluesnarfing",
+"Vishing",
+"Typosquatting",
+"Bluejacking"
+],
+0,
+"Bluesnarfing steals data over Bluetooth, while bluejacking only sends unsolicited messages."
+],
+[
+2,
+"A server has thousands of half-open TCP connections from spoofed addresses, and legitimate users cannot connect. Which attack is this?",
+[
+"Directory traversal",
+"Rainbow table attack",
+"SYN flood",
+"Pass-the-hash"
+],
+2,
+"A SYN flood exhausts the connection table by never completing the three-way handshake. SYN cookies are a common mitigation."
+],
+[
+2,
+"Attackers use usernames and passwords leaked from an unrelated website breach to log in to a company's customer portal. Which attack is this?",
+[
+"Credential stuffing",
+"Password spraying",
+"Rainbow table attack",
+"Keylogging"
+],
+0,
+"Credential stuffing reuses known username and password pairs from prior breaches. Password spraying tries a few common passwords across many accounts."
+],
+[
+2,
+"An endpoint scanner finds nothing, yet the system hides its own processes and files and survives reboots by modifying low-level OS components. Which malware type is MOST likely?",
+[
+"Adware",
+"Logic bomb",
+"Worm",
+"Rootkit"
+],
+3,
+"Rootkits operate with elevated privileges to conceal their presence from tools running in the OS. Worms are defined by self-replication across networks."
+],
+[
+2,
+"An attacker poses as a new external auditor in person and convinces a receptionist to share a list of server room badge holders. Which social engineering technique is this?",
+[
+"Tailgating",
+"Shoulder surfing",
+"Pretexting",
+"Whaling"
+],
+2,
+"Pretexting uses a fabricated scenario and identity to obtain information. Whaling is phishing aimed at senior executives."
+],
+[
+2,
+"A user logged in to an online bank visits another site, and a hidden request on that page triggers a funds transfer using the user's active session. Which attack is this?",
+[
+"Cross-site request forgery (CSRF)",
+"Directory traversal",
+"Cross-site scripting (XSS)",
+"SQL injection"
+],
+0,
+"CSRF abuses the browser's existing authenticated session to send unwanted requests. XSS injects script into a trusted page rather than forging cross-site requests."
+],
+[
+2,
+"Which control BEST prevents SQL injection in a web application?",
+[
+"Client-side JavaScript validation only",
+"Encrypting the database at rest",
+"Hiding the login page URL",
+"Parameterized queries with server-side input validation"
+],
+3,
+"Parameterized queries separate code from data so input cannot alter the SQL statement. Client-side checks can be bypassed."
+],
+[
+2,
+"A malicious update is delivered through a legitimate vendor's signed software distribution channel to thousands of customers. Which threat is this?",
+[
+"Supply chain attack",
+"Watering hole attack",
+"Brand impersonation",
+"Privilege escalation"
+],
+0,
+"Compromising a trusted supplier to reach downstream customers is a supply chain attack. A watering hole targets a site its victims visit."
+],
+[
+2,
+"A user logs in from Pune and 20 minutes later logs in from Frankfurt. What is this MOST likely an indicator of?",
+[
+"Normal use of the corporate proxy",
+"Compromised account credentials",
+"Expired password policy",
+"Clock drift on the server"
+],
+1,
+"Impossible travel strongly suggests the credentials are being used by someone else. Normal causes are less likely to explain two distant locations in minutes."
+],
+[
+2,
+"An attacker exploits a flaw that the software vendor does not yet know about, and no patch exists. What type of vulnerability is this?",
+[
+"Misconfiguration",
+"Unpatched known CVE",
+"Legacy",
+"Zero-day"
+],
+3,
+"A zero-day is unknown to the vendor and has no patch available at the time of exploitation."
+],
+[
+2,
+"An attacker with a stolen password hash file looks up each hash in a large precomputed table of hashes and plaintexts. Which attack is this?",
+[
+"Password spraying",
+"Credential stuffing",
+"Pass-the-hash",
+"Rainbow table attack"
+],
+3,
+"Rainbow tables are precomputed hash lookups, and unique salts defeat them."
+],
+[
+3,
+"A company hosts a public web server and wants an internal LAN to remain protected if the web server is compromised. Where should the server be placed?",
+[
+"In a screened subnet between two firewalls",
+"Outside the perimeter firewall with no filtering",
+"In the same VLAN as the domain controllers",
+"On the internal LAN with a host firewall"
+],
+0,
+"A screened subnet (DMZ) isolates public-facing systems so a compromise does not provide direct access to internal resources."
+],
+[
+3,
+"A firewall ruleset is processed top-down: (1) Allow TCP 443 any to web server, (2) Deny any any, (3) Allow TCP 22 from 10.1.1.0/24 to management server. Administrators on 10.1.1.0/24 cannot SSH to the management server. What is the cause?",
+[
+"Rule 1 blocks all SSH traffic",
+"Implicit deny is disabled",
+"Rule 2 matches the SSH traffic before rule 3 is evaluated",
+"SSH requires UDP, not TCP"
+],
+2,
+"Firewalls apply the first matching rule, so the deny-all rule placed above the SSH allow rule blocks it. Moving the allow rule above the deny fixes the problem."
+],
+[
+3,
+"A firewall has only two allow rules: TCP 80 and TCP 443 to a web server. A user tries to connect to the server on TCP 8080. What happens?",
+[
+"The traffic is dropped by the implicit deny rule",
+"The firewall asks the user to authenticate",
+"The traffic is allowed because the destination is permitted",
+"The traffic is redirected to TCP 80"
+],
+0,
+"Traffic that matches no rule is denied by the implicit deny at the end of the ruleset."
+],
+[
+3,
+"Which firewall rule BEST permits the 10.0.5.0/24 network to use SFTP to reach a file server at 10.0.9.10 while following least privilege?",
+[
+"Allow TCP 22 from 10.0.5.0/24 to 10.0.9.10",
+"Allow any protocol from 10.0.5.0/24 to any",
+"Allow TCP 21 from any to 10.0.9.10",
+"Allow UDP 69 from any to 10.0.9.10"
+],
+0,
+"SFTP runs over SSH on TCP 22. UDP 69 is TFTP and TCP 21 is plain FTP control."
+],
+[
+3,
+"A branch office and headquarters gateways need a VPN that encrypts the entire original IP packet, including its header, and adds a new outer header. Which IPsec mode is this?",
+[
+"Tunnel mode",
+"Transport mode",
+"Aggressive mode",
+"Authentication-only (AH) transport mode"
+],
+0,
+"Tunnel mode encapsulates the whole original packet and is typical for gateway-to-gateway VPNs. Transport mode protects only the payload and keeps the original header."
+],
+[
+3,
+"Contractors on unmanaged laptops need to reach a few internal web applications through a browser without installing any software. Which solution is BEST?",
+[
+"Open the applications directly to the internet",
+"IPsec site-to-site tunnel",
+"Full-tunnel IPsec with an installed client",
+"Clientless SSL/TLS VPN portal"
+],
+3,
+"A clientless SSL/TLS VPN provides browser-based access over HTTPS. A site-to-site tunnel connects networks, not individual contractors."
+],
+[
+3,
+"In an 802.1X deployment, which component is the switch port that relays authentication messages between the client and the RADIUS server?",
+[
+"Supplicant",
+"Authenticator",
+"Authentication server",
+"Certificate authority"
+],
+1,
+"The network access device (switch or AP) is the authenticator, the client is the supplicant, and RADIUS is the authentication server."
+],
+[
+3,
+"Which switch feature BEST mitigates MAC flooding by limiting the number of MAC addresses learned on an access port?",
+[
+"Port security",
+"Trunk negotiation",
+"DNSSEC",
+"Spanning tree"
+],
+0,
+"Port security caps allowed MAC addresses per port and can shut down or restrict the port on violation."
+],
+[
+3,
+"A rogue DHCP server on a user VLAN hands out an attacker's address as the default gateway. Which feature prevents this?",
+[
+"DHCP snooping with trusted ports",
+"MAC filtering on the router",
+"NAT overload",
+"Port mirroring"
+],
+0,
+"DHCP snooping permits server responses only on trusted ports, discarding offers from untrusted access ports."
+],
+[
+3,
+"Which security property does DNSSEC provide?",
+[
+"Load balancing of name servers",
+"Blocking of malicious domains",
+"Encryption of DNS queries for confidentiality",
+"Origin authentication and integrity of DNS data"
+],
+3,
+"DNSSEC signs records so they can be validated, but it does not encrypt queries. DoH or DoT provide confidentiality."
+],
+[
+3,
+"An application must query a directory service over an encrypted connection using the standard secure LDAP port. Which port should be used?",
+[
+"TCP 88",
+"TCP 3389",
+"TCP 389",
+"TCP 636"
+],
+3,
+"LDAPS uses TCP 636. TCP 389 is unencrypted LDAP by default, 88 is Kerberos and 3389 is RDP."
+],
+[
+3,
+"A network team wants to monitor devices with both authentication and encryption of management data. Which version of SNMP should be used?",
+[
+"SNMP with a community string of private",
+"SNMPv1",
+"SNMPv2c",
+"SNMPv3"
+],
+3,
+"SNMPv3 adds user-based authentication and encryption. Versions 1 and 2c send community strings in cleartext."
+],
+[
+3,
+"Which TWO protocols transmit credentials in cleartext and should be blocked at the perimeter in favor of secure alternatives?",
+[
+"Telnet",
+"FTP",
+"LDAPS",
+"SSH",
+"SFTP"
+],
+[
+0,
+1
+],
+"Telnet and FTP send usernames and passwords unencrypted. SSH, SFTP and LDAPS are encrypted."
+],
+[
+3,
+"An IDS needs to see a copy of traffic without sitting in the data path or risking an outage if it fails. Which method is BEST?",
+[
+"A network TAP or SPAN port",
+"Inline placement behind the firewall",
+"Using NAT to route traffic through it",
+"Placing it in the screened subnet as a gateway"
+],
+0,
+"A TAP or SPAN port provides a passive copy of traffic, so the sensor failing does not interrupt production."
+],
+[
+3,
+"A database server needs storage that survives the failure of any single disk while still offering good read performance and efficient capacity use. Which RAID level is the BEST fit?",
+[
+"RAID 0",
+"JBOD",
+"RAID 1 with a single disk",
+"RAID 5"
+],
+3,
+"RAID 5 stripes data with distributed parity and tolerates one disk failure. RAID 0 has no redundancy."
+],
+[
+3,
+"Before deploying access points in a new warehouse, an engineer wants to determine optimal AP placement and identify coverage gaps. What should be performed?",
+[
+"A penetration test of the SSID",
+"A vulnerability scan of the APs",
+"A password audit",
+"A wireless site survey with a heat map"
+],
+3,
+"A site survey with heat maps shows signal strength and interference so APs can be placed for coverage."
+],
+[
+4,
+"A scan shows TCP 3389 reachable from the internet on a production server. What is the BEST remediation?",
+[
+"Remove direct exposure and require access through a VPN or RD Gateway with MFA",
+"Disable the host firewall",
+"Change the port to 3390 on the same public IP",
+"Share the RDP password only with administrators"
+],
+0,
+"RDP should not be directly exposed. Placing it behind a VPN or gateway with MFA reduces attack surface, while changing ports is only obscurity."
+],
+[
+4,
+"Network devices send logs to a central collector over UDP 514, and the security team needs encrypted, reliable delivery. Which is the BEST solution?",
+[
+"UDP 514 with a larger buffer",
+"Syslog over TLS using TCP",
+"NetFlow export",
+"SNMPv1 traps"
+],
+1,
+"Syslog over TLS (TCP 6514) provides confidentiality and reliable transport. Plain UDP syslog is unencrypted and may drop messages."
+],
+[
+4,
+"A mail client is configured to use implicit TLS for both retrieving and sending email. Which port pair is correct for IMAPS and SMTPS?",
+[
+"993 and 465",
+"995 and 143",
+"143 and 25",
+"110 and 25"
+],
+0,
+"IMAPS uses TCP 993 and SMTPS commonly uses TCP 465. Ports 143, 25 and 110 are cleartext by default."
+],
+[
+4,
+"Which protocol provides secure file transfer through an SSH subsystem on TCP 22?",
+[
+"SMB",
+"SFTP",
+"FTPS",
+"TFTP"
+],
+1,
+"SFTP runs over SSH on a single port. FTPS wraps FTP in TLS and uses additional ports."
+],
+[
+4,
+"Firewall logs show one external IP receiving denies for sequential TCP ports on a single host within seconds. What does this MOST likely indicate?",
+[
+"Data exfiltration",
+"A DDoS attack",
+"A misconfigured NTP server",
+"Reconnaissance through a port scan"
+],
+3,
+"Sequential connection attempts to many ports are the signature of a port scan used to enumerate services."
+],
+[
+4,
+"In the incident response lifecycle, which phase normally follows containment?",
+[
+"Preparation",
+"Eradication",
+"Lessons learned",
+"Detection"
+],
+1,
+"After containment limits the damage, eradication removes the root cause such as malware, followed by recovery."
+],
+[
+4,
+"A SOC is overwhelmed by SIEM alerts that investigation shows are benign. What is the BEST action?",
+[
+"Ignore alerts with low severity",
+"Stop collecting logs from noisy sources",
+"Tune the correlation rules and thresholds to reduce false positives",
+"Disable all alerting during business hours"
+],
+2,
+"Tuning improves detection quality without losing visibility. Disabling log sources or alerts creates blind spots."
+],
+[
+4,
+"Which data source BEST shows traffic volumes and communicating hosts across the network without storing full packet payloads?",
+[
+"NetFlow",
+"Vulnerability scan report",
+"Application error logs",
+"Full packet capture"
+],
+0,
+"NetFlow summarizes conversations such as source, destination, ports and byte counts with far less storage than full capture."
+],
+[
+4,
+"Which factor should MOST increase the remediation priority of a vulnerability?",
+[
+"The vendor is well known",
+"It was published over a year ago",
+"The CVE description is lengthy",
+"It is actively exploited in the wild on an internet-facing system"
+],
+3,
+"Active exploitation and exposure drive real risk, so they take priority over age or vendor reputation."
+],
+[
+4,
+"Which authentication protocol uses tickets issued by a key distribution center and runs on port 88?",
+[
+"RADIUS",
+"Kerberos",
+"OAuth",
+"SAML"
+],
+1,
+"Kerberos uses a KDC to issue tickets for single sign-on in Active Directory environments."
+],
+[
+4,
+"Network engineers need device administration AAA that encrypts the entire payload and allows per-command authorization on routers. Which protocol is BEST?",
+[
+"RADIUS",
+"LDAP",
+"TACACS+",
+"Kerberos"
+],
+2,
+"TACACS+ separates authentication, authorization and accounting and supports command-level authorization. RADIUS encrypts only the password."
+],
+[
+4,
+"Users report being flooded with MFA push requests until someone approves one. Which control BEST mitigates this?",
+[
+"Increase the password length",
+"Number matching or phishing-resistant MFA",
+"Send push prompts more frequently",
+"Disable lockout policies"
+],
+1,
+"Number matching requires the user to enter a value shown at the login screen, making blind approvals ineffective."
+],
+[
+4,
+"Administrators check out shared privileged account credentials from a secure repository that rotates them after each use. Which solution is this?",
+[
+"Kerberos delegation",
+"Privileged access management password vault",
+"Single sign-on portal",
+"Certificate pinning"
+],
+1,
+"A PAM vault controls, logs and rotates privileged credentials. SSO does not manage shared secrets."
+],
+[
+4,
+"Which email authentication mechanism uses a cryptographic signature in the message header so receivers can verify the message was not altered and came from the domain?",
+[
+"SPF",
+"MX records",
+"S/MIME encryption",
+"DKIM"
+],
+3,
+"DKIM signs outgoing messages with a domain key published in DNS. SPF only checks the sending IP address."
+],
+[
+4,
+"Before deploying a critical OS patch to all production servers, what should be done FIRST?",
+[
+"Disable antivirus",
+"Test it in a non-production environment",
+"Remove the rollback plan",
+"Deploy to all servers immediately"
+],
+1,
+"Testing in staging validates compatibility and avoids widespread outages."
+],
+[
+4,
+"Which backup strategy keeps three copies of data on two different media types with one copy stored off-site?",
+[
+"Differential backup",
+"The 3-2-1 rule",
+"RAID 10",
+"Grandfather-father-son rotation"
+],
+1,
+"The 3-2-1 rule describes three copies, two media types and one off-site copy."
+],
+[
+4,
+"An employee leaves the company, but their accounts remain active for months. Which control BEST addresses this?",
+[
+"Longer password policy",
+"Automated deprovisioning triggered by the HR system",
+"Disabling account lockout",
+"Annual security awareness training"
+],
+1,
+"Tying account removal to HR events removes orphaned accounts quickly and consistently."
+],
+[
+4,
+"Litigation is reasonably anticipated against a company. What should be issued to ensure relevant emails are not deleted?",
+[
+"Legal hold",
+"Retention reduction",
+"Chain of custody",
+"Data sanitization order"
+],
+0,
+"A legal hold suspends normal deletion so relevant information is preserved for e-discovery."
+],
+[
+4,
+"Which control prevents users from resolving domains known to host malware or phishing sites?",
+[
+"DNS filtering",
+"Port mirroring",
+"MAC filtering",
+"Disk encryption"
+],
+0,
+"DNS filtering blocks or sinkholes lookups for malicious domains before a connection is made."
+],
+[
+4,
+"A device attached to a SPAN port analyzes traffic and generates alerts but cannot stop malicious packets. What is it?",
+[
+"Intrusion detection system (IDS)",
+"Next-generation firewall inline",
+"Intrusion prevention system (IPS)",
+"Web application firewall"
+],
+0,
+"A passive device that only alerts is an IDS. An IPS sits inline and can block traffic."
+],
+[
+4,
+"Which TWO log sources would BEST help investigate suspected data exfiltration over the web?",
+[
+"NetFlow records",
+"Badge reader logs for the server room",
+"Printer toner counters",
+"Patch deployment reports",
+"Web proxy logs"
+],
+[
+0,
+4
+],
+"Proxy logs show destinations and volumes of web requests and NetFlow shows outbound conversations. The others do not show network data movement."
+],
+[
+4,
+"Which TWO pairs correctly map an insecure protocol to a secure replacement?",
+[
+"LDAP to LDAP over UDP",
+"HTTP to HTTPS",
+"FTP to TFTP",
+"SNMPv3 to SNMPv1",
+"Telnet to SSH"
+],
+[
+1,
+4
+],
+"SSH replaces Telnet and HTTPS replaces HTTP. TFTP is also insecure and SNMPv1 is weaker than v3."
+],
+[
+4,
+"An endpoint contacts the same unknown external IP address every 60 seconds, including at night. What does this MOST likely indicate?",
+[
+"DNS zone transfer",
+"Normal NTP synchronization",
+"Command-and-control beaconing",
+"A scheduled OS update"
+],
+2,
+"Regular, automated check-ins to an unfamiliar host are typical of malware beaconing to a C2 server."
+],
+[
+4,
+"Which incident response activity reviews what went well and poorly to improve future handling?",
+[
+"Lessons learned",
+"Containment",
+"Preparation",
+"Eradication"
+],
+0,
+"Lessons learned occurs after recovery and feeds improvements into the plan and controls."
+],
+[
+4,
+"A company buys phones, allows employees limited personal use, and enforces its own security policies. Which deployment model is this?",
+[
+"CYOD",
+"Unmanaged personal device",
+"COPE",
+"BYOD"
+],
+2,
+"Corporate-owned, personally enabled devices are owned and controlled by the organization with personal use allowed."
+],
+[
+5,
+"A single loss expectancy is $50,000 and the annualized rate of occurrence is 0.2. What is the annualized loss expectancy?",
+[
+"$250,000",
+"$50,000",
+"$100,000",
+"$10,000"
+],
+3,
+"ALE equals SLE multiplied by ARO, so 50,000 x 0.2 = $10,000."
+],
+[
+5,
+"The cost of mitigating a low-impact risk far exceeds the potential loss, and management formally acknowledges it. Which risk strategy is this?",
+[
+"Transference",
+"Mitigation",
+"Avoidance",
+"Acceptance"
+],
+3,
+"Acceptance is a documented decision to live with a risk when mitigation is not cost-effective."
+],
+[
+5,
+"A workshop rates each risk as high, medium or low based on expert opinion rather than monetary values. Which analysis type is this?",
+[
+"Quantitative",
+"Qualitative",
+"Predictive",
+"Forensic"
+],
+1,
+"Qualitative analysis uses subjective ratings. Quantitative uses figures such as SLE and ALE."
+],
+[
+5,
+"Which activity is an example of passive reconnaissance during a penetration test?",
+[
+"Performing a ping sweep",
+"Grabbing banners from services",
+"Running a port scan",
+"Searching public WHOIS and DNS records"
+],
+3,
+"Passive reconnaissance gathers information without interacting with target systems."
+],
+[
+5,
+"A penetration tester is given only the company name and no network details. Which type of test is this?",
+[
+"Unknown environment",
+"Compliance audit",
+"Partially known environment",
+"Known environment"
+],
+0,
+"A tester with no prior information is performing an unknown environment (black box) test."
+],
+[
+5,
+"Which metric represents the average time required to repair a failed component and restore it to service?",
+[
+"ALE",
+"MTTR",
+"RPO",
+"MTBF"
+],
+1,
+"MTTR measures repair time. MTBF measures the average time between failures."
+],
+[
+5,
+"Incident response staff gather to discuss how they would respond to a hypothetical ransomware scenario without touching any systems. What is this exercise?",
+[
+"Failover test",
+"Parallel processing test",
+"Tabletop exercise",
+"Penetration test"
+],
+2,
+"Tabletop exercises are discussion-based walk-throughs of a scenario."
+],
+[
+5,
+"A company shares confidential product plans with a potential vendor during evaluation. Which agreement BEST prevents disclosure?",
+[
+"Memorandum of agreement",
+"Service level agreement",
+"Non-disclosure agreement (NDA)",
+"Statement of work"
+],
+2,
+"An NDA legally restricts disclosure of confidential information."
+],
+[
+5,
+"Which activity should be completed BEFORE signing a contract with a new vendor that will handle sensitive customer data?",
+[
+"Post-incident review",
+"Annual penetration test of the vendor",
+"Third-party risk assessment (due diligence)",
+"Termination of the old vendor"
+],
+2,
+"Due diligence evaluates a vendor's security posture before the relationship starts."
+],
+[
+5,
+"Under GDPR, within what time frame must a controller notify the supervisory authority after becoming aware of a reportable personal data breach?",
+[
+"30 days",
+"7 days",
+"72 hours",
+"24 hours"
+],
+2,
+"GDPR requires notification within 72 hours where feasible."
+],
+[
+5,
+"Which standard governs organizations that store, process or transmit payment card data?",
+[
+"HIPAA",
+"SOX",
+"FERPA",
+"PCI DSS"
+],
+3,
+"PCI DSS is the industry standard for cardholder data. HIPAA covers health information."
+],
+[
+5,
+"Which governance document provides detailed step-by-step instructions for completing a specific task, such as onboarding a new user account?",
+[
+"Policy",
+"Guideline",
+"Procedure",
+"Standard"
+],
+2,
+"Procedures give step-by-step instructions, while policies state high-level intent."
+],
+[
+5,
+"In a data governance model, which role makes the final decision on how sensitive a particular business dataset is?",
+[
+"Data owner",
+"Data custodian",
+"Data processor",
+"System administrator"
+],
+0,
+"The data owner is accountable for classification and access decisions. A custodian carries out technical protection."
+],
+[
+5,
+"What is the primary purpose of a clean desk policy?",
+[
+"Enforce hardware inventory",
+"Prevent tailgating",
+"Improve employee productivity",
+"Reduce exposure of sensitive information left unattended"
+],
+3,
+"Clearing papers and media from desks reduces risk of theft or viewing of sensitive material."
+],
+[
+5,
+"An organization needs an independent party to assess its controls so it can obtain a formal certification. Which type of audit is needed?",
+[
+"External audit",
+"Internal audit",
+"Peer review",
+"Self-assessment"
+],
+0,
+"Certification generally requires an independent external auditor."
+],
+[
+5,
+"Which term describes the acceptable level of variation around an organization's risk appetite?",
+[
+"Risk register",
+"Inherent risk",
+"Residual risk",
+"Risk tolerance"
+],
+3,
+"Risk tolerance sets boundaries around the appetite. Residual risk remains after controls are applied."
+],
+[
+5,
+"A company invites independent researchers to report vulnerabilities in its applications in exchange for rewards. What is this program called?",
+[
+"Red team exercise",
+"Tabletop exercise",
+"Vulnerability scan",
+"Bug bounty"
+],
+3,
+"Bug bounty programs reward external researchers for responsibly disclosed vulnerabilities."
+],
+[
+5,
+"Which TWO are rights granted to data subjects under GDPR?",
+[
+"Right of access to their data",
+"Right to unlimited retention of data by the controller",
+"Right to modify the controller's encryption keys",
+"Right to audit the controller's source code",
+"Right to data portability"
+],
+[
+0,
+4
+],
+"GDPR grants individuals access and portability rights, among others. The remaining options are not GDPR rights."
+]
+]

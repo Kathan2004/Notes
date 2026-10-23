@@ -1,0 +1,1106 @@
+[
+[
+1,
+"A new document states that all company laptops must use AES-256 full-disk encryption. Which type of governance document is this?",
+[
+"Policy",
+"Standard",
+"Procedure",
+"Guideline"
+],
+1,
+"A standard defines specific, mandatory technical requirements. A policy states high-level intent, and a procedure gives step-by-step instructions."
+],
+[
+1,
+"The security team publishes a document suggesting, but not requiring, that staff use a password manager. Which document type is this?",
+[
+"Policy",
+"Standard",
+"Procedure",
+"Guideline"
+],
+3,
+"Guidelines are optional recommendations. Policies, standards and procedures are mandatory."
+],
+[
+1,
+"Which of the following is an example of a managerial control?",
+[
+"Annual risk assessment",
+"Host-based firewall rule",
+"Security guard at the lobby",
+"Biometric door lock"
+],
+0,
+"Managerial controls address risk through planning, assessment and oversight. The others are technical or physical controls."
+],
+[
+1,
+"A file integrity tool compares hashes of critical configuration files each night to detect unauthorized changes. Which element of the CIA triad is being protected?",
+[
+"Confidentiality",
+"Integrity",
+"Availability",
+"Non-repudiation"
+],
+1,
+"Detecting unauthorized modification of data protects integrity. Non-repudiation is not part of the CIA triad."
+],
+[
+1,
+"A RADIUS server records the time each user logged in and which network resources they used. Which AAA function does this describe?",
+[
+"Authentication",
+"Authorization",
+"Accounting",
+"Assurance"
+],
+2,
+"Accounting tracks user activity and resource usage. Authentication verifies identity and authorization determines permitted access."
+],
+[
+1,
+"A company requires that the employee who creates a new vendor record cannot also approve payments to that vendor. Which principle is being applied?",
+[
+"Least privilege",
+"Job rotation",
+"Separation of duties",
+"Mandatory vacation"
+],
+2,
+"Separation of duties splits a sensitive process among multiple people to prevent fraud. Least privilege limits rights but does not split a process."
+],
+[
+1,
+"Which TWO of the following are technical security controls?",
+[
+"Host-based firewall",
+"Security awareness training",
+"Encryption of data at rest",
+"Pre-employment background checks",
+"Visitor sign-in policy"
+],
+[
+0,
+2
+],
+"Firewalls and encryption are implemented in technology. Training, background checks and policies are managerial or operational controls."
+],
+[
+1,
+"A change request includes a section describing which systems, users and processes could be affected if the change goes wrong. What is this section called?",
+[
+"Backout plan",
+"Impact analysis",
+"Maintenance window",
+"Standard operating procedure"
+],
+1,
+"Impact analysis evaluates the effects of a change. A backout plan describes how to reverse it."
+],
+[
+1,
+"Within a PKI, which entity verifies the identity of a requester before the certificate authority issues a certificate?",
+[
+"Registration authority",
+"Online responder",
+"Key escrow agent",
+"Certificate revocation list"
+],
+0,
+"The registration authority validates requests on behalf of the CA. An OCSP responder only reports revocation status."
+],
+[
+1,
+"An organization decides that every access request is evaluated using the user's identity, device health and location instead of trusting anything on the internal network. Which concept is this?",
+[
+"Defense in depth",
+"Zero Trust",
+"Security through obscurity",
+"Least functionality"
+],
+1,
+"Zero Trust removes implicit trust based on network location and continuously verifies each request."
+],
+[
+1,
+"A consultant documents the organization's current security controls, compares them with a target framework and lists the missing items. Which activity is this?",
+[
+"Penetration test",
+"Gap analysis",
+"Tabletop exercise",
+"Business impact analysis"
+],
+1,
+"A gap analysis measures the difference between the current and desired state. A BIA assesses the effect of disruption on business functions."
+],
+[
+2,
+"A disgruntled employee emails a customer list to a competitor shortly before resigning. Which threat actor type does this BEST represent?",
+[
+"Hacktivist",
+"Insider threat",
+"Nation-state",
+"Organized crime"
+],
+1,
+"The person already has legitimate access and misuses it, which defines an insider threat."
+],
+[
+2,
+"An attacker with little technical skill downloads a ready-made exploit kit and runs it against random websites. Which threat actor is this?",
+[
+"Unskilled attacker",
+"Nation-state",
+"Advanced persistent threat",
+"Shadow IT"
+],
+0,
+"Unskilled attackers rely on tools built by others. An APT would be well funded and use custom tools."
+],
+[
+2,
+"The finance department receives an email that appears to come from the CEO, urgently requesting a wire transfer to a new bank account. Which attack is this?",
+[
+"Watering hole",
+"Typosquatting",
+"Business email compromise",
+"Vishing"
+],
+2,
+"Business email compromise impersonates an executive or trusted party to trick staff into transferring money."
+],
+[
+2,
+"A caller claims to be from the IT help desk and asks an employee to read aloud the six-digit code just sent to their phone. Which attack is this?",
+[
+"Smishing",
+"Vishing",
+"Whaling",
+"Pharming"
+],
+1,
+"Voice-based social engineering is vishing. The code is a one-time MFA value that the attacker wants to reuse."
+],
+[
+2,
+"An attacker poses as an external auditor and invents a believable story to obtain a list of system administrators. Which social engineering technique is this?",
+[
+"Pretexting",
+"Tailgating",
+"Shoulder surfing",
+"Dumpster diving"
+],
+0,
+"Pretexting uses a fabricated scenario to gain information or access."
+],
+[
+2,
+"Attackers exploit a vulnerability for which the vendor has not yet released a patch. What is this called?",
+[
+"Legacy vulnerability",
+"Zero-day",
+"Misconfiguration",
+"Race condition"
+],
+1,
+"A zero-day is a flaw unknown to or unpatched by the vendor at the time of exploitation."
+],
+[
+2,
+"A trusted vendor's signed software update installs a backdoor on thousands of customer systems. Which attack category is this?",
+[
+"Supply chain attack",
+"Brute force",
+"On-path attack",
+"Replay attack"
+],
+0,
+"Compromising a trusted supplier to reach downstream customers is a supply chain attack."
+],
+[
+2,
+"Which TWO of the following are indicators of a compromised user account?",
+[
+"A login from a distant country minutes after a local login",
+"A scheduled patch window starting",
+"Large outbound data transfers at 3 AM from the user's workstation",
+"A routine backup completing successfully",
+"The user changing their desk phone speed-dial"
+],
+[
+0,
+2
+],
+"Impossible travel and unusual off-hours data transfers are classic indicators of compromise. The other events are normal activity."
+],
+[
+2,
+"Malware modifies the operating system kernel to hide its processes and files from security tools. Which type of malware is this?",
+[
+"Worm",
+"Rootkit",
+"Adware",
+"Logic bomb"
+],
+1,
+"Rootkits conceal their presence by altering low-level OS components."
+],
+[
+2,
+"An attacker captures a valid authentication token from the network and later resubmits it to gain access. Which attack is this, and which control mitigates it?",
+[
+"Replay; timestamps or nonces",
+"Pass-the-hash; salting",
+"Downgrade; longer keys",
+"Smurf; egress filtering"
+],
+0,
+"Replaying captured data is mitigated by values that expire or are single-use, such as nonces and timestamps."
+],
+[
+2,
+"A process running in a guest virtual machine breaks out and gains control of the hypervisor. What is this attack called?",
+[
+"VM escape",
+"Buffer overflow",
+"Cross-site request forgery",
+"Sandbox fingerprinting"
+],
+0,
+"VM escape breaks the isolation between a guest and its host."
+],
+[
+2,
+"Which control BEST prevents unapproved executables from running on a set of kiosk computers?",
+[
+"Application allow list",
+"Host-based IDS",
+"Full-disk encryption",
+"Screen-lock timeout"
+],
+0,
+"An allow list permits only approved software to run. An IDS only detects, and encryption does not control execution."
+],
+[
+2,
+"An organization is experiencing credential stuffing using passwords leaked from other websites. Which control is MOST effective?",
+[
+"Multifactor authentication",
+"Longer password history",
+"Hiding the login page URL",
+"Disabling password hints"
+],
+0,
+"MFA means a stolen password alone is not enough, which defeats reuse of leaked credentials."
+],
+[
+2,
+"Analysts see a single workstation sending thousands of unusually long TXT record queries to one external domain. Which activity is MOST likely occurring?",
+[
+"DNS tunneling",
+"ARP poisoning",
+"SYN flood",
+"Domain hijacking"
+],
+0,
+"Encoding data in large DNS queries is a common covert exfiltration and command-and-control channel."
+],
+[
+2,
+"A stranger walks into a secured area directly behind an employee who has just badged in. Which attack is this?",
+[
+"Pharming",
+"Tailgating",
+"Typosquatting",
+"Credential stuffing"
+],
+1,
+"Following an authorized person through a door without presenting credentials is tailgating."
+],
+[
+2,
+"A database exposed to the internet is accessible with its factory-default administrator password. Which vulnerability type is this?",
+[
+"Zero-day",
+"Misconfiguration",
+"Memory injection",
+"Race condition"
+],
+1,
+"Leaving default credentials in place is an insecure configuration, not an unknown software flaw."
+],
+[
+2,
+"Two different files are found to produce the same hash value. Which term describes this?",
+[
+"Salting",
+"Collision",
+"Key stretching",
+"Obfuscation"
+],
+1,
+"A collision is when different inputs generate the same hash, which undermines integrity guarantees."
+],
+[
+2,
+"Malware spreads from host to host across a network on its own, without any user action. Which type is this?",
+[
+"Trojan",
+"Worm",
+"Keylogger",
+"Spyware"
+],
+1,
+"Worms self-replicate and propagate automatically. A trojan needs a user to run it."
+],
+[
+2,
+"Which TWO actions help reduce the risk of successful phishing?",
+[
+"Email filtering with URL rewriting",
+"Disabling mail server logging",
+"Regular simulated phishing exercises",
+"Enabling macros by default in documents",
+"Removing DMARC records"
+],
+[
+0,
+2
+],
+"Technical filtering plus user training reduce phishing success. The other options weaken defenses."
+],
+[
+2,
+"Which control BEST ensures an organization can recover its data after a ransomware attack that encrypts network shares?",
+[
+"Offline or immutable backups",
+"Longer passwords",
+"Screen savers with locks",
+"Additional VLANs"
+],
+0,
+"Backups the attacker cannot reach or alter allow restoration without paying the ransom."
+],
+[
+3,
+"A device receives a copy of network traffic from a switch SPAN port and generates alerts without being able to block anything. What is this device?",
+[
+"IPS",
+"IDS",
+"Next-generation firewall inline",
+"Proxy server"
+],
+1,
+"A passive device on a mirrored port can only detect and alert, which is an IDS."
+],
+[
+3,
+"Which device distributes incoming requests across several servers and removes failed servers from rotation using health checks?",
+[
+"Load balancer",
+"Jump server",
+"Honeypot",
+"Network tap"
+],
+0,
+"Load balancers spread traffic and use health checks to maintain availability."
+],
+[
+3,
+"Where should public-facing web servers be placed so that a compromise does not give direct access to the internal network?",
+[
+"Inside the internal LAN",
+"In a screened subnet",
+"On the management VLAN",
+"Directly on the internet without a firewall"
+],
+1,
+"A screened subnet (DMZ) isolates exposed services between two filtering boundaries."
+],
+[
+3,
+"Which control BEST protects the data on a laptop if it is stolen?",
+[
+"Full-disk encryption",
+"File integrity monitoring",
+"Data loss prevention agent",
+"Application allow list"
+],
+0,
+"Full-disk encryption keeps data unreadable without the key when the drive is removed or the device is lost."
+],
+[
+3,
+"Two offices need a site-to-site tunnel that encrypts entire IP packets across the internet. Which protocol suite is MOST appropriate?",
+[
+"IPsec",
+"DNSSEC",
+"S/MIME",
+"SNMPv2"
+],
+0,
+"IPsec encrypts and authenticates IP traffic and is commonly used for site-to-site VPNs."
+],
+[
+3,
+"A company wants to block logins to its cloud application from countries where it has no employees. Which control is this?",
+[
+"Geofencing",
+"Tokenization",
+"Obfuscation",
+"Segmentation"
+],
+0,
+"Geofencing restricts access based on geographic location."
+],
+[
+3,
+"In a SaaS model, which of the following remains the customer's responsibility?",
+[
+"Application code patches",
+"Data classification and user access configuration",
+"Physical data center security",
+"Hypervisor maintenance"
+],
+1,
+"Customers always retain accountability for their data and how users are granted access."
+],
+[
+3,
+"Which technology shares the host operating system kernel while isolating applications in separate user spaces?",
+[
+"Containers",
+"Type 1 hypervisor virtual machines",
+"Air-gapped hosts",
+"Hardware security modules"
+],
+0,
+"Containers share the host kernel, making them lighter than full virtual machines."
+],
+[
+3,
+"Two servers are deployed so that one handles all traffic while the other waits idle and takes over if the first fails. Which design is this?",
+[
+"Active-passive",
+"Active-active",
+"Load-sharing cluster",
+"Hot aisle containment"
+],
+0,
+"Active-passive keeps a standby node that assumes the workload upon failure."
+],
+[
+3,
+"Which RAID level provides redundancy by writing identical data to two disks?",
+[
+"RAID 0",
+"RAID 1",
+"RAID 5",
+"RAID 6"
+],
+1,
+"RAID 1 mirrors data. RAID 0 stripes with no redundancy."
+],
+[
+3,
+"Which TWO changes replace insecure protocols with secure alternatives?",
+[
+"Replace Telnet with SSH",
+"Replace FTP with TFTP",
+"Replace HTTP with HTTPS",
+"Replace SNMPv3 with SNMPv1",
+"Replace LDAPS with LDAP"
+],
+[
+0,
+2
+],
+"SSH and HTTPS add encryption. TFTP, SNMPv1 and plain LDAP are not more secure."
+],
+[
+3,
+"A switch is configured to accept only a specific MAC address on each access port. Which feature is this?",
+[
+"Port security",
+"Spanning tree",
+"Link aggregation",
+"Flood guard on the router"
+],
+0,
+"Port security limits which MAC addresses can use a switch port."
+],
+[
+3,
+"A data center needs to keep servers running for several hours during a prolonged utility outage. Which solution is required in addition to a UPS?",
+[
+"Generator",
+"Surge protector",
+"Fire suppression",
+"Redundant NIC"
+],
+0,
+"A UPS bridges short interruptions; a generator provides long-term power."
+],
+[
+3,
+"Which hardware component stores cryptographic keys and can attest to the integrity of the boot process on a single device?",
+[
+"TPM",
+"HSM",
+"Smart card reader",
+"Network tap"
+],
+0,
+"A Trusted Platform Module is a chip on the endpoint for key storage and measured boot. An HSM is a separate device serving many applications."
+],
+[
+3,
+"A certificate authority's private keys must be generated and stored in a dedicated tamper-resistant device. Which should be used?",
+[
+"HSM",
+"TPM",
+"Secure enclave on a phone",
+"USB flash drive"
+],
+0,
+"Hardware security modules are designed to protect high-value keys such as those of a CA."
+],
+[
+3,
+"Remote users send only traffic destined for corporate resources through the VPN, while other traffic goes directly to the internet. Which configuration is this?",
+[
+"Split tunnel",
+"Full tunnel",
+"Site-to-site",
+"Out-of-band"
+],
+0,
+"Split tunneling sends only selected traffic through the VPN, which reduces load but also reduces visibility."
+],
+[
+4,
+"A SOC is overwhelmed by alerts, most of which are benign. What is the BEST action?",
+[
+"Disable the SIEM",
+"Tune the detection rules and thresholds",
+"Ignore low-severity alerts",
+"Reduce log retention"
+],
+1,
+"Tuning reduces false positives while preserving detection. Disabling or ignoring sources creates blind spots."
+],
+[
+4,
+"Besides the CVSS base score, which factors BEST help prioritize remediation of vulnerabilities?",
+[
+"Vendor logo and release date",
+"Asset criticality and whether exploits are active",
+"The scanner brand used",
+"The alphabetical order of hosts"
+],
+1,
+"Business criticality and exploitability place the score in context."
+],
+[
+4,
+"Creating the incident response plan and training the response team occurs in which phase?",
+[
+"Detection",
+"Containment",
+"Preparation",
+"Recovery"
+],
+2,
+"Preparation covers plans, tools and training before an incident happens."
+],
+[
+4,
+"Legal counsel expects litigation and instructs IT to preserve all relevant email and documents. What is this instruction called?",
+[
+"Legal hold",
+"Data minimization",
+"Chain of custody",
+"Retention schedule"
+],
+0,
+"A legal hold suspends normal deletion so potentially relevant data is preserved."
+],
+[
+4,
+"Which practice BEST protects log integrity if an attacker compromises a server?",
+[
+"Keep logs only on the local server",
+"Forward logs to a separate central log server",
+"Reduce log verbosity",
+"Rotate logs weekly and delete old ones"
+],
+1,
+"Off-host logging means the attacker cannot easily alter or erase evidence."
+],
+[
+4,
+"How can a forensic analyst demonstrate that a copied disk image is identical to the original drive?",
+[
+"Compare the hash values of the two",
+"Compare their file names",
+"Check the capacity only",
+"Encrypt both with the same key"
+],
+0,
+"Matching cryptographic hashes show that the image is a bit-for-bit match."
+],
+[
+4,
+"An employee is terminated for cause. What should IT do FIRST?",
+[
+"Delete the user's mailbox",
+"Disable the user's accounts and revoke access",
+"Archive the user's home directory",
+"Reset the manager's password"
+],
+1,
+"Disabling access immediately limits risk. Deleting data would destroy potential evidence."
+],
+[
+4,
+"A manager reviews each quarter whether team members still need the access they hold. What is this process?",
+[
+"Access recertification",
+"Provisioning",
+"Federation",
+"Tokenization"
+],
+0,
+"Periodic access reviews confirm permissions remain appropriate and remove excess access."
+],
+[
+4,
+"Administrators check out shared privileged credentials from a vault, and their sessions are recorded. Which solution is this?",
+[
+"Privileged access management",
+"Single sign-on",
+"Network access control",
+"Data loss prevention"
+],
+0,
+"PAM vaults, rotates and audits privileged credentials and sessions."
+],
+[
+4,
+"A biometric system accepts an unauthorized person as legitimate. Which error rate does this affect?",
+[
+"False rejection rate",
+"False acceptance rate",
+"Crossover error rate only",
+"Failure to enroll rate"
+],
+1,
+"A false acceptance occurs when an impostor is incorrectly authenticated."
+],
+[
+4,
+"Which TWO activities belong to the eradication phase of incident response?",
+[
+"Remove malware from affected hosts",
+"Restore data from clean backups",
+"Patch the exploited vulnerability",
+"Issue a press release",
+"Hold the lessons-learned meeting"
+],
+[
+0,
+2
+],
+"Eradication removes the cause and the weakness. Restoring is recovery and the meeting is lessons learned."
+],
+[
+4,
+"Which standard is used to automatically exchange structured cyber threat intelligence between organizations?",
+[
+"TAXII",
+"SAML",
+"RADIUS",
+"NTP"
+],
+0,
+"TAXII is the transport mechanism for sharing STIX-formatted threat intelligence."
+],
+[
+4,
+"Analysts form a hypothesis about attacker behavior and search the network for evidence that the existing alerts did not catch. What is this activity?",
+[
+"Threat hunting",
+"Vulnerability scanning",
+"Patch management",
+"Penetration testing"
+],
+0,
+"Threat hunting is proactive and hypothesis-driven, unlike reactive alert handling."
+],
+[
+4,
+"An exercise has attackers and defenders share their techniques and findings in real time to improve detection rules. Which team structure is this?",
+[
+"Purple team",
+"White team only",
+"Red team only",
+"Blue team only"
+],
+0,
+"Purple teaming combines offensive and defensive perspectives collaboratively."
+],
+[
+4,
+"Which DNS record defines which mail servers are authorized to send email for a domain?",
+[
+"SPF",
+"DMARC",
+"MX",
+"PTR"
+],
+0,
+"SPF lists authorized sending hosts. MX records identify servers that receive mail."
+],
+[
+4,
+"A company wants to block employees from visiting gambling and adult sites by category. Which control is MOST appropriate?",
+[
+"Content or URL filter",
+"Host-based firewall",
+"Port security",
+"File integrity monitor"
+],
+0,
+"URL filtering uses site categories to allow or deny web access."
+],
+[
+4,
+"Personal phones used for work must keep corporate data separated from personal apps. Which mobile control provides this?",
+[
+"Containerization",
+"Jailbreaking",
+"Sideloading",
+"Rooting"
+],
+0,
+"Containerization creates an isolated managed workspace on a BYOD device."
+],
+[
+4,
+"Servers gradually deviate from their approved settings over time. Which practice addresses this?",
+[
+"Configuration baseline monitoring and enforcement",
+"Increasing log retention",
+"Disabling remote administration",
+"Adding more RAM"
+],
+0,
+"Comparing systems with an approved baseline detects and corrects configuration drift."
+],
+[
+4,
+"Which action BEST verifies that backups will be usable during a disaster?",
+[
+"Check the backup job completed with no errors",
+"Perform periodic test restores",
+"Increase the backup frequency",
+"Encrypt the backup media"
+],
+1,
+"Only a restore test proves the data can be recovered. A successful job status does not."
+],
+[
+4,
+"Which authenticator is MOST resistant to phishing?",
+[
+"SMS one-time code",
+"FIDO2 hardware security key",
+"Security questions",
+"Email one-time code"
+],
+1,
+"FIDO2 keys bind authentication to the legitimate site origin, so a fake site cannot capture a usable response."
+],
+[
+4,
+"Which data source summarizes network conversations such as source, destination, ports and byte counts without capturing payloads?",
+[
+"NetFlow",
+"Full packet capture",
+"Application logs",
+"Vulnerability scan"
+],
+0,
+"NetFlow gives metadata on traffic flows with far less storage than packet capture."
+],
+[
+4,
+"A vendor shreds retired drives and provides a signed document listing their serial numbers. What is this document?",
+[
+"Certificate of destruction",
+"Chain of custody form",
+"Service level agreement",
+"Data retention schedule"
+],
+0,
+"A certificate of destruction records that media were destroyed, creating an audit record."
+],
+[
+4,
+"Logs from several systems cannot be correlated because the timestamps disagree. What should be done?",
+[
+"Synchronize clocks using NTP",
+"Compress the logs",
+"Switch to UDP",
+"Enable log rotation"
+],
+0,
+"Consistent time across systems is needed to build an accurate event timeline."
+],
+[
+4,
+"Which technique redirects requests for known malicious domains to an address controlled by the security team?",
+[
+"DNS sinkhole",
+"Reverse proxy",
+"Port mirroring",
+"Network tap"
+],
+0,
+"A DNS sinkhole returns a controlled address, blocking communication and identifying infected hosts."
+],
+[
+4,
+"An analyst wants to quickly find out whether a suspicious IP address has been reported as malicious by other organizations. Which resource is BEST?",
+[
+"Threat intelligence feed",
+"Change management log",
+"Asset inventory",
+"Business impact analysis"
+],
+0,
+"Threat intelligence feeds aggregate known malicious indicators such as IP addresses and domains."
+],
+[
+5,
+"The vice president of HR decides who may access employee records and how the data is classified. Which data role does the vice president hold?",
+[
+"Data custodian",
+"Data owner",
+"Data processor",
+"Data subject"
+],
+1,
+"The data owner is accountable for the data and sets classification and access rules. A custodian carries out the technical controls."
+],
+[
+5,
+"A retailer decides why and how customer personal data is collected and uses a third-party service to process it. Under GDPR, what is the retailer's role?",
+[
+"Processor",
+"Controller",
+"Data subject",
+"Supervisory authority"
+],
+1,
+"The controller determines the purposes and means of processing. The third party acting on its behalf is the processor."
+],
+[
+5,
+"A European customer database is breached and the controller becomes aware at 9 AM Monday. By roughly when must the supervisory authority generally be notified under GDPR?",
+[
+"24 hours",
+"72 hours",
+"7 days",
+"30 days"
+],
+1,
+"GDPR requires notification without undue delay and, where feasible, within 72 hours of becoming aware of the breach."
+],
+[
+5,
+"A start-up begins accepting credit card payments on its own website and handling cardholder data. Which compliance framework applies to it?",
+[
+"HIPAA",
+"PCI DSS",
+"SOX",
+"FERPA"
+],
+1,
+"PCI DSS is the contractual industry standard for protecting cardholder data."
+],
+[
+5,
+"Which regulation governs the protection of protected health information held by covered entities and their business associates?",
+[
+"PCI DSS",
+"GDPR",
+"HIPAA",
+"GLBA"
+],
+2,
+"HIPAA covers PHI in the United States healthcare context. GDPR is a broader EU privacy regulation."
+],
+[
+5,
+"Which is a likely consequence of a merchant failing to comply with PCI DSS?",
+[
+"Loss of the ability to process card payments",
+"Automatic revocation of its business license",
+"Mandatory cyber insurance",
+"Removal of its domain name"
+],
+0,
+"Non-compliance can bring fines from card brands, higher fees and loss of card processing privileges."
+],
+[
+5,
+"A holding company has one governance team that sets security policy for every subsidiary. Which governance structure is this?",
+[
+"Decentralized",
+"Centralized",
+"Matrixed with no authority",
+"Ad hoc"
+],
+1,
+"Centralized governance applies uniform decisions from a single group. In decentralized governance, each unit makes its own decisions."
+],
+[
+5,
+"What is the MAIN limitation of relying only on a vendor's completed security questionnaire?",
+[
+"Answers are self-reported and not independently verified",
+"It takes too long to read",
+"It cannot include encryption controls",
+"It is legally binding on the customer"
+],
+0,
+"Questionnaires are self-attested, so they should be supported by evidence such as audit reports."
+],
+[
+5,
+"Two government agencies sign a document that records their shared goals and general roles but creates no legally enforceable obligations. Which document is this?",
+[
+"MOU",
+"SLA",
+"BPA",
+"NDA"
+],
+0,
+"A memorandum of understanding expresses intent and is generally non-binding."
+],
+[
+5,
+"Two companies form a partnership and need a document defining each party's contributions, profit sharing and responsibilities. Which is MOST appropriate?",
+[
+"BPA",
+"NDA",
+"MOU only",
+"SOW"
+],
+0,
+"A business partners agreement defines the terms of a business relationship between partners."
+],
+[
+5,
+"A team rates each risk as High, Medium or Low based on expert judgment, without monetary values. Which type of analysis is this?",
+[
+"Quantitative",
+"Qualitative",
+"Residual",
+"Inherent only"
+],
+1,
+"Qualitative analysis uses descriptive ratings. Quantitative analysis uses numerical values such as SLE and ARO."
+],
+[
+5,
+"An asset loss is expected to cost $50,000 per event, and the event is expected once every four years. What is the annualized loss expectancy?",
+[
+"$12,500",
+"$25,000",
+"$50,000",
+"$200,000"
+],
+0,
+"ARO is 0.25, so ALE = $50,000 x 0.25 = $12,500."
+],
+[
+5,
+"Which tool displays risks on a grid by likelihood and impact, using colors to show severity?",
+[
+"Heat map",
+"Network diagram",
+"Data flow diagram",
+"Gantt chart"
+],
+0,
+"A risk heat map visualizes qualitative ratings on a likelihood and impact matrix."
+],
+[
+5,
+"A dashboard tracks the number of critical systems that are more than 30 days behind on patching to warn management that risk is increasing. This measure is an example of a:",
+[
+"KRI",
+"SLE",
+"RTO",
+"MTBF"
+],
+0,
+"A key risk indicator is a forward-looking metric that signals changes in risk exposure."
+],
+[
+5,
+"What is the PRIMARY advantage of an external audit compared with an internal audit?",
+[
+"Independence and objectivity",
+"Lower cost",
+"Deeper knowledge of company politics",
+"No need for evidence"
+],
+0,
+"External auditors are independent from the organization, which gives their findings more credibility."
+],
+[
+5,
+"A third-party firm examines a service provider's controls and issues a formal statement that they meet defined criteria. What is this process?",
+[
+"Attestation",
+"Self-assessment",
+"Vulnerability scan",
+"Tabletop exercise"
+],
+0,
+"Attestation is an independent assurance statement, such as a SOC 2 report, about controls."
+],
+[
+5,
+"Newly hired software developers should receive which additional training beyond general awareness training?",
+[
+"Role-based training on secure coding",
+"Facilities fire drill training",
+"Executive board reporting",
+"Help desk ticketing orientation"
+],
+0,
+"Role-based training addresses the specific risks and duties of a job function."
+],
+[
+5,
+"Which TWO are characteristics of an effective security awareness program?",
+[
+"Simulated phishing campaigns with follow-up coaching",
+"One annual training session and nothing further",
+"A clear, easy way to report suspicious messages",
+"Disciplining everyone who reports a phishing email",
+"Excluding senior executives from training"
+],
+[
+0,
+2
+],
+"Ongoing simulation and easy reporting build good behavior. Punishing reporters and excluding executives weaken the program."
+]
+]

@@ -1,0 +1,1118 @@
+[
+[
+1,
+"A zero trust deployment separates its architecture into a control plane and a data plane. Which TWO components operate in the control plane? (Choose TWO.)",
+[
+"Policy engine",
+"Policy enforcement point",
+"Policy administrator",
+"Implicit trust zone",
+"Subject and system requesting access"
+],
+[
+0,
+2
+],
+"The policy engine decides whether access is granted and the policy administrator carries out that decision by configuring the path. The enforcement point and the implicit trust zone sit in the data plane."
+],
+[
+1,
+"A company formalizes a quarterly enterprise risk assessment process and a written change management policy approved by the board. Under the standard security control categories, these controls are BEST classified as which category?",
+[
+"Operational",
+"Physical",
+"Managerial",
+"Technical"
+],
+2,
+"Managerial controls address risk management and governance through policies, assessments and oversight. Technical controls are implemented in systems, and operational controls are carried out day to day by people."
+],
+[
+1,
+"A security architect needs to detect unauthorized modification of critical operating system and application configuration files on production servers and alert the team when a file changes. Which control BEST meets this requirement?",
+[
+"Data loss prevention",
+"File integrity monitoring",
+"Application allow list",
+"Full disk encryption"
+],
+1,
+"File integrity monitoring compares current file hashes with a trusted baseline and alerts on changes, which directly supports integrity. Encryption protects confidentiality and does not report modification of files."
+],
+[
+1,
+"An attacker records encrypted TLS traffic for years and later steals the web server's long-term private key, yet is unable to decrypt any of the recorded sessions. Which property of the key exchange explains this?",
+[
+"Certificate pinning",
+"Key stretching",
+"Perfect forward secrecy",
+"Salting"
+],
+2,
+"Perfect forward secrecy uses ephemeral session keys that are not derivable from the long-term private key. Pinning and salting do not protect previously recorded sessions."
+],
+[
+1,
+"A laptop fleet must encrypt local drives so that the encryption key is released only when the machine boots with an unmodified firmware and boot chain, and the key cannot simply be moved to another device. Which component BEST provides this?",
+[
+"Smart card reader",
+"Trusted Platform Module",
+"Key management service in the cloud",
+"Hardware security module in a rack-mounted appliance"
+],
+1,
+"A TPM is a chip bound to the individual machine that can seal keys to measured boot state. An HSM is a separate appliance designed to serve many applications and is not tied to a single laptop's boot integrity."
+],
+[
+1,
+"Which TWO statements about symmetric and asymmetric encryption are accurate? (Choose TWO.)",
+[
+"Asymmetric encryption is generally slower than symmetric encryption for bulk data",
+"Asymmetric key pairs can be used to create digital signatures",
+"AES is an asymmetric algorithm",
+"Symmetric encryption removes the need to securely share a key",
+"RSA uses one shared secret key for both parties"
+],
+[
+0,
+1
+],
+"Asymmetric algorithms are computationally heavier, which is why they usually protect session keys, and the private key signs data. AES is symmetric, symmetric keys must be shared securely, and RSA uses a key pair."
+],
+[
+1,
+"A legacy payroll server cannot support multifactor authentication. The security team restricts access to it through a hardened jump host limited to three source IP addresses and enables detailed session logging. Which control type does this arrangement represent?",
+[
+"Corrective",
+"Deterrent",
+"Preventive",
+"Compensating"
+],
+3,
+"A compensating control substitutes for a requirement that cannot be met directly, here MFA. Preventive describes the function of the controls, but the reason they were chosen is compensation for a gap."
+],
+[
+1,
+"A help desk technician authenticates to a ticketing system, opens a ticket and tries to view an executive's HR record, which the system denies. Weeks later an auditor reviews which technician queried that record. Which AAA functions were involved, in order of the denial and the audit review?",
+[
+"Authorization, then authentication",
+"Authorization, then accounting",
+"Authentication, then accounting",
+"Accounting, then authorization"
+],
+1,
+"The denial is an authorization decision based on permissions, and the later review depends on accounting records of activity. Authentication only proves who the user is."
+],
+[
+1,
+"A certificate authority hierarchy is being designed. To BEST limit the damage if an intermediate CA is compromised and to protect the trust anchor, how should the root CA be handled?",
+[
+"Kept online so that it can issue certificates quickly",
+"Shared across partner organizations for cross-signing",
+"Replaced by a self-signed certificate on each web server",
+"Kept offline and used only to sign intermediate CA certificates"
+],
+3,
+"Keeping the root offline greatly reduces exposure of the highest-trust key, and intermediates issue day-to-day certificates. An online root defeats the purpose of the hierarchy."
+],
+[
+1,
+"A security engineer selects a hashing algorithm for verifying software releases. The primary requirement is that it be computationally infeasible to find two different files that produce the same digest. Which property is the engineer evaluating?",
+[
+"Collision resistance",
+"Forward secrecy",
+"Key stretching",
+"Reversibility"
+],
+0,
+"Collision resistance means two different inputs should not yield the same hash, which matters for integrity verification. Hashes are intentionally irreversible."
+],
+[
+1,
+"An organization uses one wildcard certificate (*.example.com) on dozens of servers to simplify management. What is the MOST significant security risk of this practice?",
+[
+"Browsers never trust wildcard certificates",
+"Wildcard certificates cannot use strong key lengths",
+"Compromise of the single private key affects every subdomain that uses it",
+"Wildcard certificates cannot be revoked"
+],
+2,
+"Because one private key is shared across many hosts, theft from any one server lets an attacker impersonate all of them. Wildcard certificates can be revoked and are broadly trusted."
+],
+[
+2,
+"Finance staff receive a message that looks like it came from the CFO's domain, though the reply-to address differs slightly. It urgently requests a wire to a new supplier and asks for confidentiality. Which attack is this MOST likely?",
+[
+"Business email compromise",
+"Watering hole attack",
+"Whaling through a malicious attachment",
+"Credential stuffing"
+],
+0,
+"Business email compromise impersonates an executive to authorize fraudulent payments. Whaling targets executives as victims, whereas here the executive is the impersonated party."
+],
+[
+2,
+"A caller with a spoofed internal phone number tells an employee that the bank has detected fraud on their corporate card, and asks the employee to read back the one-time code just sent to their phone. Which social engineering technique is this?",
+[
+"Tailgating",
+"Vishing",
+"Typosquatting",
+"Smishing"
+],
+1,
+"Vishing uses voice calls to manipulate victims, here to obtain an MFA code. Smishing would use text messages as the delivery channel."
+],
+[
+2,
+"A widely used IT management product ships a signed update that installs a hidden backdoor on thousands of customer networks. Investigators find the vendor's build server was compromised. Which attack category BEST describes this?",
+[
+"Supply chain attack",
+"Watering hole attack",
+"Zero-day exploit against customers",
+"Insider threat"
+],
+0,
+"The attackers compromised a trusted vendor to reach downstream customers. The customers were not individually targeted through a vulnerability in their own systems."
+],
+[
+2,
+"A vendor announces that a remote code execution flaw in its web application server is being exploited in the wild and that no patch will be available for two weeks. Which action is the BEST immediate mitigation?",
+[
+"Deploy a virtual patch on the WAF or IPS and restrict network exposure of the server",
+"Increase the password length requirement",
+"Disable all logging to improve performance",
+"Wait for the patch and take no action"
+],
+0,
+"A virtual patch and reduced exposure compensate for the missing fix. Waiting leaves an actively exploited flaw open, and password changes do not affect a code execution flaw."
+],
+[
+2,
+"A user opens a Word document and a macro launches PowerShell, which downloads and runs a payload directly in memory. No new executable is written to disk, and traditional signature-based antivirus raises no alert. Which malware type is this?",
+[
+"Rootkit installed through a driver",
+"Logic bomb",
+"Fileless malware",
+"Boot sector virus"
+],
+2,
+"Fileless malware runs in memory and abuses legitimate tools such as PowerShell, which evades file-based scanning. A rootkit would require persistence below the operating system, which is not described."
+],
+[
+2,
+"A tenant in a cloud environment runs code that breaks out of its virtual machine and gains control of the hypervisor, giving it access to other tenants' workloads. Which vulnerability type is this?",
+[
+"Sandbox evasion in a browser",
+"Virtual machine escape",
+"Side-loading",
+"Container image tampering"
+],
+1,
+"A VM escape lets code in a guest interact with the host or hypervisor. The other terms do not describe breaking out of virtualization."
+],
+[
+2,
+"A development team is concerned that attackers will exploit a stack buffer overflow by jumping to predictable memory addresses. Which operating system protection BEST makes this more difficult?",
+[
+"Address space layout randomization",
+"Mandatory access control labels",
+"Data masking",
+"Salting of memory pages"
+],
+0,
+"ASLR randomizes where code and data load in memory, so attackers cannot rely on fixed addresses. The other options do not address memory layout."
+],
+[
+2,
+"A bank customer is logged in to the online banking site and, in another tab, visits a malicious page that silently submits a funds transfer request using the customer's active session. Which TWO controls BEST mitigate this attack? (Choose TWO.)",
+[
+"Anti-forgery tokens on state-changing requests",
+"SameSite cookie attribute",
+"Output encoding of user-supplied text",
+"Parameterized database queries",
+"Salted password hashing"
+],
+[
+0,
+1
+],
+"This is cross-site request forgery. Anti-forgery tokens and SameSite cookies stop cross-origin requests from riding on the session. Output encoding stops XSS and parameterized queries stop SQL injection."
+],
+[
+2,
+"Attackers use username and password pairs leaked from an unrelated retailer's breach to log in to the company's customer portal, making only one attempt per account from many IP addresses. Which control is MOST effective against this attack?",
+[
+"Longer session timeouts",
+"Account lockout after five failed attempts",
+"Multifactor authentication",
+"Blocking a single IP address"
+],
+2,
+"This is credential stuffing, and MFA stops stolen passwords from being sufficient. Lockout is weak because each account sees only one attempt, and the attempts come from many IP addresses."
+],
+[
+2,
+"Users who type the correct bank domain are being sent to a fraudulent site. Analysis shows the company's recursive resolver cached a forged record for the bank. Which control BEST prevents this specific attack?",
+[
+"Stronger TLS cipher suites",
+"DNSSEC validation",
+"Reverse proxy caching",
+"Disabling ICMP"
+],
+1,
+"This is DNS cache poisoning, and DNSSEC digitally signs DNS records so forged answers fail validation. TLS settings would not stop resolvers from caching a bad answer."
+],
+[
+2,
+"An employee connects a personal wireless router to a wall jack in a conference room to get better Wi-Fi coverage. The router has default credentials and bridges onto the corporate LAN. Which term BEST describes this device?",
+[
+"Bluejacking device",
+"Evil twin",
+"Captive portal",
+"Rogue access point"
+],
+3,
+"A rogue access point is an unauthorized AP attached to the network. An evil twin impersonates a legitimate SSID to lure users, which is not what happened here."
+],
+[
+2,
+"A team has two open findings. Finding A is a CVSS 9.8 flaw on an isolated lab server with no sensitive data and no network path from outside. Finding B is a CVSS 7.5 flaw on an internet-facing payment server and is listed in a known-exploited vulnerabilities catalog. Which finding should be remediated FIRST?",
+[
+"Finding A, because its CVSS score is higher",
+"Finding B, because of exposure, asset criticality and active exploitation",
+"Both at the same time, ignoring context",
+"Neither until the next quarterly scan"
+],
+1,
+"Effective prioritization weighs exploitability, exposure and asset value in addition to the base score. Finding B is reachable and actively exploited on a critical system."
+],
+[
+2,
+"A critical patch has just been deployed to a fleet of web servers that were flagged in the vulnerability management program. Which step should come NEXT in the lifecycle?",
+[
+"Reclassify the vulnerability as a false positive",
+"Close the finding based on the change ticket alone",
+"Remove the servers from the asset inventory",
+"Rescan the servers to validate that the vulnerability is remediated"
+],
+3,
+"Validation through a rescan confirms the fix worked. A closed change ticket proves only that work was attempted."
+],
+[
+2,
+"A credentialed vulnerability scan reports a database server as fully patched. Two weeks later, penetration testers exploit an unpatched flaw on that server that the scanner never reported. How is the scanner's result BEST described?",
+[
+"False positive",
+"True positive",
+"True negative",
+"False negative"
+],
+3,
+"The scanner failed to report a real vulnerability, which is a false negative. A false positive would be reporting a flaw that does not exist."
+],
+[
+2,
+"At the start of an engagement, a penetration tester reviews the target's job postings, WHOIS records, public code repositories and social media profiles without sending any packets to the target's systems. Which activity is this?",
+[
+"Privilege escalation",
+"Passive reconnaissance",
+"Persistence",
+"Active reconnaissance"
+],
+1,
+"Passive reconnaissance gathers information from public sources without interacting with the target. Port scanning would be active reconnaissance."
+],
+[
+2,
+"After compromising a workstation in the user VLAN, a penetration tester configures it as a relay so that tools on the tester's own laptop can reach a segmented database subnet that is not routable from the internet. Which technique is this?",
+[
+"Pivoting",
+"Privilege escalation",
+"Reconnaissance",
+"Cleanup"
+],
+0,
+"Pivoting uses a compromised host as a stepping stone to reach otherwise inaccessible networks. Privilege escalation would raise rights on a system and does not provide network reach."
+],
+[
+2,
+"Which TWO observations are the MOST likely indicators that a user account has been compromised? (Choose TWO.)",
+[
+"Successful logins from two countries within ten minutes",
+"A routine monthly password expiration notice",
+"Large outbound transfers to an unfamiliar cloud storage service at 3 a.m.",
+"An approved software update installing on the user's laptop",
+"A completed scheduled backup of the user's profile"
+],
+[
+0,
+2
+],
+"Impossible travel and unusual large off-hours transfers to unknown destinations are classic indicators of compromise. The remaining items are normal operational events."
+],
+[
+2,
+"A kiosk in a hospital lobby should run only one approved application and must resist unknown executables introduced from USB drives. Which approach is BEST?",
+[
+"Daily full antivirus scans",
+"Application block list of known malware",
+"Disabling the screen saver",
+"Application allow list"
+],
+3,
+"An allow list permits only approved software and blocks everything else, including unknown malware. A block list only stops what is already known."
+],
+[
+2,
+"An attacker phones an employee claiming to be an external auditor, citing real project names and a fabricated deadline, and asks for copies of recent access control lists. Which social engineering principle-based technique is being used?",
+[
+"Dumpster diving",
+"Baiting",
+"Pretexting",
+"Shoulder surfing"
+],
+2,
+"Pretexting builds a believable false scenario to extract information. The other techniques involve observation, discarded material or physical lures."
+],
+[
+2,
+"An attacker captures a valid authentication message between a client and a server and retransmits it later to gain access without knowing the password. Which attack is this, and which design element BEST mitigates it?",
+[
+"Replay attack; nonces or timestamps",
+"Pass-the-hash; salting",
+"Downgrade attack; longer keys",
+"Birthday attack; larger buffers"
+],
+0,
+"Resending a captured valid message is a replay attack, and unique nonces or timestamps make old messages invalid. The other pairings do not match."
+],
+[
+3,
+"A data center hosts hundreds of virtual machines on the same subnet. After a breach, the team wants to prevent a compromised VM from reaching other VMs, even those in the same subnet, with policies tied to each workload. Which approach BEST achieves this?",
+[
+"Microsegmentation",
+"Port mirroring",
+"Perimeter firewall rule updates only",
+"Larger subnet masks"
+],
+0,
+"Microsegmentation enforces workload-level policy for east-west traffic. A perimeter firewall does not see traffic between VMs in the same subnet."
+],
+[
+3,
+"An organization wants to discover which unsanctioned SaaS applications employees use and also enforce data protection policies on the sanctioned ones. Which technology BEST fits?",
+[
+"Hardware security module",
+"Cloud access security broker",
+"Network tap",
+"Web application firewall"
+],
+1,
+"A CASB sits between users and cloud services to provide visibility, DLP and access control. A WAF protects a specific web application from attacks."
+],
+[
+3,
+"A company uses a SaaS customer relationship management platform. Which of the following remains the customer's responsibility under the shared responsibility model?",
+[
+"Maintaining the application code base",
+"Physical security of the data center",
+"Managing user accounts, access rights and the classification of data entered",
+"Patching the underlying hypervisor"
+],
+2,
+"In SaaS the provider operates the infrastructure and application, while the customer retains responsibility for identities, access and its data. The other items belong to the provider."
+],
+[
+3,
+"A security team is deciding whether to use containers or full virtual machines for hosting untrusted workloads from different customers. Which characteristic of containers is the MOST significant security concern?",
+[
+"Containers cannot be scanned for vulnerabilities",
+"Containers must always run with a hypervisor per instance",
+"Containers share the host operating system kernel, so a kernel exploit can affect others",
+"Containers cannot use network segmentation"
+],
+2,
+"Containers share the host kernel, so isolation is weaker than with VMs that each run their own kernel. Containers can be scanned and segmented."
+],
+[
+3,
+"An operations team replaces servers with freshly built images rather than patching them in place, and never logs in to change running instances. What is the PRIMARY security benefit of this immutable infrastructure approach?",
+[
+"It removes the need for vulnerability scanning",
+"It guarantees that no vulnerability exists in the image",
+"It eliminates the need for change management",
+"It reduces configuration drift and unauthorized changes"
+],
+3,
+"Replacing instances from a known-good image keeps configurations consistent and makes manual tampering short-lived. Images still need scanning and change control."
+],
+[
+3,
+"A trading platform must handle full load during normal operation and keep processing without any failover delay if a node fails. Which high availability design BEST meets this requirement?",
+[
+"Weekly backup to tape",
+"Active-passive cluster",
+"Active-active cluster",
+"Cold standby server"
+],
+2,
+"In an active-active cluster all nodes serve traffic, so a failure causes no failover pause and the remaining nodes continue. An active-passive design requires failover."
+],
+[
+3,
+"After a ransomware incident that also encrypted network-attached backups, management wants backups that the attacker cannot alter or delete even with stolen administrator credentials. Which solution BEST achieves this?",
+[
+"More frequent incremental backups to the same share",
+"Mapping the backup share to all administrators",
+"Compressing the backup files",
+"Immutable or offline backup copies"
+],
+3,
+"Immutable or air-gapped backups cannot be modified during their retention window, which protects against credential-based destruction. More copies on the same writable share would be encrypted as well."
+],
+[
+3,
+"Which TWO controls protect data while it is in transit? (Choose TWO.)",
+[
+"TLS 1.3 for web connections",
+"IPsec tunnel between two sites",
+"Full disk encryption on laptops",
+"Tokenization of card numbers in a database",
+"Transparent data encryption on a database file"
+],
+[
+0,
+1
+],
+"TLS and IPsec encrypt data as it crosses the network. Full disk encryption and transparent data encryption protect data at rest, and tokenization replaces values stored in the database."
+],
+[
+3,
+"A company needs tamper-resistant, certified hardware that generates and stores code-signing keys and serves signing requests from many build servers over the network. Which solution BEST fits?",
+[
+"Software keystore on a shared file server",
+"Trusted Platform Module in each build server",
+"Hardware security module",
+"Self-encrypting USB drive"
+],
+2,
+"An HSM is a dedicated, tamper-resistant device designed to protect keys and perform cryptographic operations for many clients. A TPM is bound to one machine."
+],
+[
+3,
+"Public-facing web, mail and DNS servers must be reachable from the internet, but a compromise of any of them must not provide direct access to the internal LAN. Which design BEST accomplishes this?",
+[
+"Putting them in the same VLAN as the domain controllers",
+"Connecting them directly to the internet with no firewall",
+"Placing them on the internal LAN with host firewalls",
+"Placing them in a screened subnet between two firewalls"
+],
+3,
+"A screened subnet isolates exposed services and limits traffic into the internal network. Placing them on the LAN gives a compromised host direct access to internal systems."
+],
+[
+3,
+"A firewall must automatically permit reply traffic for connections that internal users initiated outward, while dropping unsolicited inbound packets, without writing a separate rule for each reply. Which firewall type does this?",
+[
+"Stateful firewall",
+"Stateless packet filter",
+"Hub-based repeater",
+"Proxy auto-configuration server"
+],
+0,
+"A stateful firewall tracks connection state and allows packets that belong to an established session. A stateless filter evaluates each packet independently against static rules."
+],
+[
+3,
+"A team wants to monitor traffic for malicious activity with no risk of adding latency or causing an outage if the sensor fails, and it does not need to block traffic. Which deployment is BEST?",
+[
+"Reverse proxy in front of every server",
+"Inline IPS configured to fail closed",
+"Passive IDS connected to a network tap or SPAN port",
+"Load balancer with session persistence"
+],
+2,
+"A passive sensor on a tap or SPAN port sees copies of traffic and is out of the data path, so its failure does not interrupt production. An inline IPS can block but adds risk."
+],
+[
+3,
+"A remote access VPN uses split tunneling so only traffic for corporate subnets traverses the tunnel. What is the MOST significant security drawback of this configuration?",
+[
+"Corporate traffic is not encrypted",
+"Internet-bound traffic bypasses corporate inspection controls",
+"The tunnel cannot reach corporate subnets",
+"VPN client software cannot authenticate users"
+],
+1,
+"With split tunneling, web traffic goes directly to the internet and avoids the proxy, DLP and filtering controls. A compromised endpoint can also bridge the internet and the corporate network."
+],
+[
+3,
+"A business requires recovery of its operations within about 24 to 72 hours after a disaster. The recovery site should have hardware and connectivity already installed, with data restored from backups when needed, at a lower cost than a hot site. Which site type is BEST?",
+[
+"Warm site",
+"Hot site",
+"Cold site",
+"Mobile command post only"
+],
+0,
+"A warm site has equipment and connectivity in place but needs data restoration, which balances cost and recovery time. A cold site would have little or no equipment, and a hot site is more expensive."
+],
+[
+3,
+"A company wants any device plugged into a switch port to remain unable to pass traffic, other than authentication traffic, until the device or its user is successfully authenticated. Which technology BEST meets this requirement?",
+[
+"802.1X port-based access control",
+"Spanning tree protocol",
+"Port mirroring",
+"DHCP lease reduction"
+],
+0,
+"802.1X keeps the port in an unauthorized state until authentication succeeds with a RADIUS server. STP prevents loops and does not authenticate devices."
+],
+[
+3,
+"An industrial plant must send production metrics from the OT network to corporate reporting systems, but there must be no possible return path for traffic from the corporate network into OT. Which solution BEST meets this requirement?",
+[
+"Site-to-site VPN with split tunneling",
+"Data diode or unidirectional gateway",
+"Stateful firewall allowing established sessions",
+"Wireless bridge between networks"
+],
+1,
+"A data diode enforces one-way data flow physically or logically. Stateful firewalls and VPNs allow two-way sessions that could be abused to reach OT systems."
+],
+[
+4,
+"A compliance team wants scanners to automatically check hundreds of servers against an approved hardening baseline, using standardized, machine-readable content and reporting results consistently. Which standard is designed for this?",
+[
+"SCAP",
+"TAXII",
+"SPF",
+"CVSS"
+],
+0,
+"The Security Content Automation Protocol standardizes the expression and checking of configuration and vulnerability data. TAXII transports threat intelligence and CVSS scores severity."
+],
+[
+4,
+"The SOC wants to receive indicators of compromise from a partner automatically and in near real time. Which standard defines the transport mechanism for exchanging this threat intelligence over HTTPS?",
+[
+"STIX",
+"TAXII",
+"OVAL",
+"CPE"
+],
+1,
+"TAXII is the transport protocol for sharing cyber threat intelligence, while STIX defines the language and format of the data."
+],
+[
+4,
+"Dark web monitoring shows that credentials for dozens of the company's employee email accounts are for sale. Which action should the security team take FIRST?",
+[
+"Purchase the credential list to confirm authenticity before acting",
+"Force password resets and revoke active sessions and tokens for the affected accounts",
+"Publish a press release",
+"Wait for evidence of fraudulent logins before responding"
+],
+1,
+"Invalidating exposed credentials quickly removes the attacker's immediate access. Waiting or buying the data from criminals delays containment and rewards the sellers."
+],
+[
+4,
+"A regional hospital wants to receive early warnings about ransomware campaigns targeting healthcare, and to exchange anonymized indicators with peer organizations. Which resource BEST supports this goal?",
+[
+"Internal SIEM dashboards only",
+"Public vulnerability scanner",
+"Unmoderated social media feeds",
+"Sector-specific information sharing and analysis center"
+],
+3,
+"An ISAC lets members in the same sector share vetted threat information. Internal dashboards do not provide peer intelligence."
+],
+[
+4,
+"Which TWO are examples of open-source intelligence (OSINT)? (Choose TWO.)",
+[
+"Searching internet-exposed services and banners on Shodan",
+"A paid vendor feed delivered under a non-disclosure agreement",
+"Reviewing public WHOIS and DNS records for a suspicious domain",
+"Correlated events from the company's own SIEM",
+"A classified government threat bulletin"
+],
+[
+0,
+2
+],
+"OSINT comes from publicly available sources such as internet search services and public registries. Commercial feeds, internal logs and classified bulletins are not open sources."
+],
+[
+4,
+"A company wants independent researchers to look for vulnerabilities in its production web application under published rules, paying only for validated findings. How does this approach BEST compare with a one-time penetration test?",
+[
+"It removes the need for a defined scope",
+"It guarantees that all vulnerabilities will be found",
+"It prevents any public disclosure of findings",
+"It provides continuous, crowd-sourced testing with payment tied to valid results"
+],
+3,
+"A bug bounty program offers ongoing coverage from many researchers with diverse skills, paid by result. It still needs a scope and rules, and no method can guarantee that all flaws are found."
+],
+[
+4,
+"A SOC implements security orchestration, automation and response (SOAR). Which TWO benefits are MOST likely? (Choose TWO.)",
+[
+"Faster, more consistent response to common alerts",
+"Reduced repetitive work for analysts",
+"Elimination of the need for human oversight",
+"Guaranteed absence of false positives",
+"Removal of the need to test playbooks"
+],
+[
+0,
+1
+],
+"SOAR speeds and standardizes routine tasks and frees analysts for complex work. It does not remove oversight, false positives or the need to test playbooks."
+],
+[
+4,
+"A SOAR playbook automatically blocks any IP address that appears in a newly subscribed, unvetted threat feed. Which risk is MOST significant with this configuration?",
+[
+"The feed will be encrypted",
+"Analysts will have too little to do",
+"Log retention will fall to zero",
+"Legitimate business traffic may be blocked because of false positives, causing an outage"
+],
+3,
+"Automated blocking driven by an untested feed can disrupt valid partners or cloud services. The risk is mitigated by vetting feeds, adding approval gates and starting in alert-only mode."
+],
+[
+4,
+"Six months after deployment, an audit shows that many servers no longer match their approved security baseline because administrators made manual changes. Which approach BEST detects and corrects this drift on an ongoing basis?",
+[
+"Disabling local administrator accounts on workstations only",
+"Automated configuration management with compliance scanning against the baseline",
+"Rewriting the baseline document each quarter",
+"Annual employee awareness training"
+],
+1,
+"Automated configuration management continuously compares systems with the baseline and can remediate deviations. Documentation changes do not alter system state."
+],
+[
+4,
+"Executives require that classified design files not be copied to removable media from company laptops, including when employees work from home on an untrusted network. Which control BEST enforces this?",
+[
+"Endpoint DLP agent with device control",
+"Email gateway spam filter",
+"Network DLP appliance at the data center edge",
+"Web application firewall"
+],
+0,
+"An endpoint DLP agent enforces policy on the device itself, wherever it is connected. A network appliance only sees traffic that passes through it."
+],
+[
+4,
+"A newly deployed DLP system in blocking mode is rejecting a large number of legitimate emails and disrupting business. What is the BEST approach to resolve this while keeping the program on track?",
+[
+"Switch affected policies to monitor-only mode, tune rules using the results, then re-enable blocking in phases",
+"Disable DLP permanently",
+"Delete all existing policies and start with no rules",
+"Allow all users to override every block without logging"
+],
+0,
+"Monitoring first and tuning reduces false positives before enforcement is turned back on. Disabling the system or removing logging eliminates the protection and the evidence."
+],
+[
+4,
+"A DLP team must detect leakage of the actual entries stored in a customer database, rather than any text that merely looks like a customer record. Which technique BEST accomplishes this?",
+[
+"Exact data matching or fingerprinting of the database",
+"Keyword list of common surnames",
+"Generic regular expression for names",
+"Blocking all file transfers"
+],
+0,
+"Exact data matching compares content with hashes of real values and gives low false-positive rates. Generic patterns and keywords flag a lot of unrelated text."
+],
+[
+4,
+"Legal counsel informs IT that the company expects to be sued over a contract dispute. Mailbox retention currently deletes messages after 90 days. Which action should IT take FIRST?",
+[
+"Wait for a court order before preserving anything",
+"Issue a legal hold and suspend automatic deletion for relevant custodians and systems",
+"Export all mailboxes to personal devices",
+"Delete irrelevant mailboxes to save storage"
+],
+1,
+"A legal hold preserves potentially relevant data once litigation is reasonably anticipated. Waiting risks spoliation of evidence."
+],
+[
+4,
+"A forensic examiner must acquire an image of a suspect's hard drive and be able to show in court that the original evidence was not modified. Which tool BEST helps?",
+[
+"Defragmentation utility",
+"Hardware write blocker",
+"Registry editor",
+"Disk cleanup tool"
+],
+1,
+"A write blocker allows reading from the drive while preventing any writes. The other tools alter data on the drive."
+],
+[
+4,
+"Analysts suspect a server is sending large volumes of data to an external address. They need to see who talked to whom, how much and when, without inspecting payloads. Which data source is MOST useful?",
+[
+"NetFlow or IPFIX records",
+"Email headers",
+"Vulnerability scan results",
+"Full disk image of the server"
+],
+0,
+"Flow records summarize conversations, with endpoints, ports and byte counts, and are lightweight. A disk image would not show network traffic metadata."
+],
+[
+4,
+"A SOC receives thousands of alerts per day, and most are closed as benign. Analysts are missing real incidents because of alert fatigue. Which action is BEST?",
+[
+"Hire a second shift and keep rules unchanged",
+"Turn off alerting for low-priority sources entirely",
+"Delay triage until the end of the week",
+"Tune detection rules and thresholds, and suppress known benign patterns"
+],
+3,
+"Tuning reduces noise while keeping detection coverage. Disabling sources or delaying triage increases the chance of missing attacks."
+],
+[
+4,
+"A mobile app must sign users in with an external identity provider and receive basic profile information about the authenticated user. Which protocol is built on OAuth 2.0 specifically to provide this authentication layer?",
+[
+"RADIUS",
+"Kerberos",
+"OpenID Connect",
+"LDAP simple bind"
+],
+2,
+"OpenID Connect adds identity tokens to OAuth 2.0 so that applications can verify who the user is. OAuth 2.0 alone is an authorization framework."
+],
+[
+4,
+"Several administrators share a single domain administrator password that has not changed in two years. Which solution BEST reduces the risk?",
+[
+"Posting the password in a restricted wiki",
+"Requiring the password to be 6 characters longer",
+"Emailing the password to new administrators",
+"Privileged access management vault with credential check-out and automatic rotation"
+],
+3,
+"A PAM vault provides individual accountability, controlled check-out and rotation. Longer shared passwords still lack accountability."
+],
+[
+4,
+"A mail administrator wants receiving servers to verify that messages claiming to come from the company domain are legitimate, using both an authorized sending-server list and a cryptographic signature, with DMARC tying them to the visible From domain. Which TWO mechanisms does DMARC rely on? (Choose TWO.)",
+[
+"S/MIME",
+"SPF",
+"TLS 1.3",
+"DKIM",
+"PGP"
+],
+[
+1,
+3
+],
+"DMARC evaluates SPF, which lists authorized sending servers, and DKIM, which signs messages, and checks alignment with the From domain. S/MIME and PGP are end-to-end message security and TLS only protects transport."
+],
+[
+4,
+"A tester has no access to source code but sends crafted inputs to a running staging web application to find injection and authentication flaws. Which testing method is this?",
+[
+"Code review",
+"Dynamic application security testing",
+"Static application security testing",
+"Software composition analysis"
+],
+1,
+"Dynamic testing examines a running application from the outside. Static testing analyzes source code or binaries without executing them."
+],
+[
+4,
+"When a critical library vulnerability is announced, the company needs to quickly find out which of its applications include that library and its versions. Which artifact BEST supports this?",
+[
+"Software bill of materials",
+"Service level agreement",
+"Data flow diagram of the network",
+"Business impact analysis"
+],
+0,
+"A software bill of materials lists the components within each application, which allows fast identification of affected software. The other documents do not list library components."
+],
+[
+4,
+"A company allows employees to read corporate email on personal phones. It wants to keep corporate data separated from personal content and be able to remove only the corporate data if the employee leaves. Which mobile control BEST achieves this?",
+[
+"Jailbreaking the device",
+"Containerization through mobile device management",
+"SMS-based notifications",
+"Full device wipe for every user"
+],
+1,
+"Containerization creates a managed workspace that can be wiped selectively. A full wipe would remove the employee's personal data and may be inappropriate for BYOD."
+],
+[
+4,
+"A company wants Wi-Fi authentication that uses both server and client certificates for mutual authentication, with no passwords sent. Which EAP method is required?",
+[
+"PEAP with MS-CHAPv2",
+"LEAP",
+"EAP-MD5",
+"EAP-TLS"
+],
+3,
+"EAP-TLS uses certificates on both the server and client sides. PEAP typically uses a server certificate with user credentials inside the tunnel."
+],
+[
+4,
+"An employee moved from finance to marketing two years ago, and the employee still has access to the general ledger. Which control BEST detects and corrects this privilege creep?",
+[
+"Longer passwords",
+"Stronger firewall rules",
+"Periodic user access reviews and recertification",
+"Quarterly penetration tests"
+],
+2,
+"Periodic access reviews check whether permissions still fit the user's current role. The other controls do not compare access with job function."
+],
+[
+4,
+"A hunt team has no alert to follow. It starts from a hypothesis that an attacker is abusing built-in administrative tools to move laterally, and searches endpoint and authentication telemetry for supporting evidence. Which activity is this?",
+[
+"Threat hunting",
+"Penetration test reporting",
+"Vulnerability scanning",
+"Tabletop exercise"
+],
+0,
+"Threat hunting is a proactive, hypothesis-driven search through telemetry for undetected threats. It is not triggered by an existing alert."
+],
+[
+5,
+"A system valued at $250,000 has an exposure factor of 30% for a given event, which is expected once every two years. A control costing $20,000 per year would reduce the annual rate of occurrence to once every ten years. What is the net annual benefit of the control?",
+[
+"$17,500",
+"$10,000",
+"$30,000",
+"$37,500"
+],
+1,
+"SLE is $75,000. ALE falls from $37,500 to $7,500, saving $30,000, and subtracting the $20,000 cost leaves $10,000 net."
+],
+[
+5,
+"A risk team ranks risks as high, medium or low in workshops, using the judgment of business leaders, because reliable loss figures are not available. Which type of analysis is this?",
+[
+"Qualitative",
+"Quantitative",
+"Return on investment",
+"Simulation of annual loss expectancy"
+],
+0,
+"Qualitative analysis uses categories and expert judgment. Quantitative analysis uses numeric values such as SLE and ALE."
+],
+[
+5,
+"A vendor offers a SOC 2 Type I report in response to a due diligence questionnaire. What is the main limitation of relying on this report?",
+[
+"It covers only physical controls",
+"It contains no information about security",
+"It is valid only for the vendor's own customers",
+"It reports only on the design of controls at a point in time and not their operating effectiveness"
+],
+3,
+"Type I assesses control design on a single date, whereas Type II tests operating effectiveness over a period. Type II gives stronger assurance."
+],
+[
+5,
+"Two government agencies agree to cooperate on sharing threat information and record their general intentions, but the document is not legally binding and sets no specific performance obligations. Which document type is this?",
+[
+"Memorandum of understanding",
+"Master services agreement",
+"Business partners agreement with penalties",
+"Service level agreement"
+],
+0,
+"An MOU expresses mutual intent and is generally non-binding. An SLA and an MSA define enforceable service terms."
+],
+[
+5,
+"A data controller discovers a breach of personal data of EU residents that is likely to create a risk to individuals. Under GDPR, within what time frame must the supervisory authority generally be notified?",
+[
+"72 hours",
+"24 hours",
+"7 days",
+"30 days"
+],
+0,
+"GDPR requires notification without undue delay and, where feasible, within 72 hours of becoming aware of the breach."
+],
+[
+5,
+"A policy document states: all company laptops must use AES-256 full disk encryption. Which type of governance document is this?",
+[
+"Guideline",
+"Charter",
+"Procedure",
+"Standard"
+],
+3,
+"A standard defines mandatory, specific requirements. A procedure gives step-by-step instructions and a guideline is a recommendation."
+],
+[
+5,
+"Executives gather around a table and discuss how the company would respond to a ransomware scenario read out by a facilitator, with no systems touched. Which exercise is this?",
+[
+"Full interruption test",
+"Failover test",
+"Parallel processing test",
+"Tabletop exercise"
+],
+3,
+"A tabletop exercise is a discussion-based walk-through of a scenario. It does not involve operational systems."
+],
+[
+5,
+"A red team and blue team work together during a test, sharing techniques and detection results in real time so the defenders can improve their controls immediately. What is this collaborative approach called?",
+[
+"Purple teaming",
+"Bug bounty",
+"White teaming",
+"Black-box testing"
+],
+0,
+"Purple teaming combines offensive and defensive efforts to speed up learning. A bug bounty is a crowd-sourced program, not a joint internal exercise."
+],
+[
+5,
+"During a penetration test, the tester finds that an in-scope application is hosted on a third-party SaaS platform. What should the tester do BEFORE testing it?",
+[
+"Confirm written permission and review the provider's testing policy",
+"Skip documentation of the finding",
+"Use denial-of-service tools to test resiliency",
+"Proceed because the customer owns the data"
+],
+0,
+"The provider owns the infrastructure, so its permission or policy must be followed before testing. Customer authorization alone does not cover systems the customer does not control."
+],
+[
+5,
+"An accounting clerk can create new vendors in the system and also approve payments to them. Which control BEST reduces the risk of fraud in this process?",
+[
+"Separation of duties",
+"Longer password length",
+"Data masking",
+"Full disk encryption"
+],
+0,
+"Separating creation and approval requires collusion for fraud. The other controls do not address conflicting responsibilities."
+],
+[
+5,
+"A vulnerability cannot be remediated and the residual risk is rated high. Who should formally approve accepting that risk?",
+[
+"The risk owner or business executive accountable for the affected asset",
+"The vulnerability scanner administrator",
+"The help desk lead",
+"The external auditor"
+],
+0,
+"Risk acceptance is a business decision made by the accountable owner or senior management. Auditors assess and do not accept risk on behalf of the organization."
+],
+[
+5,
+"A marketing app collects customers' dates of birth, home addresses and phone numbers, though it needs only an email address to send newsletters. Which privacy principle is being violated?",
+[
+"Data minimization",
+"Data masking",
+"Data sovereignty",
+"Data retention"
+],
+0,
+"Data minimization means collecting only what is needed. Retention concerns how long data is kept."
+],
+[
+5,
+"A publicly traded company must show that its internal controls over financial reporting are effective and that executives attest to the accuracy of the statements. Which regulation applies?",
+[
+"SOX",
+"PCI DSS",
+"FERPA",
+"HIPAA"
+],
+0,
+"The Sarbanes-Oxley Act regulates financial reporting and internal controls for public companies. PCI DSS covers payment cards and HIPAA covers health data."
+],
+[
+5,
+"Before signing a contract with a cloud provider, the procurement and security teams review its financial stability, certifications, references and breach history. Which concept does this describe?",
+[
+"Due diligence",
+"Right to audit",
+"Due care",
+"Continuous monitoring"
+],
+0,
+"Due diligence is the investigation performed before entering an agreement. Due care is acting responsibly to maintain protection afterward."
+],
+[
+5,
+"Leadership states that the online store may experience up to two hours of downtime per month without escalation to the board, but anything beyond that must be reported. Which risk management concept does this describe?",
+[
+"Residual risk",
+"Risk transference",
+"Risk tolerance",
+"Risk avoidance"
+],
+2,
+"Risk tolerance is the acceptable variation around objectives. Risk appetite is the broader level of risk the organization will pursue."
+],
+[
+5,
+"Which TWO factors are external considerations that influence an organization's security governance? (Choose TWO.)",
+[
+"Regulatory requirements",
+"Industry standards and norms",
+"The company's internal risk appetite",
+"The company's organizational structure",
+"The executive team's budget cycle"
+],
+[
+0,
+1
+],
+"Regulations and industry norms originate outside the organization. Risk appetite, structure and budget cycles are internal factors."
+],
+[
+5,
+"A customer sends a formal request asking the company to provide a copy of all personal data it holds about the customer. Which privacy right is being exercised?",
+[
+"Right to object to profiling",
+"Right to be forgotten",
+"Right of access",
+"Data portability only for employees"
+],
+2,
+"The right of access lets individuals obtain a copy of their personal data. The right to be forgotten concerns erasure."
+],
+[
+5,
+"A SOC manager wants a metric that BEST shows how quickly the team notices intrusions after they begin. Which metric should be used?",
+[
+"Annualized rate of occurrence",
+"Mean time between failures",
+"Recovery point objective",
+"Mean time to detect"
+],
+3,
+"Mean time to detect measures the time between the start of an incident and its detection. MTBF refers to reliability of components."
+]
+]

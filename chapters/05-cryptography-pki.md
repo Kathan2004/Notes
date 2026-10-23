@@ -10,13 +10,13 @@
 - Avalanche effect: Tiny input change = completely different hash.
 - Collision-resistant: Hard to find two inputs with same hash.
 - **Common Algorithms**:
-- **MD5** (128-bit): ❌ Broken (collisions found); deprecated.
-- **SHA-1** (160-bit): ⚠️ Weak (collisions possible); avoid for security.
-- **SHA-256** (256-bit): ✅ Secure; standard.
-- **SHA-512** (512-bit): ✅ Very secure; paranoid.
-- **bcrypt**: ✅ Slow, designed for passwords.
-- **PBKDF2**: ✅ Key derivation, password storage.
-- **Argon2**: ✅ Modern, GPU-resistant password hashing.
+- **MD5** (128-bit): Broken (collisions found); deprecated.
+- **SHA-1** (160-bit): Weak (collisions possible); avoid for security.
+- **SHA-256** (256-bit): Secure; standard.
+- **SHA-512** (512-bit): Very secure; paranoid.
+- **bcrypt**: Slow, designed for passwords.
+- **PBKDF2**: Key derivation, password storage.
+- **Argon2**: Modern, GPU-resistant password hashing.
 
 **Example**:
 ```
@@ -37,11 +37,11 @@ SHA-256: ef92b778bafe771e89245d171bafae2c0ce58494fe20e9ad0b2c69d37b06c4a6
 ### Use Cases
 | Scenario | Hash | Encryption |
 |----------|------|------------|
-| Store passwords safely | ✓ | ✗ (shouldn't be reversible) |
-| Detect file tampering | ✓ | ✗ (need irreversibility) |
-| Hide data in transit | ✗ | ✓ |
-| Digital signatures | ✓ (sign hash) | ✓ (public key crypto) |
-| Password recovery | ✗ | ✗ (hash can't be reversed; use password reset) |
+| Store passwords safely | Yes | No (shouldn't be reversible) |
+| Detect file tampering | Yes | No (need irreversibility) |
+| Hide data in transit | No | Yes |
+| Digital signatures | Yes (sign hash) | Yes (public key crypto) |
+| Password recovery | No | No (hash can't be reversed; use password reset) |
 
 ---
 
@@ -58,11 +58,11 @@ ciphertext ←→ insecure channel ←→ ciphertext
 ```
 
 ### Common Algorithms
-- **AES (Advanced Encryption Standard)** ✅
+- **AES (Advanced Encryption Standard)**: recommended
   - 128, 192, or 256-bit key.
   - Industry standard; used in TLS, VPN, full-disk encryption.
   - Modes: ECB (bad), CBC, CTR, GCM.
-- **3DES (Triple DES)**: ⚠️ Deprecated (slow, small block size).
+- **3DES (Triple DES)**: Deprecated (slow, small block size).
 - **Blowfish/Twofish**: Older; still used in some systems.
 - **ChaCha20**: Modern, fast; used in TLS 1.3.
 
@@ -170,7 +170,7 @@ End-Entity Certificate (for example.com)
 3. Client validates certificate chain to Root.
 4. Client checks certificate hasn't expired or been revoked (CRL/OCSP).
 5. Client verifies cert Subject matches domain in URL.
-6. If all valid → "🔒 Secure" padlock appears.
+6. If all valid → the browser shows the padlock (secure connection).
 
 ### Certificate Revocation
 - **CRL (Certificate Revocation List)**: Signed list of revoked serial numbers; checked infrequently (stale data).

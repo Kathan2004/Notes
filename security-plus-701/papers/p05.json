@@ -1,0 +1,1122 @@
+[
+[
+1,
+"In a Kerberos realm, which component authenticates a user at logon and issues the ticket-granting ticket (TGT)?",
+[
+"Key distribution center",
+"Registration authority",
+"RADIUS accounting server",
+"Policy enforcement point"
+],
+0,
+"The authentication service of the Kerberos key distribution center verifies the user and issues the TGT, which is later exchanged for service tickets."
+],
+[
+1,
+"An auditor reviews a log showing every command a network engineer ran on a core switch. Which AAA function produced this record?",
+[
+"Authentication",
+"Authorization",
+"Accounting",
+"Attestation"
+],
+2,
+"Accounting records what an authenticated user did and when. Authorization only decides what the user may do."
+],
+[
+1,
+"A vendor states its fingerprint reader has a CER of 1.5%, while a competing reader has a CER of 4%. What does this indicate?",
+[
+"The first reader is more accurate because its false acceptance and false rejection rates are equal at a lower value",
+"The first reader is less accurate because its error rate is lower",
+"The first reader never rejects legitimate users",
+"The first reader enrolls users faster"
+],
+0,
+"The crossover error rate is where FAR equals FRR, and a lower CER means a more accurate biometric system. It says nothing about enrollment speed."
+],
+[
+1,
+"Which TWO of the following are 'something you are' authentication factors?",
+[
+"Fingerprint",
+"Smart card",
+"Retina scan",
+"PIN",
+"Hardware token"
+],
+[
+0,
+2
+],
+"Fingerprints and retina patterns are inherent biometric traits. The smart card and hardware token are 'something you have' and the PIN is 'something you know'."
+],
+[
+1,
+"A user authenticated at 9 a.m. The access system now re-evaluates device posture and location before allowing each sensitive request, instead of trusting the earlier logon. Which Zero Trust concept does this describe?",
+[
+"Implicit trust",
+"Separation of duties",
+"Adaptive identity",
+"Static allow listing"
+],
+2,
+"Adaptive identity evaluates context continuously and adjusts access decisions. Implicit trust is the opposite of what is described."
+],
+[
+1,
+"Two parties with no pre-shared secret need to agree on a symmetric session key over an untrusted network. Which technique is designed for this?",
+[
+"AES-GCM",
+"SHA-256",
+"Diffie-Hellman key exchange",
+"HMAC"
+],
+2,
+"Diffie-Hellman lets two parties derive a shared secret over an open channel. AES encrypts data and SHA-256 and HMAC provide hashing and integrity, not key agreement."
+],
+[
+1,
+"Which mechanism provides BOTH integrity and authenticity of a message by using a shared secret key?",
+[
+"Plain SHA-256 hash",
+"Base64 encoding",
+"HMAC",
+"Salted hash"
+],
+2,
+"An HMAC mixes a secret key into the hash, so only a holder of the key can produce a valid value. A plain hash can be recomputed by anyone."
+],
+[
+1,
+"In an accounts payable system, one employee can add new vendors while a different employee must approve payments to them. Which security principle does this apply?",
+[
+"Least privilege",
+"Separation of duties",
+"Job rotation",
+"Mandatory vacation"
+],
+1,
+"Splitting a sensitive process across two people so that no one person can complete it alone is separation of duties."
+],
+[
+1,
+"During change management, which activity identifies the systems, users and processes that a proposed firewall change could affect before the change is approved?",
+[
+"Backout plan",
+"Maintenance window",
+"Impact analysis",
+"Version control"
+],
+2,
+"Impact analysis assesses what a change will touch and the associated risk. A backout plan describes how to reverse the change."
+],
+[
+1,
+"Which PKI component verifies a requester's identity and forwards approved certificate requests to the certificate authority?",
+[
+"Registration authority",
+"Certificate revocation list",
+"OCSP responder",
+"Key escrow agent"
+],
+0,
+"The registration authority vets the requester on behalf of the CA. CRLs and OCSP responders deal with revocation status, not enrollment."
+],
+[
+1,
+"A legacy application cannot support multifactor authentication, so the security team limits access to it from a monitored jump host with strict source-address rules. Which control type does this represent?",
+[
+"Directive",
+"Deterrent",
+"Corrective",
+"Compensating"
+],
+3,
+"A compensating control substitutes for a requirement that cannot be met directly, here MFA."
+],
+[
+2,
+"An attacker holding a standard domain account requests service tickets for accounts that have service principal names and cracks the tickets offline to recover service account passwords. Which attack is this?",
+[
+"Kerberoasting",
+"Golden ticket",
+"Pass-the-hash",
+"LDAP injection"
+],
+0,
+"Kerberoasting abuses the fact that service tickets are encrypted with the service account's secret, allowing offline password cracking. A golden ticket instead forges TGTs."
+],
+[
+2,
+"Investigators find that an attacker forged Kerberos TGTs using the key of the krbtgt account, gaining long-term access as any domain user. Which attack is this?",
+[
+"Kerberoasting",
+"Golden ticket",
+"Credential stuffing",
+"Pharming"
+],
+1,
+"Forging TGTs with the krbtgt key is a golden ticket attack. Kerberoasting only recovers service account passwords."
+],
+[
+2,
+"Attackers sign in to a company's employee portal using username and password pairs leaked in a breach of an unrelated retail site. Which attack is this?",
+[
+"Password spraying",
+"Credential stuffing",
+"Rainbow table attack",
+"Dictionary attack"
+],
+1,
+"Credential stuffing replays known leaked credential pairs on other services, relying on password reuse. Spraying instead tries a few common passwords against many accounts."
+],
+[
+2,
+"Employees report repeated, unrequested push approval prompts late at night, and one user approved a prompt that let an attacker sign in. Which control BEST mitigates this attack?",
+[
+"Longer prompt timeouts",
+"Sending the approval code by SMS instead",
+"Number matching on the push prompt",
+"Increasing password complexity"
+],
+2,
+"Number matching forces the user to enter a value shown on the sign-in screen, so blind approval of a prompt no longer works. SMS codes are weaker, not stronger."
+],
+[
+2,
+"A SIEM alert shows a user signing in from Pune and, 15 minutes later, from a hosting provider in another country, with no VPN in use. Which is the MOST likely explanation?",
+[
+"The user's account credentials or session token have been compromised",
+"The user changed the laptop time zone",
+"The password reached its scheduled expiration",
+"The identity provider certificate expired"
+],
+0,
+"Impossible travel means two sign-ins that are too far apart to be made by one person in the elapsed time, which usually indicates stolen credentials or tokens."
+],
+[
+2,
+"Attackers use a reverse proxy that relays a victim's password and one-time code to the real site in real time. Which MFA method is MOST resistant to this attack?",
+[
+"SMS one-time code",
+"TOTP code from an authenticator app",
+"FIDO2 security key",
+"Push notification approval"
+],
+2,
+"FIDO2 credentials are bound to the legitimate site's origin, so a proxy domain cannot obtain a usable assertion. Typed or approved codes can be relayed."
+],
+[
+2,
+"An attacker persuades a mobile carrier to move a victim's phone number to a new SIM card and then receives the victim's login verification texts. Which MFA method is MOST directly weakened?",
+[
+"FIDO2 hardware key",
+"SMS-based one-time passcodes",
+"Smart card with PIN",
+"Authenticator app TOTP seeded on the device"
+],
+1,
+"SIM swapping gives the attacker control of the phone number, so SMS codes can be intercepted. The other methods do not depend on the phone number."
+],
+[
+2,
+"A standard user exploits a kernel flaw and obtains administrator rights on the same workstation. Which type of attack is this?",
+[
+"Horizontal privilege escalation",
+"Vertical privilege escalation",
+"Lateral movement",
+"Session replay"
+],
+1,
+"Gaining a higher privilege level than the account was assigned is vertical privilege escalation. Horizontal escalation reaches another account at the same level."
+],
+[
+2,
+"Three weeks after being terminated, a former employee's credentials were used to download customer files. Which weakness MOST likely allowed this?",
+[
+"Missing TLS on the file server",
+"Failure to deprovision the account",
+"Use of a weak hashing algorithm",
+"An unpatched web browser"
+],
+1,
+"Orphaned accounts that remain active after termination are a direct result of incomplete deprovisioning."
+],
+[
+2,
+"A vulnerability scan of newly installed network cameras shows administrator logins that still accept the vendor's factory password. Which action BEST remediates this finding?",
+[
+"Enable SNMPv1 on the cameras",
+"Move the cameras to a guest VLAN only",
+"Disable logging on the cameras",
+"Replace default credentials with unique, strong ones before deployment"
+],
+3,
+"Default credentials are publicly documented and must be changed. Segmentation alone leaves the weak login in place."
+],
+[
+2,
+"A caller claiming to be a traveling executive urgently asks the help desk to reset the executive's password and read out the new one. Which control BEST prevents this social engineering attempt?",
+[
+"Verify identity through a pre-registered out-of-band method before any reset",
+"Reset any account when the caller knows the employee ID",
+"Shorten the lifetime of temporary passwords",
+"Log the call without further verification"
+],
+0,
+"Positive identity verification through a separate trusted channel defeats pretexting. Employee IDs are easily obtained and logging alone does not prevent the reset."
+],
+[
+2,
+"A malicious web page causes a logged-in user's browser to silently submit a request that changes the user's email address on a banking site. Which attack is this, and what BEST prevents it?",
+[
+"XSS, prevented by output encoding",
+"CSRF, prevented by anti-forgery tokens",
+"SQL injection, prevented by parameterized queries",
+"Directory traversal, prevented by input canonicalization"
+],
+1,
+"Cross-site request forgery abuses the browser's existing authenticated session, and unpredictable per-request tokens block forged requests."
+],
+[
+2,
+"An attacker exploits a flaw in a widely used application for which the vendor has not yet released a patch. Which term describes this vulnerability?",
+[
+"Legacy vulnerability",
+"Misconfiguration",
+"Zero-day",
+"Known false positive"
+],
+2,
+"A zero-day is unknown to the vendor or unpatched at the time of exploitation, so no fix is available."
+],
+[
+2,
+"Logs show 400 failed logons against one administrator account from a single external IP address, followed by one successful logon from the same address. What does this MOST likely indicate?",
+[
+"A successful brute-force attack on the account",
+"A DNS poisoning attempt",
+"A legitimate password expiry event",
+"A misconfigured NTP server"
+],
+0,
+"Many failures against one account followed by a success from the same source is the signature of a successful brute-force attack."
+],
+[
+2,
+"Visitors at an airport connect to a Wi-Fi network named like the airport's official network, but their credentials are later used by an attacker. The attacker's access point broadcast the same SSID with a stronger signal. Which attack is this?",
+[
+"Bluesnarfing",
+"Evil twin",
+"Deauthentication flood",
+"War driving"
+],
+1,
+"An evil twin is a rogue access point that impersonates a legitimate SSID to capture traffic and credentials."
+],
+[
+2,
+"An EDR alert shows PowerShell executing an encoded payload entirely in memory, with no new executable written to disk. Which type of malware activity is this?",
+[
+"Ransomware",
+"Logic bomb",
+"Fileless malware",
+"Boot sector virus"
+],
+2,
+"Fileless malware runs from memory using legitimate tools such as PowerShell, which evades signature-based file scanning."
+],
+[
+2,
+"A kiosk should run only the vendor-approved application and nothing else. Which mitigation BEST enforces this?",
+[
+"Full-disk encryption",
+"Application allow list",
+"Host-based firewall logging",
+"Screen lock timeout"
+],
+1,
+"An application allow list only permits approved programs to run, blocking unknown or malicious binaries. Encryption protects data at rest, not execution."
+],
+[
+2,
+"After a user logs in, an attacker copies the user's session cookie from an unsecured network and replays it to access the application without knowing any credentials. Which attack is this?",
+[
+"Session hijacking",
+"Credential stuffing",
+"Brute force",
+"Phishing"
+],
+0,
+"Replaying a valid session identifier takes over an authenticated session; short session lifetimes, Secure and HttpOnly cookies and TLS reduce the risk."
+],
+[
+2,
+"Which TWO controls BEST reduce the risk of password spraying against an organization's cloud accounts?",
+[
+"Require MFA for all sign-ins",
+"Force password changes every 30 days",
+"Block passwords that appear on common-password lists",
+"Display password hints on the login page",
+"Remove the account lockout policy"
+],
+[
+0,
+2
+],
+"MFA stops a correct guess from granting access, and banning common passwords removes the targets spraying relies on. Frequent rotation does not stop guessing of common values."
+],
+[
+2,
+"Which TWO social-engineering techniques are carried out through text messages and telephone calls, respectively?",
+[
+"Smishing",
+"Whaling",
+"Vishing",
+"Typosquatting",
+"Watering hole"
+],
+[
+0,
+2
+],
+"Smishing uses SMS and vishing uses voice calls. Whaling targets executives, typosquatting uses lookalike domains, and a watering hole compromises a site visited by the target."
+],
+[
+3,
+"A network team wants to authorize individual commands that administrators may run on routers and to encrypt the whole authentication payload. Which AAA protocol BEST fits?",
+[
+"RADIUS",
+"TACACS+",
+"LDAP",
+"SNMPv2"
+],
+1,
+"TACACS+ separates authentication, authorization and accounting, supports per-command authorization and encrypts the entire payload. RADIUS encrypts only the password."
+],
+[
+3,
+"In an 802.1X deployment, a laptop connects to a switch port and the switch forwards the credentials to a RADIUS server. What role does the switch play?",
+[
+"Supplicant",
+"Authenticator",
+"Authentication server",
+"Certificate authority"
+],
+1,
+"The network device that relays credentials between the client (supplicant) and the RADIUS server (authentication server) is the authenticator."
+],
+[
+3,
+"An administrator must ensure that directory lookups and binds from application servers are encrypted in transit. Which option BEST accomplishes this?",
+[
+"LDAP on TCP 389 without TLS",
+"LDAPS on TCP 636",
+"Telnet to the directory server",
+"TFTP transfer of the directory database"
+],
+1,
+"LDAPS wraps LDAP in TLS, typically on TCP 636. Plain LDAP on 389 sends binds and queries in cleartext unless StartTLS is used."
+],
+[
+3,
+"A developer wants a mobile app to authenticate users and receive a signed JWT identity token from a cloud identity provider. Which protocol is designed for this?",
+[
+"OAuth 2.0 alone",
+"Kerberos",
+"LDAP",
+"OpenID Connect"
+],
+3,
+"OpenID Connect adds an authentication layer and ID token on top of OAuth 2.0, which by itself only handles authorization."
+],
+[
+3,
+"Employees of a partner company need to open the organization's procurement portal by using their own corporate credentials, without separate accounts being created. Which approach BEST provides this?",
+[
+"Federation between the two identity providers",
+"Shared generic accounts",
+"Local account provisioning for each partner user",
+"A site-to-site VPN only"
+],
+0,
+"Federation establishes trust between identity domains so users authenticate with their home identity provider. Shared accounts eliminate accountability."
+],
+[
+3,
+"Security wants cloud apps to deny sign-ins from unmanaged devices and to require MFA when the sign-in risk is high. Which capability BEST implements this?",
+[
+"Static firewall ACLs",
+"Port security",
+"Disk quotas",
+"Conditional access policies"
+],
+3,
+"Conditional access evaluates signals such as device state, location and risk to decide whether to allow, block or require extra authentication."
+],
+[
+3,
+"Several administrators share one privileged service account whose password is known to many staff. Which solution BEST improves accountability and reduces exposure?",
+[
+"Writing the password on a card in a safe",
+"A privileged access management vault with check-out and automatic rotation",
+"Extending the password expiration to 365 days",
+"Emailing the new password to the team monthly"
+],
+1,
+"A PAM vault stores the credential, logs each check-out and rotates it afterward, so use is attributable and old knowledge becomes useless."
+],
+[
+3,
+"A certificate authority needs tamper-resistant hardware to generate and store its private signing keys. Which device BEST meets this need?",
+[
+"Hardware security module",
+"Network load balancer",
+"Web application firewall",
+"Uninterruptible power supply"
+],
+0,
+"A hardware security module securely generates, stores and uses cryptographic keys inside tamper-resistant hardware."
+],
+[
+3,
+"Which design BEST limits lateral movement between workloads in the same data center subnet?",
+[
+"Increasing the bandwidth of core switches",
+"Microsegmentation with per-workload policies",
+"Adding a second DNS server",
+"Enabling jumbo frames"
+],
+1,
+"Microsegmentation applies granular policy between individual workloads, restricting east-west traffic that traditional perimeter controls do not see."
+],
+[
+3,
+"Two web servers behind a load balancer both serve user requests at the same time, and either can absorb the full load if the other fails. Which configuration is this?",
+[
+"Active-passive",
+"Cold standby",
+"Active-active",
+"Warm site"
+],
+2,
+"In an active-active cluster all nodes process traffic simultaneously, whereas active-passive keeps a node idle until failover."
+],
+[
+3,
+"An organization needs visibility into, and policy enforcement over, employee use of both approved and unapproved SaaS applications. Which technology BEST fits?",
+[
+"Cloud access security broker",
+"Network intrusion prevention system",
+"Hardware security module",
+"Honeynet"
+],
+0,
+"A CASB sits between users and cloud services to discover shadow IT and enforce data and access policies."
+],
+[
+3,
+"A file server needs to survive the failure of any single disk by using distributed parity, with a minimum of three drives. Which RAID level should be used?",
+[
+"RAID 0",
+"RAID 1",
+"RAID 5",
+"RAID 10 with two drives"
+],
+2,
+"RAID 5 stripes data with distributed parity and tolerates one drive failure with at least three drives. RAID 0 has no redundancy."
+],
+[
+3,
+"An administrator is replacing Telnet for remote management of switches. Which protocol and port should replace it?",
+[
+"FTP on TCP 21",
+"SSH on TCP 22",
+"HTTP on TCP 80",
+"SNMPv1 on UDP 161"
+],
+1,
+"SSH on TCP 22 provides encrypted remote command-line access. Telnet, FTP and HTTP send credentials in cleartext."
+],
+[
+3,
+"Which TWO controls protect data at rest on a company laptop?",
+[
+"Full-disk encryption",
+"TLS for web traffic",
+"Self-encrypting drive",
+"IPsec transport mode",
+"SSH tunneling"
+],
+[
+0,
+2
+],
+"Full-disk encryption and self-encrypting drives protect stored data. TLS, IPsec and SSH protect data in transit."
+],
+[
+3,
+"Which TWO statements describe FIDO2 / WebAuthn authenticators?",
+[
+"The private key never leaves the authenticator",
+"A shared secret is sent to the server at each logon",
+"Credentials are scoped to the legitimate website's origin",
+"Verification depends on an SMS code",
+"The server stores the user's biometric template"
+],
+[
+0,
+2
+],
+"FIDO2 uses public-key cryptography with a device-held private key and origin binding, which resists phishing. No shared secret or biometric leaves the device."
+],
+[
+3,
+"Which characteristic of containers MOST directly creates the risk of a container escape affecting other workloads?",
+[
+"Containers share the host operating system kernel",
+"Containers use immutable images",
+"Containers start faster than virtual machines",
+"Containers can be orchestrated automatically"
+],
+0,
+"Because containers share the host kernel, a kernel-level flaw can let an attacker break out and reach the host or other containers."
+],
+[
+4,
+"Which one-time password method generates a code from a shared secret and an incrementing counter, so a code remains valid until it is used?",
+[
+"TOTP",
+"HOTP",
+"SMS OTP",
+"Biometric template"
+],
+1,
+"HOTP is counter-based, while TOTP derives codes from the current time and expires after a short window."
+],
+[
+4,
+"A company wants new employees to receive correct role-based access on their first day without manual ticketing. Which approach BEST achieves this?",
+[
+"Letting managers email requests to IT",
+"Copying the permissions of a similar coworker",
+"Automated provisioning triggered by the HR system and mapped to job roles",
+"Giving all new hires temporary administrator rights"
+],
+2,
+"HR-driven automated provisioning applies consistent role-based access and reduces errors. Copying a coworker's access leads to privilege creep."
+],
+[
+4,
+"An employee is terminated effective immediately. Which action should the security team take FIRST?",
+[
+"Delete the user's mailbox and home directory",
+"Disable the account and revoke active sessions and tokens",
+"Wait for the next quarterly access review",
+"Reset the manager's password"
+],
+1,
+"Disabling the account and revoking sessions stops access right away while preserving data that may be needed for investigation or legal hold."
+],
+[
+4,
+"A quarterly process has managers confirm that each team member's access is still required. What is the primary purpose of this process?",
+[
+"Detect and remove excess privileges and privilege creep",
+"Increase password entropy",
+"Encrypt data at rest",
+"Measure network latency"
+],
+0,
+"User access reviews (recertification) find stale or excessive permissions that accumulate as people change roles."
+],
+[
+4,
+"Which password policy BEST aligns with current NIST SP 800-63B guidance?",
+[
+"Minimum 8 characters, forced complexity, change every 30 days",
+"Minimum 15 characters, screening against breached passwords, no forced periodic change",
+"Four security questions in place of a password",
+"Minimum 6 characters with a password hint"
+],
+1,
+"NIST favors length, checking against known-compromised lists, and changing only on evidence of compromise. Forced rotation and complexity rules encourage weak patterns."
+],
+[
+4,
+"An organization wants to eliminate passwords for workforce sign-in, using a device-bound cryptographic key unlocked by a local biometric or PIN. Which technology BEST fits?",
+[
+"Security questions",
+"SMS one-time codes",
+"Passkeys based on FIDO2",
+"Longer passphrases"
+],
+2,
+"Passkeys use public-key cryptography unlocked locally, giving passwordless and phishing-resistant authentication."
+],
+[
+4,
+"Employees complain that the new fingerprint readers frequently reject them even when they scan the correct finger. Which metric is too high?",
+[
+"False acceptance rate",
+"False rejection rate",
+"Crossover error rate only",
+"Enrollment rate"
+],
+1,
+"A false rejection occurs when a legitimate user is denied. Lowering the sensitivity threshold usually reduces FRR but raises FAR."
+],
+[
+4,
+"Which account lockout approach BEST slows online password guessing without enabling attackers to permanently lock out legitimate users?",
+[
+"Permanent lockout after one failed attempt",
+"Temporary lockout or increasing delay after repeated failures",
+"No lockout, only complexity rules",
+"Lockout that applies only to administrators"
+],
+1,
+"Temporary lockouts or progressive delays throttle guessing while limiting denial-of-service against accounts."
+],
+[
+4,
+"An identity protection tool flags a sign-in as high risk because of impossible travel. Which automated response is BEST?",
+[
+"Allow access and only log the event",
+"Require step-up MFA and a password change, or block the sign-in",
+"Permanently delete the account",
+"Add the source IP address to an allow list"
+],
+1,
+"A risk-based policy should challenge or block the sign-in and force credential recovery. Allowing it or allow-listing the IP ignores the likely compromise."
+],
+[
+4,
+"A vulnerability scanner fails to report a missing patch that is actually present on a server. What is this result called?",
+[
+"False positive",
+"True positive",
+"False negative",
+"True negative"
+],
+2,
+"A false negative is a real issue that the scanner did not detect."
+],
+[
+4,
+"A penetration tester is given no prior information about the target network or applications. Which test type is this?",
+[
+"Known environment",
+"Partially known environment",
+"Unknown environment",
+"Purple team exercise"
+],
+2,
+"Unknown environment (black box) testing starts with no knowledge of the target, simulating an external attacker."
+],
+[
+4,
+"Which factor MOST strongly justifies patching a vulnerability ahead of others with the same CVSS score?",
+[
+"It is being actively exploited in the wild on internet-facing systems",
+"It was published last month",
+"It affects a system scheduled for a refresh next year",
+"Its vendor name is well known"
+],
+0,
+"Active exploitation and exposure raise real-world risk and should drive prioritization beyond the base score."
+],
+[
+4,
+"Malware has been removed from all affected hosts. According to the standard incident response process, what is the NEXT phase?",
+[
+"Containment",
+"Recovery",
+"Preparation",
+"Detection"
+],
+1,
+"After eradication comes recovery, restoring systems to normal operation, followed by lessons learned."
+],
+[
+4,
+"A forensic examiner creates a bit-for-bit image of a suspect drive. What BEST proves the image is identical to the original?",
+[
+"Compare the file names on both copies",
+"Take a screenshot of the copy process",
+"Compute and compare cryptographic hashes of the original and the image",
+"Compress the image before storage"
+],
+2,
+"Matching hash values demonstrate that the image was not altered, supporting its admissibility."
+],
+[
+4,
+"A SOC analyst team is overwhelmed by SIEM alerts, most of which are benign. Which action BEST addresses this?",
+[
+"Disable the SIEM",
+"Tune alert rules and thresholds based on analysis of false positives",
+"Delete older logs",
+"Raise all alerts to critical severity"
+],
+1,
+"Tuning rules reduces noise and alert fatigue while keeping coverage of real threats."
+],
+[
+4,
+"Which email authentication record lists the servers that are authorized to send mail for a domain?",
+[
+"SPF",
+"DMARC alignment report",
+"S/MIME certificate",
+"MX"
+],
+0,
+"SPF publishes authorized sending hosts. DMARC then uses SPF and DKIM results to set policy."
+],
+[
+4,
+"An administrator needs to enforce the same password and lockout settings on thousands of domain-joined computers. Which tool is MOST appropriate?",
+[
+"Group Policy",
+"Packet sniffer",
+"Honeypot",
+"Hardware security module"
+],
+0,
+"Group Policy centrally pushes configuration and security settings to domain-joined systems."
+],
+[
+4,
+"A company allows personal phones for email and wants to keep corporate data separate from personal data and wipe only the corporate portion. Which solution BEST meets this?",
+[
+"Rooting the device",
+"Containerization or a managed work profile",
+"Disabling the device camera",
+"Using USB tethering"
+],
+1,
+"Containerization isolates corporate apps and data so they can be managed or wiped without touching personal content."
+],
+[
+4,
+"Scripts running on application servers contain hard-coded database passwords. Which remediation is BEST?",
+[
+"Base64-encode the passwords in the scripts",
+"Use a secrets manager that issues credentials at runtime and rotates them",
+"Store the passwords in a shared spreadsheet",
+"Email the passwords to the development team"
+],
+1,
+"A secrets manager removes static credentials from code and supports rotation. Base64 is an encoding, not protection."
+],
+[
+4,
+"What is the PRIMARY risk of deploying single sign-on without additional safeguards?",
+[
+"Users must remember many passwords",
+"Compromise of one credential can grant access to many connected applications",
+"Applications can no longer use TLS",
+"Logs can no longer be collected"
+],
+1,
+"SSO concentrates access behind one identity, so strong protections such as MFA are required. It reduces, not increases, the number of passwords."
+],
+[
+4,
+"Users in a Kerberos realm suddenly cannot authenticate, and logs show ticket validation failures on one client. What is the MOST likely cause?",
+[
+"The client's clock is out of sync with the KDC",
+"The client lacks a TPM",
+"The client's DNS server is on IPv6",
+"The client uses a different keyboard layout"
+],
+0,
+"Kerberos is time-sensitive and rejects tickets when clock skew exceeds the allowed tolerance, typically five minutes. NTP synchronization resolves it."
+],
+[
+4,
+"Which TWO actions should be included when deprovisioning a departing contractor?",
+[
+"Disable the contractor's accounts and revoke tokens",
+"Reset the project manager's password",
+"Recover issued laptops and badges",
+"Share the contractor's login with the replacement",
+"Extend access for 30 days as a courtesy"
+],
+[
+0,
+2
+],
+"Deprovisioning removes logical access and returns physical assets. Sharing credentials or extending access leaves risk in place."
+],
+[
+4,
+"Stolen credentials were used against the VPN and cloud apps. Which TWO log sources would BEST show where the credentials were used?",
+[
+"Identity provider sign-in logs",
+"Printer spooler logs",
+"VPN concentrator authentication logs",
+"HVAC controller logs",
+"Backup job logs"
+],
+[
+0,
+2
+],
+"Identity provider and VPN authentication logs record source addresses, times and results of sign-ins. The other logs are unrelated to credential use."
+],
+[
+4,
+"Which TWO practices are BEST for protecting administrator accounts?",
+[
+"Use separate admin accounts distinct from daily-use accounts",
+"Share one admin account among the team",
+"Require MFA for all administrative sign-ins",
+"Exclude admin actions from logging",
+"Grant permanent standing privileges"
+],
+[
+0,
+2
+],
+"Separate accounts limit exposure of privileged credentials and MFA protects them. Sharing, no logging and standing privileges all weaken accountability and increase risk."
+],
+[
+4,
+"A security team proactively searches network and endpoint data for signs of intruders, assuming a breach may already have occurred. What is this activity?",
+[
+"Vulnerability scanning",
+"Threat hunting",
+"Penetration testing",
+"Patch management"
+],
+1,
+"Threat hunting is a hypothesis-driven search for undetected threats rather than a response to an alert."
+],
+[
+5,
+"A risk assessment rates each risk as high, medium or low based on expert judgment, without monetary values. Which approach is this?",
+[
+"Quantitative analysis",
+"Qualitative analysis",
+"Annualized loss expectancy",
+"Monte Carlo simulation"
+],
+1,
+"Qualitative analysis uses relative ratings, while quantitative analysis assigns numeric financial values."
+],
+[
+5,
+"Which metric would give leadership an early warning that risk exposure is rising, such as the number of critical systems missing patches?",
+[
+"Key risk indicator",
+"Recovery point objective",
+"Mean time between failures",
+"Service level agreement"
+],
+0,
+"Key risk indicators track conditions that signal increasing risk before incidents occur."
+],
+[
+5,
+"Under the GDPR, within what period must a controller generally notify the supervisory authority after becoming aware of a personal data breach?",
+[
+"24 hours",
+"72 hours",
+"30 days",
+"90 days"
+],
+1,
+"GDPR Article 33 requires notification without undue delay and, where feasible, within 72 hours."
+],
+[
+5,
+"Who is ultimately responsible for deciding how a data set is classified and for approving who may access it?",
+[
+"Data custodian",
+"Data owner",
+"Data processor",
+"System administrator"
+],
+1,
+"The data owner is accountable for classification and access decisions, while the custodian implements the technical controls."
+],
+[
+5,
+"HR often notifies IT of terminations days late, leaving accounts active. Which change BEST fixes the root cause?",
+[
+"Ask managers to send reminders",
+"Automate the offboarding workflow from the HR system with a defined time requirement",
+"Lock all accounts every weekend",
+"Increase password length"
+],
+1,
+"Integrating HR events with account disablement removes the manual delay and enforces a defined timeline."
+],
+[
+5,
+"Which document should be signed to protect confidential information shared with a vendor during evaluation, before any contract is awarded?",
+[
+"Nondisclosure agreement",
+"Service level agreement",
+"Statement of work",
+"Business impact analysis"
+],
+0,
+"An NDA legally obligates the recipient to protect shared confidential information."
+],
+[
+5,
+"Which practice BEST gives an organization ongoing visibility into the changing security posture of its third-party vendors?",
+[
+"A one-time questionnaire at onboarding",
+"Continuous monitoring such as external security ratings and periodic reassessment",
+"Reviewing the vendor's marketing materials",
+"Signing a longer contract"
+],
+1,
+"Vendor risk changes over time, so ongoing monitoring is needed beyond onboarding checks."
+],
+[
+5,
+"Which type of audit is performed by an independent third party, often to support certification or regulatory requirements?",
+[
+"Internal audit",
+"External audit",
+"Self-assessment",
+"Peer code review"
+],
+1,
+"External audits are conducted by independent parties and provide stronger assurance than internal reviews."
+],
+[
+5,
+"Which measure BEST increases the number of phishing emails that employees report to the security team?",
+[
+"Adding a one-click report phishing button to the mail client",
+"Publishing a policy that bans personal email",
+"Blocking all external attachments",
+"Annual training only"
+],
+0,
+"Reducing friction for reporting increases participation and gives the SOC faster detection data."
+],
+[
+5,
+"Which exercise gathers key staff to talk through a disaster scenario step by step without affecting any production systems?",
+[
+"Failover test",
+"Parallel processing test",
+"Tabletop exercise",
+"Full interruption test"
+],
+2,
+"A tabletop exercise is discussion-based and low-risk, used to validate plans and roles."
+],
+[
+5,
+"Which metric describes the average time that elapses between failures of a repairable system?",
+[
+"MTTR",
+"RTO",
+"MTBF",
+"RPO"
+],
+2,
+"Mean time between failures measures reliability. MTTR measures how long repair takes."
+],
+[
+5,
+"A privacy team decides to collect only the customer attributes strictly needed to complete a purchase. Which privacy principle is being applied?",
+[
+"Data minimization",
+"Data sovereignty",
+"Tokenization",
+"Data masking"
+],
+0,
+"Data minimization limits collection and retention to what is necessary for a stated purpose."
+],
+[
+5,
+"A retailer that stores and processes cardholder data must follow which industry standard?",
+[
+"HIPAA",
+"PCI DSS",
+"SOX",
+"FERPA"
+],
+1,
+"PCI DSS is the payment card industry standard for protecting cardholder data."
+],
+[
+5,
+"Which governance document provides the detailed, step-by-step instructions that staff follow to provision a new user account?",
+[
+"Policy",
+"Standard",
+"Procedure",
+"Guideline"
+],
+2,
+"Procedures define the specific steps for a task, while policies state high-level intent."
+],
+[
+5,
+"During a breach affecting customers, who should speak to the media?",
+[
+"Any employee who is asked",
+"The designated spokesperson named in the incident communication plan",
+"The technician who found the breach",
+"The attacker's contact"
+],
+1,
+"A single authorized spokesperson keeps messaging consistent and avoids disclosing unapproved details."
+],
+[
+5,
+"Which TWO elements are typically found in a service level agreement?",
+[
+"Uptime or availability targets",
+"Employee performance reviews",
+"Penalties or remedies for missed targets",
+"Source code of the service",
+"Vendor's private encryption keys"
+],
+[
+0,
+2
+],
+"SLAs define measurable service targets and consequences for failing to meet them."
+],
+[
+5,
+"Which TWO activities are part of a user access review?",
+[
+"Comparing current permissions to each person's job role",
+"Rotating TLS certificates",
+"Having managers recertify or revoke access",
+"Applying operating system patches",
+"Rebuilding the SIEM index"
+],
+[
+0,
+2
+],
+"Access reviews validate that permissions match current duties and remove those no longer required."
+],
+[
+5,
+"A publicly traded company must show effective internal controls over financial reporting. Which law requires this?",
+[
+"GDPR",
+"HIPAA",
+"SOX",
+"COPPA"
+],
+2,
+"The Sarbanes-Oxley Act requires internal controls over financial reporting for public companies."
+]
+]
